@@ -31,6 +31,7 @@
 		2F4DDE112E19678200607760 /* Paperlogy-8ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */; };
 		2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE042E19678200607760 /* Paperlogy-4Regular.ttf */; };
 		2F4DDE142E1979AF00607760 /* WText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE132E1979AF00607760 /* WText.swift */; };
+		2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE182E1983D600607760 /* ShadowModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-8ExtraBold.ttf"; sourceTree = "<group>"; };
 		2F4DDE092E19678200607760 /* Paperlogy-9Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-9Black.ttf"; sourceTree = "<group>"; };
 		2F4DDE132E1979AF00607760 /* WText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WText.swift; sourceTree = "<group>"; };
+		2F4DDE152E197AB200607760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F4DDE182E1983D600607760 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +98,7 @@
 		2F4DDDE72E19636400607760 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE172E1983AC00607760 /* ViewModifier */,
 				2F4DDDFC2E1966A800607760 /* TextStyle */,
 			);
 			path = DesignSystem;
@@ -105,6 +109,7 @@
 			children = (
 				2F4DDDE92E19638800607760 /* Font */,
 				2F4DDDDF2E19635D00607760 /* Assets.xcassets */,
+				2F4DDE152E197AB200607760 /* Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -157,6 +162,14 @@
 				2F4DDE092E19678200607760 /* Paperlogy-9Black.ttf */,
 			);
 			path = Paperlogy;
+			sourceTree = "<group>";
+		};
+		2F4DDE172E1983AC00607760 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE182E1983D600607760 /* ShadowModifier.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -266,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* WText.swift in Sources */,
@@ -406,6 +420,7 @@
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Whiplash-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,6 +450,7 @@
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Whiplash-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
