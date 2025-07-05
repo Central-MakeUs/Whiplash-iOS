@@ -1,5 +1,5 @@
 //
-//  WText.swift
+//  BaseText.swift
 //  Whiplash-iOS
 //
 //  Created by 남경민 on 7/6/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WText: View {
+struct BaseText: View {
     var text: String
     var style: TextStyle
     var color: Color = .primary

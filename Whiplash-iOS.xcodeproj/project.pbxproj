@@ -30,7 +30,7 @@
 		2F4DDE102E19678200607760 /* Paperlogy-7Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE072E19678200607760 /* Paperlogy-7Bold.ttf */; };
 		2F4DDE112E19678200607760 /* Paperlogy-8ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */; };
 		2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE042E19678200607760 /* Paperlogy-4Regular.ttf */; };
-		2F4DDE142E1979AF00607760 /* WText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE132E1979AF00607760 /* WText.swift */; };
+		2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE132E1979AF00607760 /* BaseText.swift */; };
 		2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE182E1983D600607760 /* ShadowModifier.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		2F4DDE072E19678200607760 /* Paperlogy-7Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-7Bold.ttf"; sourceTree = "<group>"; };
 		2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-8ExtraBold.ttf"; sourceTree = "<group>"; };
 		2F4DDE092E19678200607760 /* Paperlogy-9Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-9Black.ttf"; sourceTree = "<group>"; };
-		2F4DDE132E1979AF00607760 /* WText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WText.swift; sourceTree = "<group>"; };
+		2F4DDE132E1979AF00607760 /* BaseText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseText.swift; sourceTree = "<group>"; };
 		2F4DDE152E197AB200607760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F4DDE182E1983D600607760 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDDFD2E1966D900607760 /* TextStyle.swift */,
-				2F4DDE132E1979AF00607760 /* WText.swift */,
+				2F4DDE132E1979AF00607760 /* BaseText.swift */,
 			);
 			path = TextStyle;
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
-				2F4DDE142E1979AF00607760 /* WText.swift in Sources */,
+				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
