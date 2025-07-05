@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F4DDDE32E19635D00607760 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDD2E19635D00607760 /* Preview Assets.xcassets */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
 		2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* ContentView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F4DDDDD2E19635D00607760 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F4DDDE02E19635D00607760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
@@ -79,21 +77,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F4DDDDE2E19635D00607760 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				2F4DDDDD2E19635D00607760 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE262E19A24100607760 /* Preview Content */,
+				2F4DDE232E19A18100607760 /* Presentation */,
 				2F4DDDE82E19637C00607760 /* Resource */,
-				2F4DDDDE2E19635D00607760 /* Preview Content */,
-				2F4DDDE02E19635D00607760 /* ContentView.swift */,
-				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
 				2F4DDDE72E19636400607760 /* DesignSystem */,
 			);
 			path = "Whiplash-iOS";
@@ -194,6 +183,30 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		2F4DDE232E19A18100607760 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE242E19A18D00607760 /* App */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2F4DDE242E19A18D00607760 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
+				2F4DDDE02E19635D00607760 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2F4DDE262E19A24100607760 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		2FED143D2E0AC15300D9CEDE = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +284,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4DDDE32E19635D00607760 /* Preview Assets.xcassets in Resources */,
 				2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */,
 				2F4DDDF32E19667700607760 /* Pretendard-Light.otf in Resources */,
 				2F4DDDF42E19667700607760 /* Pretendard-ExtraBold.otf in Resources */,
