@@ -6,17 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
+		2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* ContentView.swift */; };
+		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
+		2F4DDDF32E19667700607760 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEE2E19667700607760 /* Pretendard-Light.otf */; };
+		2F4DDDF42E19667700607760 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEC2E19667700607760 /* Pretendard-ExtraBold.otf */; };
+		2F4DDDF52E19667700607760 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEF2E19667700607760 /* Pretendard-Medium.otf */; };
+		2F4DDDF62E19667700607760 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDF02E19667700607760 /* Pretendard-Regular.otf */; };
+		2F4DDDF72E19667700607760 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDF12E19667700607760 /* Pretendard-SemiBold.otf */; };
+		2F4DDDF82E19667700607760 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDED2E19667700607760 /* Pretendard-ExtraLight.otf */; };
+		2F4DDDF92E19667700607760 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEB2E19667700607760 /* Pretendard-Bold.otf */; };
+		2F4DDDFA2E19667700607760 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEA2E19667700607760 /* Pretendard-Black.otf */; };
+		2F4DDDFB2E19667700607760 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDF22E19667700607760 /* Pretendard-Thin.otf */; };
+		2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDFD2E1966D900607760 /* TextStyle.swift */; };
+		2F4DDE0A2E19678200607760 /* Paperlogy-6SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE062E19678200607760 /* Paperlogy-6SemiBold.ttf */; };
+		2F4DDE0B2E19678200607760 /* Paperlogy-1Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE012E19678200607760 /* Paperlogy-1Thin.ttf */; };
+		2F4DDE0C2E19678200607760 /* Paperlogy-2ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE022E19678200607760 /* Paperlogy-2ExtraLight.ttf */; };
+		2F4DDE0D2E19678200607760 /* Paperlogy-3Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE032E19678200607760 /* Paperlogy-3Light.ttf */; };
+		2F4DDE0E2E19678200607760 /* Paperlogy-5Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE052E19678200607760 /* Paperlogy-5Medium.ttf */; };
+		2F4DDE0F2E19678200607760 /* Paperlogy-9Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE092E19678200607760 /* Paperlogy-9Black.ttf */; };
+		2F4DDE102E19678200607760 /* Paperlogy-7Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE072E19678200607760 /* Paperlogy-7Bold.ttf */; };
+		2F4DDE112E19678200607760 /* Paperlogy-8ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */; };
+		2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE042E19678200607760 /* Paperlogy-4Regular.ttf */; };
+		2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE132E1979AF00607760 /* BaseText.swift */; };
+		2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE182E1983D600607760 /* ShadowModifier.swift */; };
+		2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE1D2E198CD500607760 /* BaseButton.swift */; };
+		2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE212E199DE300607760 /* LoginButton.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F4DDDE02E19635D00607760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
+		2F4DDDEA2E19667700607760 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		2F4DDDEB2E19667700607760 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		2F4DDDEC2E19667700607760 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		2F4DDDED2E19667700607760 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		2F4DDDEE2E19667700607760 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		2F4DDDEF2E19667700607760 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		2F4DDDF02E19667700607760 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		2F4DDDF12E19667700607760 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		2F4DDDF22E19667700607760 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		2F4DDDFD2E1966D900607760 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		2F4DDE012E19678200607760 /* Paperlogy-1Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-1Thin.ttf"; sourceTree = "<group>"; };
+		2F4DDE022E19678200607760 /* Paperlogy-2ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-2ExtraLight.ttf"; sourceTree = "<group>"; };
+		2F4DDE032E19678200607760 /* Paperlogy-3Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-3Light.ttf"; sourceTree = "<group>"; };
+		2F4DDE042E19678200607760 /* Paperlogy-4Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-4Regular.ttf"; sourceTree = "<group>"; };
+		2F4DDE052E19678200607760 /* Paperlogy-5Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-5Medium.ttf"; sourceTree = "<group>"; };
+		2F4DDE062E19678200607760 /* Paperlogy-6SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-6SemiBold.ttf"; sourceTree = "<group>"; };
+		2F4DDE072E19678200607760 /* Paperlogy-7Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-7Bold.ttf"; sourceTree = "<group>"; };
+		2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-8ExtraBold.ttf"; sourceTree = "<group>"; };
+		2F4DDE092E19678200607760 /* Paperlogy-9Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-9Black.ttf"; sourceTree = "<group>"; };
+		2F4DDE132E1979AF00607760 /* BaseText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseText.swift; sourceTree = "<group>"; };
+		2F4DDE152E197AB200607760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F4DDE182E1983D600607760 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
+		2F4DDE1D2E198CD500607760 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		2F4DDE212E199DE300607760 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2FED14482E0AC15300D9CEDE /* Whiplash-iOS */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Whiplash-iOS";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2FED14432E0AC15300D9CEDE /* Frameworks */ = {
@@ -29,10 +77,140 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE262E19A24100607760 /* Preview Content */,
+				2F4DDE232E19A18100607760 /* Presentation */,
+				2F4DDDE82E19637C00607760 /* Resource */,
+				2F4DDDE72E19636400607760 /* DesignSystem */,
+			);
+			path = "Whiplash-iOS";
+			sourceTree = "<group>";
+		};
+		2F4DDDE72E19636400607760 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE1B2E198C9A00607760 /* Component */,
+				2F4DDE172E1983AC00607760 /* ViewModifier */,
+				2F4DDDFC2E1966A800607760 /* TextStyle */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		2F4DDDE82E19637C00607760 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDDE92E19638800607760 /* Font */,
+				2F4DDDDF2E19635D00607760 /* Assets.xcassets */,
+				2F4DDE152E197AB200607760 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2F4DDDE92E19638800607760 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE002E19676C00607760 /* Paperlogy */,
+				2F4DDDFF2E19676100607760 /* Pretendard */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2F4DDDFC2E1966A800607760 /* TextStyle */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDDFD2E1966D900607760 /* TextStyle.swift */,
+				2F4DDE132E1979AF00607760 /* BaseText.swift */,
+			);
+			path = TextStyle;
+			sourceTree = "<group>";
+		};
+		2F4DDDFF2E19676100607760 /* Pretendard */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDDEA2E19667700607760 /* Pretendard-Black.otf */,
+				2F4DDDEB2E19667700607760 /* Pretendard-Bold.otf */,
+				2F4DDDEC2E19667700607760 /* Pretendard-ExtraBold.otf */,
+				2F4DDDED2E19667700607760 /* Pretendard-ExtraLight.otf */,
+				2F4DDDEE2E19667700607760 /* Pretendard-Light.otf */,
+				2F4DDDEF2E19667700607760 /* Pretendard-Medium.otf */,
+				2F4DDDF02E19667700607760 /* Pretendard-Regular.otf */,
+				2F4DDDF12E19667700607760 /* Pretendard-SemiBold.otf */,
+				2F4DDDF22E19667700607760 /* Pretendard-Thin.otf */,
+			);
+			path = Pretendard;
+			sourceTree = "<group>";
+		};
+		2F4DDE002E19676C00607760 /* Paperlogy */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE012E19678200607760 /* Paperlogy-1Thin.ttf */,
+				2F4DDE022E19678200607760 /* Paperlogy-2ExtraLight.ttf */,
+				2F4DDE032E19678200607760 /* Paperlogy-3Light.ttf */,
+				2F4DDE042E19678200607760 /* Paperlogy-4Regular.ttf */,
+				2F4DDE052E19678200607760 /* Paperlogy-5Medium.ttf */,
+				2F4DDE062E19678200607760 /* Paperlogy-6SemiBold.ttf */,
+				2F4DDE072E19678200607760 /* Paperlogy-7Bold.ttf */,
+				2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */,
+				2F4DDE092E19678200607760 /* Paperlogy-9Black.ttf */,
+			);
+			path = Paperlogy;
+			sourceTree = "<group>";
+		};
+		2F4DDE172E1983AC00607760 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE182E1983D600607760 /* ShadowModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		2F4DDE1B2E198C9A00607760 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE1C2E198CAA00607760 /* Button */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		2F4DDE1C2E198CAA00607760 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE1D2E198CD500607760 /* BaseButton.swift */,
+				2F4DDE212E199DE300607760 /* LoginButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		2F4DDE232E19A18100607760 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE242E19A18D00607760 /* App */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2F4DDE242E19A18D00607760 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
+				2F4DDDE02E19635D00607760 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2F4DDE262E19A24100607760 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		2FED143D2E0AC15300D9CEDE = {
 			isa = PBXGroup;
 			children = (
-				2FED14482E0AC15300D9CEDE /* Whiplash-iOS */,
+				2F4DDDE22E19635D00607760 /* Whiplash-iOS */,
 				2FED14472E0AC15300D9CEDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +237,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				2FED14482E0AC15300D9CEDE /* Whiplash-iOS */,
 			);
 			name = "Whiplash-iOS";
 			packageProductDependencies = (
@@ -109,6 +284,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */,
+				2F4DDDF32E19667700607760 /* Pretendard-Light.otf in Resources */,
+				2F4DDDF42E19667700607760 /* Pretendard-ExtraBold.otf in Resources */,
+				2F4DDDF52E19667700607760 /* Pretendard-Medium.otf in Resources */,
+				2F4DDDF62E19667700607760 /* Pretendard-Regular.otf in Resources */,
+				2F4DDE0A2E19678200607760 /* Paperlogy-6SemiBold.ttf in Resources */,
+				2F4DDE0B2E19678200607760 /* Paperlogy-1Thin.ttf in Resources */,
+				2F4DDE0C2E19678200607760 /* Paperlogy-2ExtraLight.ttf in Resources */,
+				2F4DDE0D2E19678200607760 /* Paperlogy-3Light.ttf in Resources */,
+				2F4DDE0E2E19678200607760 /* Paperlogy-5Medium.ttf in Resources */,
+				2F4DDE0F2E19678200607760 /* Paperlogy-9Black.ttf in Resources */,
+				2F4DDE102E19678200607760 /* Paperlogy-7Bold.ttf in Resources */,
+				2F4DDE112E19678200607760 /* Paperlogy-8ExtraBold.ttf in Resources */,
+				2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */,
+				2F4DDDF72E19667700607760 /* Pretendard-SemiBold.otf in Resources */,
+				2F4DDDF82E19667700607760 /* Pretendard-ExtraLight.otf in Resources */,
+				2F4DDDF92E19667700607760 /* Pretendard-Bold.otf in Resources */,
+				2F4DDDFA2E19667700607760 /* Pretendard-Black.otf in Resources */,
+				2F4DDDFB2E19667700607760 /* Pretendard-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
+				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
+				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
+				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
+				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
+				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
+				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +456,7 @@
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Whiplash-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +486,7 @@
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Whiplash-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
