@@ -32,6 +32,7 @@
 		2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE042E19678200607760 /* Paperlogy-4Regular.ttf */; };
 		2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE132E1979AF00607760 /* BaseText.swift */; };
 		2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE182E1983D600607760 /* ShadowModifier.swift */; };
+		2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE1D2E198CD500607760 /* BaseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		2F4DDE132E1979AF00607760 /* BaseText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseText.swift; sourceTree = "<group>"; };
 		2F4DDE152E197AB200607760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F4DDE182E1983D600607760 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
+		2F4DDE1D2E198CD500607760 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,10 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDDE82E19637C00607760 /* Resource */,
-				2F4DDDE72E19636400607760 /* DesignSystem */,
 				2F4DDDDE2E19635D00607760 /* Preview Content */,
 				2F4DDDE02E19635D00607760 /* ContentView.swift */,
 				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
+				2F4DDDE72E19636400607760 /* DesignSystem */,
 			);
 			path = "Whiplash-iOS";
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 		2F4DDDE72E19636400607760 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE1B2E198C9A00607760 /* Component */,
 				2F4DDE172E1983AC00607760 /* ViewModifier */,
 				2F4DDDFC2E1966A800607760 /* TextStyle */,
 			);
@@ -170,6 +173,22 @@
 				2F4DDE182E1983D600607760 /* ShadowModifier.swift */,
 			);
 			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		2F4DDE1B2E198C9A00607760 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE1C2E198CAA00607760 /* Button */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		2F4DDE1C2E198CAA00607760 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE1D2E198CD500607760 /* BaseButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -283,6 +302,7 @@
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
+				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
