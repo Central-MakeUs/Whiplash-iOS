@@ -13,15 +13,15 @@
         <string>Pretendard-Regular.otf</string>
         <string>Pretendard-SemiBold.otf</string>
         <string>Pretendard-Thin.otf</string>
-        <string>Paperlogy-1Thin.otf</string>
-        <string>Paperlogy-2ExtraLight.otf</string>
-        <string>Paperlogy-3Light.otf</string>
-        <string>Paperlogy-4Regular.otf</string>
-        <string>Paperlogy-5Medium.otf</string>
-        <string>Paperlogy-6SemiBold.otf</string>
-        <string>Paperlogy-7Bold.otf</string>
-        <string>Paperlogy-8ExtraBold.otf</string>
-        <string>Paperlogy-9Black.otf</string>
+        <string>Paperlogy-1Thin.ttf</string>
+        <string>Paperlogy-2ExtraLight.ttf</string>
+        <string>Paperlogy-3Light.ttf</string>
+        <string>Paperlogy-4Regular.ttf</string>
+        <string>Paperlogy-5Medium.ttf</string>
+        <string>Paperlogy-6SemiBold.ttf</string>
+        <string>Paperlogy-7Bold.ttf</string>
+        <string>Paperlogy-8ExtraBold.ttf</string>
+        <string>Paperlogy-9Black.ttf</string>
     </array>
 </dict>
 </plist>
