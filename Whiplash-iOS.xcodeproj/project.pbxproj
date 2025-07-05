@@ -80,7 +80,6 @@
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2F4DDE262E19A24100607760 /* Preview Content */,
 				2F4DDE232E19A18100607760 /* Presentation */,
 				2F4DDDE82E19637C00607760 /* Resource */,
 				2F4DDDE72E19636400607760 /* DesignSystem */,
@@ -198,13 +197,6 @@
 				2F4DDDE02E19635D00607760 /* ContentView.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		2F4DDE262E19A24100607760 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -452,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Whiplash-iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -482,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Whiplash-iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
