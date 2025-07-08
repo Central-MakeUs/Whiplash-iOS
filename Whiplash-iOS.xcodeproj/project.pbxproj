@@ -35,6 +35,12 @@
 		2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE212E199DE300607760 /* LoginButton.swift */; };
 		2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6B2E1D009F00607760 /* LoginView.swift */; };
 		2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */; };
+		2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE702E1D031C00607760 /* AppLayout.swift */; };
+		2F4DDE742E1D043200607760 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2F4DDE732E1D043200607760 /* ComposableArchitecture */; };
+		2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE7B2E1D12FD00607760 /* KeychainProvider.swift */; };
+		2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */; };
+		2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE802E1D1C1600607760 /* SingInInfo.swift */; };
+		2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE842E1D1DB700607760 /* AuthRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +73,12 @@
 		2F4DDE212E199DE300607760 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		2F4DDE6B2E1D009F00607760 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
+		2F4DDE702E1D031C00607760 /* AppLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLayout.swift; sourceTree = "<group>"; };
+		2F4DDE752E1D08E000607760 /* Whiplash-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Whiplash-iOS.entitlements"; sourceTree = "<group>"; };
+		2F4DDE7B2E1D12FD00607760 /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
+		2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		2F4DDE802E1D1C1600607760 /* SingInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInInfo.swift; sourceTree = "<group>"; };
+		2F4DDE842E1D1DB700607760 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4DDE742E1D043200607760 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +97,13 @@
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE792E1D12AD00607760 /* Data */,
+				2F4DDE762E1D113B00607760 /* Domain */,
 				2F4DDE692E1D007200607760 /* Feature */,
 				2F4DDDE82E19637C00607760 /* Resource */,
 				2F4DDDE72E19636400607760 /* DesignSystem */,
 				2F4DDE242E19A18D00607760 /* App */,
+				2F4DDE782E1D12A800607760 /* Core */,
 			);
 			path = "Whiplash-iOS";
 			sourceTree = "<group>";
@@ -95,6 +111,7 @@
 		2F4DDDE72E19636400607760 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE6F2E1D030A00607760 /* Layout */,
 				2F4DDE1B2E198C9A00607760 /* Component */,
 				2F4DDE172E1983AC00607760 /* ViewModifier */,
 				2F4DDDFC2E1966A800607760 /* TextStyle */,
@@ -108,6 +125,7 @@
 				2F4DDDE92E19638800607760 /* Font */,
 				2F4DDDDF2E19635D00607760 /* Assets.xcassets */,
 				2F4DDE152E197AB200607760 /* Info.plist */,
+				2F4DDE752E1D08E000607760 /* Whiplash-iOS.entitlements */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -213,6 +231,79 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		2F4DDE6F2E1D030A00607760 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE702E1D031C00607760 /* AppLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		2F4DDE762E1D113B00607760 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE832E1D1D6700607760 /* Repository */,
+				2F4DDE822E1D1D0600607760 /* UseCase */,
+				2F4DDE7F2E1D1C0100607760 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2F4DDE782E1D12A800607760 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE7A2E1D12BB00607760 /* Keychain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2F4DDE792E1D12AD00607760 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE862E1D201500607760 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2F4DDE7A2E1D12BB00607760 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE7B2E1D12FD00607760 /* KeychainProvider.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		2F4DDE7F2E1D1C0100607760 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE802E1D1C1600607760 /* SingInInfo.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2F4DDE822E1D1D0600607760 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2F4DDE832E1D1D6700607760 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE842E1D1DB700607760 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2F4DDE862E1D201500607760 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		2FED143D2E0AC15300D9CEDE = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +337,7 @@
 			);
 			name = "Whiplash-iOS";
 			packageProductDependencies = (
+				2F4DDE732E1D043200607760 /* ComposableArchitecture */,
 			);
 			productName = "Whiplash-iOS";
 			productReference = 2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */;
@@ -275,6 +367,9 @@
 			);
 			mainGroup = 2FED143D2E0AC15300D9CEDE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2FED14472E0AC15300D9CEDE /* Products */;
 			projectDirPath = "";
@@ -323,9 +418,14 @@
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
+				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
 				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
 				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
+				2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */,
+				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
+				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
+				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
 			);
@@ -458,6 +558,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Resource/Whiplash-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -475,8 +577,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "KyoungminNam.Whiplash-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akuma.calling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,6 +591,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Resource/Whiplash-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -505,8 +610,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "KyoungminNam.Whiplash-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akuma.calling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -535,6 +641,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.20.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F4DDE732E1D043200607760 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FED143E2E0AC15300D9CEDE /* Project object */;
 }
