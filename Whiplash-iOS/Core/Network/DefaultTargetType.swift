@@ -5,6 +5,7 @@
 //  Created by 남경민 on 7/8/25.
 //
 
+import Foundation
 import Moya
 
 public enum DefaultTargetType {
