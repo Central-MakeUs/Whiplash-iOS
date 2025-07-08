@@ -48,6 +48,8 @@
 		2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE922E1D34D000607760 /* Respondable.swift */; };
 		2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */; };
 		2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */; };
+		2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */; };
+		2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		2F4DDE922E1D34D000607760 /* Respondable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respondable.swift; sourceTree = "<group>"; };
 		2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequestDTO.swift; sourceTree = "<group>"; };
 		2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
+		2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReissueResponseDTO.swift; sourceTree = "<group>"; };
+		2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReissueRequestDTO.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -354,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */,
+				2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */,
+				2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
 				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
+				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
@@ -502,6 +509,7 @@
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
 				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
 				2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */,
+				2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 				2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */,
 				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
