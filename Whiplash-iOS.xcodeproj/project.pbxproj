@@ -33,6 +33,8 @@
 		2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE182E1983D600607760 /* ShadowModifier.swift */; };
 		2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE1D2E198CD500607760 /* BaseButton.swift */; };
 		2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE212E199DE300607760 /* LoginButton.swift */; };
+		2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6B2E1D009F00607760 /* LoginView.swift */; };
+		2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		2F4DDE182E1983D600607760 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
 		2F4DDE1D2E198CD500607760 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		2F4DDE212E199DE300607760 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		2F4DDE6B2E1D009F00607760 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,9 +84,10 @@
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2F4DDE232E19A18100607760 /* Presentation */,
+				2F4DDE692E1D007200607760 /* Feature */,
 				2F4DDDE82E19637C00607760 /* Resource */,
 				2F4DDDE72E19636400607760 /* DesignSystem */,
+				2F4DDE242E19A18D00607760 /* App */,
 			);
 			path = "Whiplash-iOS";
 			sourceTree = "<group>";
@@ -182,14 +187,6 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		2F4DDE232E19A18100607760 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				2F4DDE242E19A18D00607760 /* App */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		2F4DDE242E19A18D00607760 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +194,23 @@
 				2F4DDDE02E19635D00607760 /* ContentView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		2F4DDE692E1D007200607760 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE6A2E1D007E00607760 /* Login */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		2F4DDE6A2E1D007E00607760 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE6B2E1D009F00607760 /* LoginView.swift */,
+				2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -311,7 +325,9 @@
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
 				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
+				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
+				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
