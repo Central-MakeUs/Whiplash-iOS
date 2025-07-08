@@ -252,6 +252,7 @@
 		2F4DDE782E1D12A800607760 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE872E1D2CFD00607760 /* Network */,
 				2F4DDE7A2E1D12BB00607760 /* Keychain */,
 			);
 			path = Core;
@@ -302,6 +303,13 @@
 			children = (
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		2F4DDE872E1D2CFD00607760 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -369,6 +377,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				2F4DDE882E1D2D9D00607760 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2FED14472E0AC15300D9CEDE /* Products */;
@@ -649,6 +658,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.20.2;
+			};
+		};
+		2F4DDE882E1D2D9D00607760 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
