@@ -46,6 +46,8 @@
 		2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8D2E1D328800607760 /* APIClient.swift */; };
 		2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8F2E1D34B000607760 /* Requestable.swift */; };
 		2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE922E1D34D000607760 /* Respondable.swift */; };
+		2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */; };
+		2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		2F4DDE8D2E1D328800607760 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		2F4DDE8F2E1D34B000607760 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		2F4DDE922E1D34D000607760 /* Respondable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respondable.swift; sourceTree = "<group>"; };
+		2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequestDTO.swift; sourceTree = "<group>"; };
+		2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -311,6 +315,8 @@
 		2F4DDE862E1D201500607760 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE9C2E1D3DC000607760 /* RepositoryImpl */,
+				2F4DDE952E1D3CF200607760 /* DTO */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -333,6 +339,38 @@
 				2F4DDDE82E19637C00607760 /* Resource */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		2F4DDE952E1D3CF200607760 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE972E1D3D0000607760 /* Response */,
+				2F4DDE962E1D3CF800607760 /* Request */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		2F4DDE962E1D3CF800607760 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2F4DDE972E1D3D0000607760 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2F4DDE9C2E1D3DC000607760 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryImpl;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -459,9 +497,11 @@
 				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
 				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
 				2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */,
+				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
 				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
+				2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 				2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */,
 				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
