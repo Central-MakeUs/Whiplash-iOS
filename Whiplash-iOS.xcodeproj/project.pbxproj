@@ -42,6 +42,7 @@
 		2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE802E1D1C1600607760 /* SingInInfo.swift */; };
 		2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE842E1D1DB700607760 /* AuthRepository.swift */; };
 		2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE892E1D2E3000607760 /* Config.xcconfig */; };
+		2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		2F4DDE802E1D1C1600607760 /* SingInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInInfo.swift; sourceTree = "<group>"; };
 		2F4DDE842E1D1DB700607760 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		2F4DDE892E1D2E3000607760 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTargetType.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -311,6 +313,7 @@
 		2F4DDE872E1D2CFD00607760 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
+				2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
 				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
 				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
