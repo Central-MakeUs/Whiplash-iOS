@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol AuthRepository {
-    var signIn: @Sendable () async throws -> SignInInfo { get }
-    var logout: @Sendable () async throws -> Void { get }
+    var signIn: @Sendable ( _ socialType: SocialLoginType) async throws -> SignInInfo { get }
+    var logout: @Sendable ( _ socialType: SocialLoginType) async throws -> Void { get }
 }

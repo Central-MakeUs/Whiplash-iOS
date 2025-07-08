@@ -13,12 +13,12 @@ public enum AuthUseCaseError: Error {
 }
 
 public struct AuthUseCase {
-    public var signIn: @Sendable (_ repository: AuthRepository) async throws -> SignInInfo
-    public var logout: @Sendable (_ repository: AuthRepository) async throws -> Void
+    public var signIn: @Sendable (_ repository: AuthRepository, _ socialType: SocialLoginType) async throws -> SignInInfo
+    public var logout: @Sendable (_ repository: AuthRepository, _ socialType: SocialLoginType) async throws -> Void
 
     public init(
-        signIn: @escaping @Sendable (_ repository: AuthRepository) async throws -> SignInInfo,
-        logout: @escaping @Sendable (_ repository: AuthRepository) async throws -> Void
+        signIn: @escaping @Sendable (_ repository: AuthRepository, _ socialType: SocialLoginType) async throws -> SignInInfo,
+        logout: @escaping @Sendable (_ repository: AuthRepository, _ socialType: SocialLoginType) async throws -> Void
     ) {
         self.signIn = signIn
         self.logout = logout
@@ -28,12 +28,12 @@ public struct AuthUseCase {
 extension AuthUseCase: DependencyKey {
     public static let liveValue: Self = {
         return Self(
-            signIn: { repository in
-                let response = try await repository.signIn()
+            signIn: { repository, type in
+                let response = try await repository.signIn(type)
                 return response
             },
-            logout: { appleAuthService in
-                return try await appleAuthService.logout()
+            logout: { repository, type in
+                return try await repository.logout(type)
             }
         )
     }()
