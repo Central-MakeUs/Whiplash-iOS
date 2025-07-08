@@ -44,6 +44,8 @@
 		2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE892E1D2E3000607760 /* Config.xcconfig */; };
 		2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */; };
 		2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8D2E1D328800607760 /* APIClient.swift */; };
+		2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8F2E1D34B000607760 /* Requestable.swift */; };
+		2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE922E1D34D000607760 /* Respondable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		2F4DDE892E1D2E3000607760 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTargetType.swift; sourceTree = "<group>"; };
 		2F4DDE8D2E1D328800607760 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2F4DDE8F2E1D34B000607760 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		2F4DDE922E1D34D000607760 /* Respondable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respondable.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,11 +107,10 @@
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE942E1D355B00607760 /* Shared */,
 				2F4DDE792E1D12AD00607760 /* Data */,
 				2F4DDE762E1D113B00607760 /* Domain */,
 				2F4DDE692E1D007200607760 /* Feature */,
-				2F4DDDE82E19637C00607760 /* Resource */,
-				2F4DDDE72E19636400607760 /* DesignSystem */,
 				2F4DDE242E19A18D00607760 /* App */,
 				2F4DDE782E1D12A800607760 /* Core */,
 			);
@@ -317,8 +320,19 @@
 			children = (
 				2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */,
 				2F4DDE8D2E1D328800607760 /* APIClient.swift */,
+				2F4DDE8F2E1D34B000607760 /* Requestable.swift */,
+				2F4DDE922E1D34D000607760 /* Respondable.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		2F4DDE942E1D355B00607760 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDDE72E19636400607760 /* DesignSystem */,
+				2F4DDDE82E19637C00607760 /* Resource */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -438,6 +452,7 @@
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
 				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
+				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
 				2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
@@ -448,6 +463,7 @@
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
 				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
+				2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */,
 				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
