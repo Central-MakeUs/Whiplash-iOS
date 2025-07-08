@@ -43,6 +43,7 @@
 		2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE842E1D1DB700607760 /* AuthRepository.swift */; };
 		2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE892E1D2E3000607760 /* Config.xcconfig */; };
 		2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */; };
+		2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8D2E1D328800607760 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		2F4DDE842E1D1DB700607760 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		2F4DDE892E1D2E3000607760 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTargetType.swift; sourceTree = "<group>"; };
+		2F4DDE8D2E1D328800607760 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */,
+				2F4DDE8D2E1D328800607760 /* APIClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
+				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
 				2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */,
