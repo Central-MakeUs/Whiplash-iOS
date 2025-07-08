@@ -34,10 +34,7 @@ struct LoginButton: View {
     }
 }
 
-enum SocialLoginType {
-    case google
-    case apple
-    case kakao
+extension SocialLoginType {
 
     var title: String {
         switch self {
