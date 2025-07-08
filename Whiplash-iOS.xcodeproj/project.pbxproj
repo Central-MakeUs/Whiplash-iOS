@@ -50,6 +50,10 @@
 		2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */; };
 		2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */; };
 		2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */; };
+		2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */; };
+		2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA42E1D460600607760 /* AppleAuthService.swift */; };
+		2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA62E1D461500607760 /* KakaoAuthService.swift */; };
+		2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA82E1D462100607760 /* GoogleAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +101,10 @@
 		2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
 		2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReissueResponseDTO.swift; sourceTree = "<group>"; };
 		2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReissueRequestDTO.swift; sourceTree = "<group>"; };
+		2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginType.swift; sourceTree = "<group>"; };
+		2F4DDEA42E1D460600607760 /* AppleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthService.swift; sourceTree = "<group>"; };
+		2F4DDEA62E1D461500607760 /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
+		2F4DDEA82E1D462100607760 /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -296,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDE802E1D1C1600607760 /* SingInInfo.swift */,
+				2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 		2F4DDE862E1D201500607760 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDEA32E1D45F000607760 /* Service */,
 				2F4DDE9C2E1D3DC000607760 /* RepositoryImpl */,
 				2F4DDE952E1D3CF200607760 /* DTO */,
 			);
@@ -377,6 +387,16 @@
 			children = (
 			);
 			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		2F4DDEA32E1D45F000607760 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEA42E1D460600607760 /* AppleAuthService.swift */,
+				2F4DDEA62E1D461500607760 /* KakaoAuthService.swift */,
+				2F4DDEA82E1D462100607760 /* GoogleAuthService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -495,7 +515,10 @@
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
 				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
+				2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */,
+				2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */,
 				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
+				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
@@ -504,6 +527,7 @@
 				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
 				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
 				2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */,
+				2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */,
 				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
