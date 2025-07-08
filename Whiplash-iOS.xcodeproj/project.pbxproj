@@ -41,6 +41,7 @@
 		2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */; };
 		2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE802E1D1C1600607760 /* SingInInfo.swift */; };
 		2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE842E1D1DB700607760 /* AuthRepository.swift */; };
+		2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE892E1D2E3000607760 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		2F4DDE802E1D1C1600607760 /* SingInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInInfo.swift; sourceTree = "<group>"; };
 		2F4DDE842E1D1DB700607760 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		2F4DDE892E1D2E3000607760 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				2F4DDDDF2E19635D00607760 /* Assets.xcassets */,
 				2F4DDE152E197AB200607760 /* Info.plist */,
 				2F4DDE752E1D08E000607760 /* Whiplash-iOS.entitlements */,
+				2F4DDE892E1D2E3000607760 /* Config.xcconfig */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */,
 				2F4DDDF72E19667700607760 /* Pretendard-SemiBold.otf in Resources */,
 				2F4DDDF82E19667700607760 /* Pretendard-ExtraLight.otf in Resources */,
+				2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */,
 				2F4DDDF92E19667700607760 /* Pretendard-Bold.otf in Resources */,
 				2F4DDDFA2E19667700607760 /* Pretendard-Black.otf in Resources */,
 				2F4DDDFB2E19667700607760 /* Pretendard-Thin.otf in Resources */,
