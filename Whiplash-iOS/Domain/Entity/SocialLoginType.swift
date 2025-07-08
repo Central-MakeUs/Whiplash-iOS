@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public enum SocialLoginType: String, Codable {
+    case apple
+    case kakao
+    case google
+}
