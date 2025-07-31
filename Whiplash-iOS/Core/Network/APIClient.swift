@@ -52,10 +52,12 @@ public final class APIClient {
                 switch result {
                 case .success(let response):
                     continuation.resume(returning: response)
+                    Logger.shared.log(category: .network, "응답 내용: \(response))")
+
                 case .failure(let error):
                     let response = error.response
-                    print("에러 statusCode:", response!.statusCode)
-                    print("에러 body:", String(data: response!.data, encoding: .utf8) ?? "nil")
+                    Logger.shared.log(level: .error, category: .network, "에러 코드: \(response!.statusCode)")
+                    Logger.shared.log(level: .error, category: .network, "에러 메세지: \(String(data: response!.data, encoding: .utf8))")
                     continuation.resume(throwing: error)
                 }
             }
