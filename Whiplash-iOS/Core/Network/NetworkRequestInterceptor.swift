@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-final class NetworkRequestInterceptor: RequestInterceptor {
+open class NetworkRequestInterceptor: RequestInterceptor {
     
     public init () {}
     

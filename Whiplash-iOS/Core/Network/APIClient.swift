@@ -12,7 +12,9 @@ public final class APIClient {
     private let provider: MoyaProvider<DefaultTargetType>
     
     public init() {
-        provider = MoyaProvider<DefaultTargetType>()
+        let insterceptor = AuthInterceptor.shared
+        let session = Session(interceptor: insterceptor)
+        provider = MoyaProvider<DefaultTargetType>(session: session)
     }
     
     /// response가 있는 api request에 사용
@@ -51,6 +53,9 @@ public final class APIClient {
                 case .success(let response):
                     continuation.resume(returning: response)
                 case .failure(let error):
+                    let response = error.response
+                    print("에러 statusCode:", response!.statusCode)
+                    print("에러 body:", String(data: response!.data, encoding: .utf8) ?? "nil")
                     continuation.resume(throwing: error)
                 }
             }

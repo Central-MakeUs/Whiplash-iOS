@@ -19,6 +19,7 @@ extension DefaultTargetType: TargetType {
         guard let baseUrlString = Bundle.current.object(forInfoDictionaryKey: "BASE_URL") as? String else {
             fatalError("BASE_URL not found in Info.plist")
         }
+        print(baseUrlString)
         guard let url = URL(string: baseUrlString) else {
             fatalError("URL 타입 변환 실패")
         }
@@ -28,7 +29,7 @@ extension DefaultTargetType: TargetType {
     public var path: String {
         switch self {
         case .signIn:
-            return "/signIn"
+            return "/api/auth/social-login"
         case .reissueToken:
             return "/api/auth/reissue"
         }
