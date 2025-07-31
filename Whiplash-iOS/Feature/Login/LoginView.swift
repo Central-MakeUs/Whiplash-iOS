@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct LoginView: View {
+    let store: StoreOf<LoginFeature>
+    
+    init(store: StoreOf<LoginFeature>) {
+        self.store = store
+    }
+    
     var body: some View {
         ZStack {
             Color.gray900
@@ -17,13 +24,15 @@ struct LoginView: View {
                 Spacer()
                 
                 LoginButton(type: .apple) {
-                    //
+                    store.send(.loginButtonTapped(.apple))
                 }
+                
                 LoginButton(type: .kakao) {
-                    //
+                    store.send(.loginButtonTapped(.kakao))
                 }
+                
                 LoginButton(type: .google) {
-                    //
+                    store.send(.loginButtonTapped(.google))
                 }
                 
                 Spacer().frame(height: 94)
@@ -34,5 +43,7 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    LoginView(store: Store(initialState: LoginFeature.State(),
+                           reducer: { LoginFeature() })
+    )
 }
