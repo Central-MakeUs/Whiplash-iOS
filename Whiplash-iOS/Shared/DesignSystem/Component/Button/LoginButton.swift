@@ -21,7 +21,8 @@ struct LoginButton: View {
                          color: type.foregroundColor)
             }
             .padding(.horizontal, 24)
-            .frame(width: 324, height: 44)
+            .frame(maxWidth: .infinity)
+            .frame(height: 44)
             .background(type.backgroundColor)
             .cornerRadius(4)
             .overlay(
@@ -33,10 +34,7 @@ struct LoginButton: View {
     }
 }
 
-enum SocialLoginType {
-    case google
-    case apple
-    case kakao
+extension SocialLoginType {
 
     var title: String {
         switch self {

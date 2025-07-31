@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7AC2E3BDC7A005273A5 /* Response.swift */; };
+		2F02F7B02E3BE17B005273A5 /* DependencyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */; };
+		2F02F7B22E3BF0FD005273A5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B12E3BF0FD005273A5 /* Moya */; };
+		2F02F7B42E3C009C005273A5 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B32E3C009C005273A5 /* KakaoSDKAuth */; };
+		2F02F7B62E3C009C005273A5 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B52E3C009C005273A5 /* KakaoSDKCommon */; };
+		2F02F7B82E3C009C005273A5 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B72E3C009C005273A5 /* KakaoSDKUser */; };
+		2F02F7BA2E3C00F0005273A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */; };
+		2F02F7BC2E3C02A3005273A5 /* KakaoAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7BB2E3C02A3005273A5 /* KakaoAuthRepository.swift */; };
+		2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */; };
+		2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */; };
+		2F02F7C52E3C0945005273A5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7C42E3C0945005273A5 /* GoogleSignIn */; };
+		2F02F7C72E3C0945005273A5 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7C62E3C0945005273A5 /* GoogleSignInSwift */; };
+		2F02F7C92E3C0B15005273A5 /* GoogleAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7C82E3C0B15005273A5 /* GoogleAuthRepository.swift */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
 		2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* ContentView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
@@ -33,9 +46,43 @@
 		2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE182E1983D600607760 /* ShadowModifier.swift */; };
 		2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE1D2E198CD500607760 /* BaseButton.swift */; };
 		2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE212E199DE300607760 /* LoginButton.swift */; };
+		2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6B2E1D009F00607760 /* LoginView.swift */; };
+		2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */; };
+		2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE702E1D031C00607760 /* AppLayout.swift */; };
+		2F4DDE742E1D043200607760 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2F4DDE732E1D043200607760 /* ComposableArchitecture */; };
+		2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE7B2E1D12FD00607760 /* KeychainProvider.swift */; };
+		2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */; };
+		2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE802E1D1C1600607760 /* SingInInfo.swift */; };
+		2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE842E1D1DB700607760 /* AuthRepository.swift */; };
+		2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE892E1D2E3000607760 /* Config.xcconfig */; };
+		2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */; };
+		2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8D2E1D328800607760 /* APIClient.swift */; };
+		2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE8F2E1D34B000607760 /* Requestable.swift */; };
+		2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE922E1D34D000607760 /* Respondable.swift */; };
+		2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */; };
+		2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */; };
+		2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */; };
+		2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */; };
+		2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */; };
+		2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA42E1D460600607760 /* AppleAuthService.swift */; };
+		2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA62E1D461500607760 /* KakaoAuthService.swift */; };
+		2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEA82E1D462100607760 /* GoogleAuthService.swift */; };
+		2F4DDEAB2E1D48D100607760 /* AppleAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEAA2E1D48D100607760 /* AppleAuthRepository.swift */; };
+		2F4DDEAE2E209F1800607760 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEAD2E209F1700607760 /* Logger.swift */; };
+		2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEB22E20DDC800607760 /* NetworkRequestInterceptor.swift */; };
+		2F4DDEB62E20EDA000607760 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEB52E20EDA000607760 /* AuthInterceptor.swift */; };
+		2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEB92E20F21B00607760 /* Date+.swift */; };
+		2F4DDEBC2E222E6900607760 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDEBB2E222E6900607760 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F02F7AC2E3BDC7A005273A5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyValues.swift; sourceTree = "<group>"; };
+		2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F02F7BB2E3C02A3005273A5 /* KakaoAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthRepository.swift; sourceTree = "<group>"; };
+		2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoURLHandler.swift; sourceTree = "<group>"; };
+		2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLRouter.swift; sourceTree = "<group>"; };
+		2F02F7C82E3C0B15005273A5 /* GoogleAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthRepository.swift; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F4DDDE02E19635D00607760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
@@ -63,6 +110,34 @@
 		2F4DDE182E1983D600607760 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
 		2F4DDE1D2E198CD500607760 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		2F4DDE212E199DE300607760 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		2F4DDE6B2E1D009F00607760 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
+		2F4DDE702E1D031C00607760 /* AppLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLayout.swift; sourceTree = "<group>"; };
+		2F4DDE752E1D08E000607760 /* Whiplash-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Whiplash-iOS.entitlements"; sourceTree = "<group>"; };
+		2F4DDE7B2E1D12FD00607760 /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
+		2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		2F4DDE802E1D1C1600607760 /* SingInInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInInfo.swift; sourceTree = "<group>"; };
+		2F4DDE842E1D1DB700607760 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		2F4DDE892E1D2E3000607760 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTargetType.swift; sourceTree = "<group>"; };
+		2F4DDE8D2E1D328800607760 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2F4DDE8F2E1D34B000607760 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		2F4DDE922E1D34D000607760 /* Respondable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respondable.swift; sourceTree = "<group>"; };
+		2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequestDTO.swift; sourceTree = "<group>"; };
+		2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponseDTO.swift; sourceTree = "<group>"; };
+		2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReissueResponseDTO.swift; sourceTree = "<group>"; };
+		2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenReissueRequestDTO.swift; sourceTree = "<group>"; };
+		2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginType.swift; sourceTree = "<group>"; };
+		2F4DDEA42E1D460600607760 /* AppleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthService.swift; sourceTree = "<group>"; };
+		2F4DDEA62E1D461500607760 /* KakaoAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthService.swift; sourceTree = "<group>"; };
+		2F4DDEA82E1D462100607760 /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
+		2F4DDEAA2E1D48D100607760 /* AppleAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthRepository.swift; sourceTree = "<group>"; };
+		2F4DDEAD2E209F1700607760 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		2F4DDEB02E20A27C00607760 /* OSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSLog.framework; path = System/Library/Frameworks/OSLog.framework; sourceTree = SDKROOT; };
+		2F4DDEB22E20DDC800607760 /* NetworkRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestInterceptor.swift; sourceTree = "<group>"; };
+		2F4DDEB52E20EDA000607760 /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
+		2F4DDEB92E20F21B00607760 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		2F4DDEBB2E222E6900607760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,19 +146,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F02F7B62E3C009C005273A5 /* KakaoSDKCommon in Frameworks */,
+				2F02F7B22E3BF0FD005273A5 /* Moya in Frameworks */,
+				2F02F7C72E3C0945005273A5 /* GoogleSignInSwift in Frameworks */,
+				2F4DDE742E1D043200607760 /* ComposableArchitecture in Frameworks */,
+				2F02F7B82E3C009C005273A5 /* KakaoSDKUser in Frameworks */,
+				2F02F7B42E3C009C005273A5 /* KakaoSDKAuth in Frameworks */,
+				2F02F7C52E3C0945005273A5 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F02F7AB2E3BCD71005273A5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEAA2E1D48D100607760 /* AppleAuthRepository.swift */,
+				2F02F7BB2E3C02A3005273A5 /* KakaoAuthRepository.swift */,
+				2F02F7C82E3C0B15005273A5 /* GoogleAuthRepository.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2F02F7BD2E3C03AC005273A5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F7BE2E3C03B3005273A5 /* Handler */,
+				2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2F02F7BE2E3C03B3005273A5 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2F4DDE262E19A24100607760 /* Preview Content */,
-				2F4DDE232E19A18100607760 /* Presentation */,
-				2F4DDDE82E19637C00607760 /* Resource */,
-				2F4DDDE72E19636400607760 /* DesignSystem */,
+				2F4DDE942E1D355B00607760 /* Shared */,
+				2F4DDE792E1D12AD00607760 /* Data */,
+				2F4DDE762E1D113B00607760 /* Domain */,
+				2F4DDE692E1D007200607760 /* Feature */,
+				2F4DDE242E19A18D00607760 /* App */,
+				2F4DDE782E1D12A800607760 /* Core */,
 			);
 			path = "Whiplash-iOS";
 			sourceTree = "<group>";
@@ -91,6 +202,7 @@
 		2F4DDDE72E19636400607760 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE6F2E1D030A00607760 /* Layout */,
 				2F4DDE1B2E198C9A00607760 /* Component */,
 				2F4DDE172E1983AC00607760 /* ViewModifier */,
 				2F4DDDFC2E1966A800607760 /* TextStyle */,
@@ -101,9 +213,12 @@
 		2F4DDDE82E19637C00607760 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDEBB2E222E6900607760 /* GoogleService-Info.plist */,
 				2F4DDDE92E19638800607760 /* Font */,
 				2F4DDDDF2E19635D00607760 /* Assets.xcassets */,
 				2F4DDE152E197AB200607760 /* Info.plist */,
+				2F4DDE752E1D08E000607760 /* Whiplash-iOS.entitlements */,
+				2F4DDE892E1D2E3000607760 /* Config.xcconfig */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -183,34 +298,228 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		2F4DDE232E19A18100607760 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				2F4DDE242E19A18D00607760 /* App */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		2F4DDE242E19A18D00607760 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
 				2F4DDDE02E19635D00607760 /* ContentView.swift */,
+				2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */,
+				2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		2F4DDE262E19A24100607760 /* Preview Content */ = {
+		2F4DDE692E1D007200607760 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2F4DDE6A2E1D007E00607760 /* Login */,
 			);
-			path = "Preview Content";
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		2F4DDE6A2E1D007E00607760 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE6B2E1D009F00607760 /* LoginView.swift */,
+				2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2F4DDE6F2E1D030A00607760 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE702E1D031C00607760 /* AppLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		2F4DDE762E1D113B00607760 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE832E1D1D6700607760 /* Repository */,
+				2F4DDE822E1D1D0600607760 /* UseCase */,
+				2F4DDE7F2E1D1C0100607760 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2F4DDE782E1D12A800607760 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F7BD2E3C03AC005273A5 /* Router */,
+				2F4DDE872E1D2CFD00607760 /* Network */,
+				2F4DDE7A2E1D12BB00607760 /* Keychain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2F4DDE792E1D12AD00607760 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE862E1D201500607760 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2F4DDE7A2E1D12BB00607760 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE7B2E1D12FD00607760 /* KeychainProvider.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		2F4DDE7F2E1D1C0100607760 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE802E1D1C1600607760 /* SingInInfo.swift */,
+				2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2F4DDE822E1D1D0600607760 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE7D2E1D145700607760 /* AuthUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2F4DDE832E1D1D6700607760 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE842E1D1DB700607760 /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2F4DDE862E1D201500607760 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEB42E20ED7C00607760 /* Interceptor */,
+				2F4DDEA32E1D45F000607760 /* Service */,
+				2F4DDE9C2E1D3DC000607760 /* RepositoryImpl */,
+				2F4DDE952E1D3CF200607760 /* DTO */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		2F4DDE872E1D2CFD00607760 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE8B2E1D307A00607760 /* DefaultTargetType.swift */,
+				2F4DDE8D2E1D328800607760 /* APIClient.swift */,
+				2F4DDE8F2E1D34B000607760 /* Requestable.swift */,
+				2F4DDE922E1D34D000607760 /* Respondable.swift */,
+				2F4DDEB22E20DDC800607760 /* NetworkRequestInterceptor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2F4DDE942E1D355B00607760 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEB72E20F20200607760 /* Util */,
+				2F4DDEAC2E209F0100607760 /* Logger */,
+				2F4DDDE72E19636400607760 /* DesignSystem */,
+				2F4DDDE82E19637C00607760 /* Resource */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2F4DDE952E1D3CF200607760 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE972E1D3D0000607760 /* Response */,
+				2F4DDE962E1D3CF800607760 /* Request */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		2F4DDE962E1D3CF800607760 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE982E1D3D2200607760 /* SignInRequestDTO.swift */,
+				2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2F4DDE972E1D3D0000607760 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDE9A2E1D3D5400607760 /* SignInResponseDTO.swift */,
+				2F4DDE9D2E1D409E00607760 /* TokenReissueResponseDTO.swift */,
+				2F02F7AC2E3BDC7A005273A5 /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2F4DDE9C2E1D3DC000607760 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F7AB2E3BCD71005273A5 /* Auth */,
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		2F4DDEA32E1D45F000607760 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEA42E1D460600607760 /* AppleAuthService.swift */,
+				2F4DDEA62E1D461500607760 /* KakaoAuthService.swift */,
+				2F4DDEA82E1D462100607760 /* GoogleAuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2F4DDEAC2E209F0100607760 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEAD2E209F1700607760 /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		2F4DDEAF2E20A27C00607760 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEB02E20A27C00607760 /* OSLog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F4DDEB42E20ED7C00607760 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEB52E20EDA000607760 /* AuthInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		2F4DDEB72E20F20200607760 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEB82E20F20C00607760 /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		2F4DDEB82E20F20C00607760 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2F4DDEB92E20F21B00607760 /* Date+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
 			isa = PBXGroup;
 			children = (
 				2F4DDDE22E19635D00607760 /* Whiplash-iOS */,
+				2F4DDEAF2E20A27C00607760 /* Frameworks */,
 				2FED14472E0AC15300D9CEDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -240,6 +549,13 @@
 			);
 			name = "Whiplash-iOS";
 			packageProductDependencies = (
+				2F4DDE732E1D043200607760 /* ComposableArchitecture */,
+				2F02F7B12E3BF0FD005273A5 /* Moya */,
+				2F02F7B32E3C009C005273A5 /* KakaoSDKAuth */,
+				2F02F7B52E3C009C005273A5 /* KakaoSDKCommon */,
+				2F02F7B72E3C009C005273A5 /* KakaoSDKUser */,
+				2F02F7C42E3C0945005273A5 /* GoogleSignIn */,
+				2F02F7C62E3C0945005273A5 /* GoogleSignInSwift */,
 			);
 			productName = "Whiplash-iOS";
 			productReference = 2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */;
@@ -269,6 +585,12 @@
 			);
 			mainGroup = 2FED143D2E0AC15300D9CEDE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				2F4DDE882E1D2D9D00607760 /* XCRemoteSwiftPackageReference "Moya" */,
+				2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				2F02F7C32E3C0945005273A5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2FED14472E0AC15300D9CEDE /* Products */;
 			projectDirPath = "";
@@ -297,9 +619,11 @@
 				2F4DDE0F2E19678200607760 /* Paperlogy-9Black.ttf in Resources */,
 				2F4DDE102E19678200607760 /* Paperlogy-7Bold.ttf in Resources */,
 				2F4DDE112E19678200607760 /* Paperlogy-8ExtraBold.ttf in Resources */,
+				2F4DDEBC2E222E6900607760 /* GoogleService-Info.plist in Resources */,
 				2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */,
 				2F4DDDF72E19667700607760 /* Pretendard-SemiBold.otf in Resources */,
 				2F4DDDF82E19667700607760 /* Pretendard-ExtraLight.otf in Resources */,
+				2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */,
 				2F4DDDF92E19667700607760 /* Pretendard-Bold.otf in Resources */,
 				2F4DDDFA2E19667700607760 /* Pretendard-Black.otf in Resources */,
 				2F4DDDFB2E19667700607760 /* Pretendard-Thin.otf in Resources */,
@@ -313,13 +637,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */,
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
+				2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
+				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
+				2F4DDEAB2E1D48D100607760 /* AppleAuthRepository.swift in Sources */,
+				2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */,
+				2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */,
+				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
+				2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */,
+				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
+				2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */,
+				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
+				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
+				2F4DDEAE2E209F1800607760 /* Logger.swift in Sources */,
+				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
+				2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
 				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
+				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
+				2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */,
+				2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */,
+				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
+				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
+				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
+				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
+				2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */,
+				2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
+				2F4DDEB62E20EDA000607760 /* AuthInterceptor.swift in Sources */,
+				2F02F7C92E3C0B15005273A5 /* GoogleAuthRepository.swift in Sources */,
+				2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */,
+				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
+				2F02F7BC2E3C02A3005273A5 /* KakaoAuthRepository.swift in Sources */,
+				2F02F7BA2E3C00F0005273A5 /* AppDelegate.swift in Sources */,
+				2F02F7B02E3BE17B005273A5 /* DependencyValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +683,7 @@
 /* Begin XCBuildConfiguration section */
 		2FED14522E0AC15600D9CEDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F4DDE892E1D2E3000607760 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -450,9 +806,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Shared/Resource/Whiplash-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Whiplash-iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -467,8 +825,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "KyoungminNam.Whiplash-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akuma.calling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,9 +839,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Shared/Resource/Whiplash-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Whiplash-iOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6B2F2JB38S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -497,8 +858,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "KyoungminNam.Whiplash-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akuma.calling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,6 +889,79 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F02F7C32E3C0945005273A5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.20.2;
+			};
+		};
+		2F4DDE882E1D2D9D00607760 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.24.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F02F7B12E3BF0FD005273A5 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDE882E1D2D9D00607760 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		2F02F7B32E3C009C005273A5 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		2F02F7B52E3C009C005273A5 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		2F02F7B72E3C009C005273A5 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+		2F02F7C42E3C0945005273A5 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F02F7C32E3C0945005273A5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		2F02F7C62E3C0945005273A5 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F02F7C32E3C0945005273A5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		2F4DDE732E1D043200607760 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FED143E2E0AC15300D9CEDE /* Project object */;
 }
