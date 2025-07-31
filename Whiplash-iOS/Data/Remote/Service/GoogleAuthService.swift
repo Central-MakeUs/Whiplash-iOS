@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class GoogleAuthService {
+    
+    func signIn() async throws -> String {
+        return "mock_google_token"
+    }
+    
+}

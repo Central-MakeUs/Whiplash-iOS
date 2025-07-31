@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class KakaoAuthService: NSObject {
+    
+    func signIn() async throws -> String {
+        return "mock_kakao_token"
+    }
+    
+}
