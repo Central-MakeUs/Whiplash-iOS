@@ -23,9 +23,9 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                LoginButton(type: .apple) {
-                    store.send(.loginButtonTapped(.apple))
-                }
+                Image(.Image.appLogo)
+                
+                Spacer()
                 
                 LoginButton(type: .kakao) {
                     store.send(.loginButtonTapped(.kakao))
@@ -34,6 +34,11 @@ struct LoginView: View {
                 LoginButton(type: .google) {
                     store.send(.loginButtonTapped(.google))
                 }
+                
+                LoginButton(type: .apple) {
+                    store.send(.loginButtonTapped(.apple))
+                }
+                
                 
                 Spacer().frame(height: 94)
             }
