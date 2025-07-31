@@ -28,10 +28,8 @@ public struct LoginFeature {
         case didFinishLogin(shouldCreateProfile: Bool)
     }
     
-    @Dependency(AuthUseCase.self) var authUseCase
-    @Dependency(AuthUseCase.self) var authUseCase
-    @Dependency(AuthUseCase.self) var authUseCase
-    @Dependency(AuthUseCase.self) var authUseCase
+    @Dependency(\.authUsecase) var authUseCase
+    @Dependency(\.appleRepository) var appleRepository
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -40,7 +38,7 @@ public struct LoginFeature {
                 return .run { send in
                     await send(.didFinishLogin(
                         Result {
-                            try await authUseCase.signIn()
+                            try await authUseCase.signIn(appleRepository)
                         }
                     ))
                 }
