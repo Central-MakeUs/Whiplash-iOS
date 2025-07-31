@@ -19,32 +19,35 @@ public struct LoginFeature {
     }
     
     public enum Action {
-        case appleLoginButtonTapped
+        case loginButtonTapped(SocialLoginType)
         case didFinishLogin(Result<SignInInfo, Error>)
         case delegate(Delegate)
     }
     
     public enum Delegate {
-        case didFinishLogin
+        case didFinishLogin(shouldCreateProfile: Bool)
     }
     
     @Dependency(AuthUseCase.self) var authUseCase
+    @Dependency(AuthUseCase.self) var authUseCase
+    @Dependency(AuthUseCase.self) var authUseCase
+    @Dependency(AuthUseCase.self) var authUseCase
     
     public var body: some ReducerOf<Self> {
-        Reduce<State, Action> { state, action in
+        Reduce { state, action in
             switch action {
-            case .appleLoginButtonTapped:
+            case let .loginButtonTapped(type):
                 return .run { send in
                     await send(.didFinishLogin(
                         Result {
-                            try await authUseCase.signIn()//apple repository 넘기기
+                            try await authUseCase.signIn()
                         }
                     ))
                 }
-            case let .didFinishLogin(.success(response)):
-                KeychainProvider.shared.save(response.accessToken, key: .accessToken)
-                KeychainProvider.shared.save(response.refreshToken, key: .refreshToken)
-                return .send(.delegate(.didFinishLogin())) // 필요한 정보 설정
+            case let .didFinishLogin(.success(info)):
+                KeychainProvider.shared.save(info.accessToken, key: .accessToken)
+                KeychainProvider.shared.save(info.refreshToken, key: .refreshToken)
+                return .send(.delegate(.didFinishLogin(shouldCreateProfile: true)))
             case .didFinishLogin(.failure):
                 return .none
             case .delegate:
