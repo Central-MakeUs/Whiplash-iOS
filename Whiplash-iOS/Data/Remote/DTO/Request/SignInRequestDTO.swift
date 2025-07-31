@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignInRequestDTO: Requestable {
+public struct SignInRequestDTO: Requestable {
     let socialType: String
     let token: String
     let deviceId: String
