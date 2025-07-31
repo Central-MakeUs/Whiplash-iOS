@@ -19,4 +19,9 @@ extension DependencyValues {
         get { self[AppleAuthRepositoryImpl.self] }
         set { self[AppleAuthRepositoryImpl.self] = newValue }
     }
+    
+    var kakaoRepository: KakaoAuthRepositoryImpl {
+        get { self[KakaoAuthRepositoryImpl.self] }
+        set { self[KakaoAuthRepositoryImpl.self] = newValue }
+    }
 }
