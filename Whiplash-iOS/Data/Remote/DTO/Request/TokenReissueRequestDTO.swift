@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TokenReissueRequestDTO: Encodable {
+struct TokenReissueRequestDTO: Requestable {
     let refreshToken: String
 
     init(refreshToken: String) {

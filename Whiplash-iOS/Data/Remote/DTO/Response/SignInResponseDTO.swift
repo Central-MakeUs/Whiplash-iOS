@@ -7,13 +7,25 @@
 
 import Foundation
 
-struct SignInResponseDTO: Decodable {
+struct SignInResponseDTO: Respondable {
     let accessToken: String
     let refreshToken: String
+    let nickname: String
     
     init(accessToken: String,
-         refreshToken: String) {
+         refreshToken: String,
+         nickname: String) {
         self.accessToken = accessToken
         self.refreshToken = refreshToken
+        self.nickname = nickname
     }
+}
+
+extension SignInResponseDTO {
+    
+    var toDomain: SignInInfo {
+        .init(accessToken: accessToken,
+              refreshToken: refreshToken)
+    }
+    
 }
