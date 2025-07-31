@@ -31,6 +31,7 @@ public struct LoginFeature {
     @Dependency(\.authUsecase) var authUseCase
     @Dependency(\.appleRepository) var appleRepository
     @Dependency(\.kakaoRepository) var kakaoRepository
+    @Dependency(\.googleRepository) var googleRepository
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -45,7 +46,7 @@ public struct LoginFeature {
                             case .kakao:
                                 try await authUseCase.signIn(kakaoRepository)
                             case .google:
-                                try await authUseCase.signIn(appleRepository)
+                                try await authUseCase.signIn(googleRepository)
                             }
                         }
                     ))
