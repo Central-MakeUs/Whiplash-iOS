@@ -24,4 +24,9 @@ extension DependencyValues {
         get { self[KakaoAuthRepositoryImpl.self] }
         set { self[KakaoAuthRepositoryImpl.self] = newValue }
     }
+    
+    var googleRepository: GoogleAuthRepositoryImpl {
+        get { self[GoogleAuthRepositoryImpl.self] }
+        set { self[GoogleAuthRepositoryImpl.self] = newValue }
+    }
 }
