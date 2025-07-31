@@ -7,36 +7,9 @@
 
 import Foundation
 import ComposableArchitecture
+import Moya
 
-/*
-public final class AuthRepositoryImpl: AuthRepository {
-    private let apiClient: APIClient
-    private let loginServices: [SocialLoginType: any AuthRepository]
-
-    public init(apiClient: APIClient,
-                loginServices: [SocialLoginType: any AuthRepository]) {
-        self.apiClient = apiClient
-        self.loginServices = loginServices
-    }
-
-    public func signIn(with type: SocialLoginType) async throws -> SignInInfo {
-        guard let service = loginServices[type] else {
-            throw NSError(domain: "LoginServiceNotFound", code: 0)
-        }
-
-        let token = try await service.login()
-        let request = SignInRequestDTO(identityToken: token)
-        let response: SignInResponseDTO = try await apiClient.request(target: AuthTarget.signIn(dto))
-        return response.toDomain()
-    }
-
-    public func logout() async throws {
-        //_ = try await apiClient.request(target: .logout) as EmptyResponse
-    }
-}*/
-
-
-public struct AuthRepositoryImpl: AuthRepository {
+public struct AppleAuthRepositoryImpl: AuthRepository {
     
     public var signIn: @Sendable () async throws -> SignInInfo
     public var logout: @Sendable () async throws -> Void
@@ -50,17 +23,43 @@ public struct AuthRepositoryImpl: AuthRepository {
     }
 }
 
-extension AuthRepositoryImpl: DependencyKey {
+extension AppleAuthRepositoryImpl: DependencyKey {
     
     public static let liveValue: Self = {
         let interceptor = AuthInterceptor()
-
+        let apiClient = APIClient()
+        
         return Self(
             signIn: {
-               
+                let identityToken = try await AppleAuthService().signIn()
+                let endpoint = Endpoint<SignInResponseDTO>(
+                    path: "api/auth/login/apple",
+                    httpMethod: .post,
+                    bodyParameters: SignInRequestDTO(identityToken: identityToken)
+                )
+                let response = await NetworkProvider.shared.sendRequest(endpoint, interceptor: nil)
+                
+                switch response {
+                case .success(let response):
+                    return response.toDomain
+                case .failure(let error):
+                    throw error
+                }
+                
+                apiClient.request(SignInResponseDTO, target: .signIn)
+                
             },
             logout: {
+                let endpoint = Endpoint<Empty>(
+                    path: "api/auth/logout",
+                    httpMethod: .post
+                )
                 
+                let response = await NetworkProvider.shared.sendRequest(endpoint, interceptor: interceptor)
+                
+                if case .failure(let failure) = response {
+                    throw failure
+                }
             }
         )
     }()
