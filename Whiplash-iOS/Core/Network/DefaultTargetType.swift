@@ -10,7 +10,7 @@ import Moya
 
 public enum DefaultTargetType {
     /// 로그인
-    case signIn
+    case signIn(SignInRequestDTO)
 }
 
 extension DefaultTargetType: TargetType {
@@ -23,7 +23,7 @@ extension DefaultTargetType: TargetType {
         }
         return url
     }
-
+    
     public var path: String {
         switch self {
         case .signIn:
@@ -38,14 +38,15 @@ extension DefaultTargetType: TargetType {
             return .get
         }
     }
-
+    
     public var task: Task {
         switch self {
-        case .signIn:
-            return .requestPlain
+        case .signIn(let request):
+            return .requestJSONEncodable(request)
         }
     }
-
+    
+    
     public var headers: [String: String]? {
         return [
             "Content-Type": "application/json",
