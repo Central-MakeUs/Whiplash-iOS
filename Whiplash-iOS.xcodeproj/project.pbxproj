@@ -10,6 +10,13 @@
 		2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7AC2E3BDC7A005273A5 /* Response.swift */; };
 		2F02F7B02E3BE17B005273A5 /* DependencyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */; };
 		2F02F7B22E3BF0FD005273A5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B12E3BF0FD005273A5 /* Moya */; };
+		2F02F7B42E3C009C005273A5 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B32E3C009C005273A5 /* KakaoSDKAuth */; };
+		2F02F7B62E3C009C005273A5 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B52E3C009C005273A5 /* KakaoSDKCommon */; };
+		2F02F7B82E3C009C005273A5 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B72E3C009C005273A5 /* KakaoSDKUser */; };
+		2F02F7BA2E3C00F0005273A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */; };
+		2F02F7BC2E3C02A3005273A5 /* KakaoAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7BB2E3C02A3005273A5 /* KakaoAuthRepository.swift */; };
+		2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */; };
+		2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
 		2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* ContentView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
@@ -68,6 +75,10 @@
 /* Begin PBXFileReference section */
 		2F02F7AC2E3BDC7A005273A5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyValues.swift; sourceTree = "<group>"; };
+		2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F02F7BB2E3C02A3005273A5 /* KakaoAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthRepository.swift; sourceTree = "<group>"; };
+		2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoURLHandler.swift; sourceTree = "<group>"; };
+		2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLRouter.swift; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F4DDDE02E19635D00607760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
@@ -131,8 +142,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F02F7B62E3C009C005273A5 /* KakaoSDKCommon in Frameworks */,
 				2F02F7B22E3BF0FD005273A5 /* Moya in Frameworks */,
 				2F4DDE742E1D043200607760 /* ComposableArchitecture in Frameworks */,
+				2F02F7B82E3C009C005273A5 /* KakaoSDKUser in Frameworks */,
+				2F02F7B42E3C009C005273A5 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +157,26 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDEAA2E1D48D100607760 /* AppleAuthRepository.swift */,
+				2F02F7BB2E3C02A3005273A5 /* KakaoAuthRepository.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		2F02F7BD2E3C03AC005273A5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F7BE2E3C03B3005273A5 /* Handler */,
+				2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2F02F7BE2E3C03B3005273A5 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */,
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
@@ -265,6 +297,7 @@
 				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
 				2F4DDDE02E19635D00607760 /* ContentView.swift */,
 				2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */,
+				2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -307,6 +340,7 @@
 		2F4DDE782E1D12A800607760 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2F02F7BD2E3C03AC005273A5 /* Router */,
 				2F4DDE872E1D2CFD00607760 /* Network */,
 				2F4DDE7A2E1D12BB00607760 /* Keychain */,
 			);
@@ -510,6 +544,9 @@
 			packageProductDependencies = (
 				2F4DDE732E1D043200607760 /* ComposableArchitecture */,
 				2F02F7B12E3BF0FD005273A5 /* Moya */,
+				2F02F7B32E3C009C005273A5 /* KakaoSDKAuth */,
+				2F02F7B52E3C009C005273A5 /* KakaoSDKCommon */,
+				2F02F7B72E3C009C005273A5 /* KakaoSDKUser */,
 			);
 			productName = "Whiplash-iOS";
 			productReference = 2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */;
@@ -590,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */,
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */,
@@ -601,6 +639,7 @@
 				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
 				2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */,
 				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
+				2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */,
 				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
 				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
@@ -622,6 +661,8 @@
 				2F4DDEB62E20EDA000607760 /* AuthInterceptor.swift in Sources */,
 				2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */,
 				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
+				2F02F7BC2E3C02A3005273A5 /* KakaoAuthRepository.swift in Sources */,
+				2F02F7BA2E3C00F0005273A5 /* AppDelegate.swift in Sources */,
 				2F02F7B02E3BE17B005273A5 /* DependencyValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -870,6 +911,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2F4DDE882E1D2D9D00607760 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		2F02F7B32E3C009C005273A5 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		2F02F7B52E3C009C005273A5 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		2F02F7B72E3C009C005273A5 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDEBD2E2238C200607760 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
 		};
 		2F4DDE732E1D043200607760 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
