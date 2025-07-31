@@ -39,7 +39,7 @@ extension AppleAuthRepositoryImpl: DependencyKey {
                 let response: Response<SignInResponseDTO> = try await apiClient.request(
                     Response<SignInResponseDTO>.self,
                     target: .signIn(request))
-                print(response)
+                
                 if response.isSuccess, let dto = response.result {
                     
                     return dto.toDomain
