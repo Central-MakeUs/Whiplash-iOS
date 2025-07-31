@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import ComposableArchitecture
+
+extension DependencyValues {
+    
+    var authUsecase: AuthUseCase {
+        get { self[AuthUseCase.self] }
+        set { self[AuthUseCase.self] = newValue }
+    }
+    
+    var appleRepository: AppleAuthRepositoryImpl {
+        get { self[AppleAuthRepositoryImpl.self] }
+        set { self[AppleAuthRepositoryImpl.self] = newValue }
+    }
+}
