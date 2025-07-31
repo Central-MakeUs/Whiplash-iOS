@@ -30,6 +30,7 @@ public struct LoginFeature {
     
     @Dependency(\.authUsecase) var authUseCase
     @Dependency(\.appleRepository) var appleRepository
+    @Dependency(\.kakaoRepository) var kakaoRepository
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -38,7 +39,14 @@ public struct LoginFeature {
                 return .run { send in
                     await send(.didFinishLogin(
                         Result {
-                            try await authUseCase.signIn(appleRepository)
+                            switch type {
+                            case .apple:
+                                try await authUseCase.signIn(appleRepository)
+                            case .kakao:
+                                try await authUseCase.signIn(kakaoRepository)
+                            case .google:
+                                try await authUseCase.signIn(appleRepository)
+                            }
                         }
                     ))
                 }
