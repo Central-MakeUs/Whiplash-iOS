@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct Whiplash_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView(store: Store(initialState: LoginFeature.State(), reducer: { LoginFeature() }))
         }
     }
 }

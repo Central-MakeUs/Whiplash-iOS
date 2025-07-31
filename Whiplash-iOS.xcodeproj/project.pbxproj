@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7AC2E3BDC7A005273A5 /* Response.swift */; };
 		2F02F7B02E3BE17B005273A5 /* DependencyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */; };
+		2F02F7B22E3BF0FD005273A5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7B12E3BF0FD005273A5 /* Moya */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
 		2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* ContentView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
@@ -130,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F02F7B22E3BF0FD005273A5 /* Moya in Frameworks */,
 				2F4DDE742E1D043200607760 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +509,7 @@
 			name = "Whiplash-iOS";
 			packageProductDependencies = (
 				2F4DDE732E1D043200607760 /* ComposableArchitecture */,
+				2F02F7B12E3BF0FD005273A5 /* Moya */,
 			);
 			productName = "Whiplash-iOS";
 			productReference = 2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */;
@@ -628,6 +631,7 @@
 /* Begin XCBuildConfiguration section */
 		2FED14522E0AC15600D9CEDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F4DDE892E1D2E3000607760 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -750,7 +754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Resource/Whiplash-iOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Shared/Resource/Whiplash-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -783,7 +787,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Resource/Whiplash-iOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Whiplash-iOS/Shared/Resource/Whiplash-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -862,6 +866,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2F02F7B12E3BF0FD005273A5 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F4DDE882E1D2D9D00607760 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		2F4DDE732E1D043200607760 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2F4DDE722E1D043200607760 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
