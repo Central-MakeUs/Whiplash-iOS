@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor 
 final class AppURLRouter {
     static func route(_ url: URL) -> Bool {
         
