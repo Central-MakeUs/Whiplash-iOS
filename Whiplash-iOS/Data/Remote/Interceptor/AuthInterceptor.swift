@@ -25,12 +25,10 @@ final class AuthInterceptor: NetworkRequestInterceptor {
             switch result {
             case .success(let response):
                 let data = response.result!
-                print("로그인 성공: \(data)")
                 KeychainProvider.shared.save(data.accessToken, key: .accessToken)
                 KeychainProvider.shared.save(data.refreshToken, key: .refreshToken)
 
             case .failure(let error):
-                print("로그인 실패: \(error.localizedDescription)")
                 self.deleteAllTokens()
             }
         }
