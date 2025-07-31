@@ -10,30 +10,28 @@ import Alamofire
 
 final class AuthInterceptor: NetworkRequestInterceptor {
     
+    static let shared = AuthInterceptor()
+    
     override func reissueTokens(completion: @escaping (RetryResult) -> Void) {
         guard let refreshToken = KeychainProvider.shared.read(.refreshToken) else {
             completion(.doNotRetry)
             return
         }
         
-        let endPoint = Endpoint<TokenReissueResponseDTO>(
-            path: "api/auth/token:reissue",
-            httpMethod: .post,
-            bodyParameters: TokenReissueRequestDTO(refreshToken: refreshToken))
-        Task {
-            let response = await NetworkProvider.shared.sendRequest(endPoint, interceptor: NetworkRequestInterceptor())
-            
-            switch response {
-                
+        let apiClient = APIClient()
+        let request = TokenReissueRequestDTO(deviceId: "")
+        
+        apiClient.request(Response<TokenReissueResponseDTO>.self, target: .reissueToken(request)) { result in
+            switch result {
             case .success(let response):
-                KeychainProvider.shared.save(response.accessToken, key: .accessToken)
-                KeychainProvider.shared.save(response.refreshToken, key: .refreshToken)
-                completion(.retry)
-                
+                let data = response.result!
+                print("로그인 성공: \(data)")
+                KeychainProvider.shared.save(data.accessToken, key: .accessToken)
+                KeychainProvider.shared.save(data.refreshToken, key: .refreshToken)
+
             case .failure(let error):
+                print("로그인 실패: \(error.localizedDescription)")
                 self.deleteAllTokens()
-                NotificationCenter.default.post(name: .didFailTokenRefreshing, object: nil, userInfo: nil)
-                completion(.doNotRetryWithError(error))
             }
         }
     }
