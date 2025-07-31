@@ -11,7 +11,7 @@ import Moya
 public enum DefaultTargetType {
     /// 로그인
     case signIn(SignInRequestDTO)
-    case refreshToken(TokenReissueRequestDTO)
+    case reissueToken(TokenReissueRequestDTO)
 }
 
 extension DefaultTargetType: TargetType {
@@ -29,7 +29,7 @@ extension DefaultTargetType: TargetType {
         switch self {
         case .signIn:
             return "/signIn"
-        case .refreshToken:
+        case .reissueToken:
             return "/api/auth/reissue"
         }
     }
@@ -38,7 +38,7 @@ extension DefaultTargetType: TargetType {
         switch self {
         case .signIn:
             return .post
-        case .refreshToken:
+        case .reissueToken:
             return .post
         }
     }
@@ -47,7 +47,7 @@ extension DefaultTargetType: TargetType {
         switch self {
         case .signIn(let request):
             return .requestJSONEncodable(request)
-        case .refreshToken(let request):
+        case .reissueToken(let request):
             return .requestJSONEncodable(request)
         }
     }
