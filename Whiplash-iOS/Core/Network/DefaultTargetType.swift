@@ -19,7 +19,7 @@ extension DefaultTargetType: TargetType {
         guard let baseUrlString = Bundle.current.object(forInfoDictionaryKey: "BASE_URL") as? String else {
             fatalError("BASE_URL not found in Info.plist")
         }
-        print(baseUrlString)
+        
         guard let url = URL(string: baseUrlString) else {
             fatalError("URL 타입 변환 실패")
         }
