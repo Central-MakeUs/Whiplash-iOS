@@ -8,9 +8,9 @@
 import Foundation
 
 struct TokenReissueRequestDTO: Requestable {
-    let refreshToken: String
+    let deviceId: String
 
-    init(refreshToken: String) {
-        self.refreshToken = refreshToken
+    init(deviceId: String) {
+        self.deviceId = deviceId
     }
 }
