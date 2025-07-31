@@ -32,34 +32,23 @@ extension AppleAuthRepositoryImpl: DependencyKey {
         return Self(
             signIn: {
                 let identityToken = try await AppleAuthService().signIn()
-                let endpoint = Endpoint<SignInResponseDTO>(
-                    path: "api/auth/login/apple",
-                    httpMethod: .post,
-                    bodyParameters: SignInRequestDTO(identityToken: identityToken)
-                )
-                let response = await NetworkProvider.shared.sendRequest(endpoint, interceptor: nil)
+                let request = SignInRequestDTO(socialType: "apple", token: identityToken, deviceId: "")
                 
-                switch response {
-                case .success(let response):
-                    return response.toDomain
-                case .failure(let error):
-                    throw error
+                let response: Response<SignInResponseDTO> = try await apiClient.request(
+                    Response<SignInResponseDTO>.self,
+                    target: .signIn(request))
+                
+                if response.isSuccess, let dto = response.result {
+                    
+                    return dto.toDomain
+                    
+                } else {
+                    throw NSError(domain: "SignIn", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
-                
-                apiClient.request(SignInResponseDTO, target: .signIn)
-                
+
             },
             logout: {
-                let endpoint = Endpoint<Empty>(
-                    path: "api/auth/logout",
-                    httpMethod: .post
-                )
                 
-                let response = await NetworkProvider.shared.sendRequest(endpoint, interceptor: interceptor)
-                
-                if case .failure(let failure) = response {
-                    throw failure
-                }
             }
         )
     }()
