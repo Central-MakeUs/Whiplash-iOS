@@ -40,4 +40,20 @@ public final class APIClient {
             }
         }
     }
+    
+    public func request<T: Respondable>(
+        _ T: T.Type,
+        target: DefaultTargetType
+    ) async throws -> T {
+        return try await withCheckedThrowingContinuation { continuation in
+            request(T.self, target: target) { result in
+                switch result {
+                case .success(let response):
+                    continuation.resume(returning: response)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
 }
