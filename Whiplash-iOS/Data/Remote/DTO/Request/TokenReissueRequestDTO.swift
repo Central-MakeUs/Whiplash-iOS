@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TokenReissueRequestDTO: Requestable {
+public struct TokenReissueRequestDTO: Requestable {
     let deviceId: String
 
     init(deviceId: String) {
