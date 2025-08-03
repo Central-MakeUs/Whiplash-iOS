@@ -24,7 +24,6 @@ struct SetAlarmView: View {
                         }
 
                         AppSearchBarPreView(placeholder: "도착 목표 장소는?")
-                            .ont
                         
                         HStack() {
                             Spacer()
