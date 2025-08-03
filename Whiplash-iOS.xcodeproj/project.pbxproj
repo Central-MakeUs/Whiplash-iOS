@@ -20,8 +20,16 @@
 		2F02F7C52E3C0945005273A5 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7C42E3C0945005273A5 /* GoogleSignIn */; };
 		2F02F7C72E3C0945005273A5 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F02F7C62E3C0945005273A5 /* GoogleSignInSwift */; };
 		2F02F7C92E3C0B15005273A5 /* GoogleAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F7C82E3C0B15005273A5 /* GoogleAuthRepository.swift */; };
+		2F02F81B2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F81A2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift */; };
+		2F02F81D2E3DD638005273A5 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F81C2E3DD638005273A5 /* View+.swift */; };
+		2F02F8202E3DD7A8005273A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F81F2E3DD7A8005273A5 /* HomeView.swift */; };
+		2F02F8222E3DD7FD005273A5 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8212E3DD7FD005273A5 /* NavigationRouter.swift */; };
+		2F02F8242E3DDA3E005273A5 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8232E3DDA3E005273A5 /* AppFeature.swift */; };
+		2F02F8282E3DE709005273A5 /* AlarmCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8272E3DE709005273A5 /* AlarmCardView.swift */; };
+		2F02F82A2E3DE7D1005273A5 /* AlarmCardFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8292E3DE7D1005273A5 /* AlarmCardFeature.swift */; };
+		2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F82C2E3DE95E005273A5 /* Alarm.swift */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
-		2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* ContentView.swift */; };
+		2F4DDDE52E19635D00607760 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* MainView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
 		2F4DDDF32E19667700607760 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEE2E19667700607760 /* Pretendard-Light.otf */; };
 		2F4DDDF42E19667700607760 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEC2E19667700607760 /* Pretendard-ExtraBold.otf */; };
@@ -42,9 +50,9 @@
 		2F4DDE102E19678200607760 /* Paperlogy-7Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE072E19678200607760 /* Paperlogy-7Bold.ttf */; };
 		2F4DDE112E19678200607760 /* Paperlogy-8ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */; };
 		2F4DDE122E19678200607760 /* Paperlogy-4Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDE042E19678200607760 /* Paperlogy-4Regular.ttf */; };
-		2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE132E1979AF00607760 /* BaseText.swift */; };
+		2F4DDE142E1979AF00607760 /* AppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE132E1979AF00607760 /* AppText.swift */; };
 		2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE182E1983D600607760 /* ShadowModifier.swift */; };
-		2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE1D2E198CD500607760 /* BaseButton.swift */; };
+		2F4DDE1E2E198CD500607760 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE1D2E198CD500607760 /* AppButton.swift */; };
 		2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE212E199DE300607760 /* LoginButton.swift */; };
 		2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6B2E1D009F00607760 /* LoginView.swift */; };
 		2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */; };
@@ -73,6 +81,13 @@
 		2F4DDEB62E20EDA000607760 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEB52E20EDA000607760 /* AuthInterceptor.swift */; };
 		2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEB92E20F21B00607760 /* Date+.swift */; };
 		2F4DDEBC2E222E6900607760 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDEBB2E222E6900607760 /* GoogleService-Info.plist */; };
+		2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE6F2E3E36A600412543 /* AppToggleStyle.swift */; };
+		2FCBBE722E3E54A100412543 /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE712E3E54A100412543 /* HomeFeature.swift */; };
+		2FCBBE752E3E58A600412543 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE742E3E58A600412543 /* AppTextField.swift */; };
+		2FCBBE792E3E7D8B00412543 /* AppSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE782E3E7D8B00412543 /* AppSearchBar.swift */; };
+		2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */; };
+		2FCBBE7E2E3E8E1400412543 /* AlarmTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE7D2E3E8E1400412543 /* AlarmTimePickerView.swift */; };
+		2FCBBE802E3E94F400412543 /* WeekdayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE7F2E3E94F400412543 /* WeekdayPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,8 +98,16 @@
 		2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoURLHandler.swift; sourceTree = "<group>"; };
 		2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLRouter.swift; sourceTree = "<group>"; };
 		2F02F7C82E3C0B15005273A5 /* GoogleAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthRepository.swift; sourceTree = "<group>"; };
+		2F02F81A2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarModifier.swift; sourceTree = "<group>"; };
+		2F02F81C2E3DD638005273A5 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		2F02F81F2E3DD7A8005273A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2F02F8212E3DD7FD005273A5 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		2F02F8232E3DDA3E005273A5 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		2F02F8272E3DE709005273A5 /* AlarmCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCardView.swift; sourceTree = "<group>"; };
+		2F02F8292E3DE7D1005273A5 /* AlarmCardFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCardFeature.swift; sourceTree = "<group>"; };
+		2F02F82C2E3DE95E005273A5 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F4DDDE02E19635D00607760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F4DDDE02E19635D00607760 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
 		2F4DDDEA2E19667700607760 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		2F4DDDEB2E19667700607760 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -105,10 +128,10 @@
 		2F4DDE072E19678200607760 /* Paperlogy-7Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-7Bold.ttf"; sourceTree = "<group>"; };
 		2F4DDE082E19678200607760 /* Paperlogy-8ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-8ExtraBold.ttf"; sourceTree = "<group>"; };
 		2F4DDE092E19678200607760 /* Paperlogy-9Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Paperlogy-9Black.ttf"; sourceTree = "<group>"; };
-		2F4DDE132E1979AF00607760 /* BaseText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseText.swift; sourceTree = "<group>"; };
+		2F4DDE132E1979AF00607760 /* AppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppText.swift; sourceTree = "<group>"; };
 		2F4DDE152E197AB200607760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F4DDE182E1983D600607760 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
-		2F4DDE1D2E198CD500607760 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		2F4DDE1D2E198CD500607760 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		2F4DDE212E199DE300607760 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		2F4DDE6B2E1D009F00607760 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
@@ -138,6 +161,13 @@
 		2F4DDEB52E20EDA000607760 /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
 		2F4DDEB92E20F21B00607760 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		2F4DDEBB2E222E6900607760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FCBBE6F2E3E36A600412543 /* AppToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToggleStyle.swift; sourceTree = "<group>"; };
+		2FCBBE712E3E54A100412543 /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
+		2FCBBE742E3E58A600412543 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		2FCBBE782E3E7D8B00412543 /* AppSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchBar.swift; sourceTree = "<group>"; };
+		2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmView.swift; sourceTree = "<group>"; };
+		2FCBBE7D2E3E8E1400412543 /* AlarmTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimePickerView.swift; sourceTree = "<group>"; };
+		2FCBBE7F2E3E94F400412543 /* WeekdayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayPicker.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -174,6 +204,7 @@
 			children = (
 				2F02F7BE2E3C03B3005273A5 /* Handler */,
 				2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */,
+				2F02F8212E3DD7FD005273A5 /* NavigationRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -184,6 +215,33 @@
 				2F02F7BF2E3C03CA005273A5 /* KakaoURLHandler.swift */,
 			);
 			path = Handler;
+			sourceTree = "<group>";
+		};
+		2F02F81E2E3DD79A005273A5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F81F2E3DD7A8005273A5 /* HomeView.swift */,
+				2FCBBE712E3E54A100412543 /* HomeFeature.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2F02F8262E3DE6EF005273A5 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE7A2E3E809000412543 /* SetAlarm */,
+				2F02F82B2E3DE7D8005273A5 /* AlarmCard */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		2F02F82B2E3DE7D8005273A5 /* AlarmCard */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F8272E3DE709005273A5 /* AlarmCardView.swift */,
+				2F02F8292E3DE7D1005273A5 /* AlarmCardFeature.swift */,
+			);
+			path = AlarmCard;
 			sourceTree = "<group>";
 		};
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
@@ -202,6 +260,7 @@
 		2F4DDDE72E19636400607760 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				2FCBBE6E2E3E368C00412543 /* ToggleStyle */,
 				2F4DDE6F2E1D030A00607760 /* Layout */,
 				2F4DDE1B2E198C9A00607760 /* Component */,
 				2F4DDE172E1983AC00607760 /* ViewModifier */,
@@ -236,7 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDDFD2E1966D900607760 /* TextStyle.swift */,
-				2F4DDE132E1979AF00607760 /* BaseText.swift */,
+				2F4DDE132E1979AF00607760 /* AppText.swift */,
 			);
 			path = TextStyle;
 			sourceTree = "<group>";
@@ -277,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDE182E1983D600607760 /* ShadowModifier.swift */,
+				2F02F81A2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -284,6 +344,8 @@
 		2F4DDE1B2E198C9A00607760 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				2FCBBE762E3E794D00412543 /* SearchBar */,
+				2FCBBE732E3E589400412543 /* TextField */,
 				2F4DDE1C2E198CAA00607760 /* Button */,
 			);
 			path = Component;
@@ -292,7 +354,7 @@
 		2F4DDE1C2E198CAA00607760 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				2F4DDE1D2E198CD500607760 /* BaseButton.swift */,
+				2F4DDE1D2E198CD500607760 /* AppButton.swift */,
 				2F4DDE212E199DE300607760 /* LoginButton.swift */,
 			);
 			path = Button;
@@ -302,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
-				2F4DDDE02E19635D00607760 /* ContentView.swift */,
+				2F4DDDE02E19635D00607760 /* MainView.swift */,
 				2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */,
 				2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */,
 			);
@@ -312,7 +374,10 @@
 		2F4DDE692E1D007200607760 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2F02F8262E3DE6EF005273A5 /* Alarm */,
+				2F02F81E2E3DD79A005273A5 /* Home */,
 				2F4DDE6A2E1D007E00607760 /* Login */,
+				2F02F8232E3DDA3E005273A5 /* AppFeature.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -375,6 +440,7 @@
 			children = (
 				2F4DDE802E1D1C1600607760 /* SingInInfo.swift */,
 				2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */,
+				2F02F82C2E3DE95E005273A5 /* Alarm.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -511,8 +577,43 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDEB92E20F21B00607760 /* Date+.swift */,
+				2F02F81C2E3DD638005273A5 /* View+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2FCBBE6E2E3E368C00412543 /* ToggleStyle */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE6F2E3E36A600412543 /* AppToggleStyle.swift */,
+			);
+			path = ToggleStyle;
+			sourceTree = "<group>";
+		};
+		2FCBBE732E3E589400412543 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE742E3E58A600412543 /* AppTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		2FCBBE762E3E794D00412543 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE782E3E7D8B00412543 /* AppSearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		2FCBBE7A2E3E809000412543 /* SetAlarm */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */,
+				2FCBBE7D2E3E8E1400412543 /* AlarmTimePickerView.swift */,
+				2FCBBE7F2E3E94F400412543 /* WeekdayPicker.swift */,
+			);
+			path = SetAlarm;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -638,12 +739,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */,
+				2F02F8242E3DDA3E005273A5 /* AppFeature.swift in Sources */,
+				2FCBBE752E3E58A600412543 /* AppTextField.swift in Sources */,
+				2FCBBE802E3E94F400412543 /* WeekdayPicker.swift in Sources */,
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
+				2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */,
+				2F02F8202E3DD7A8005273A5 /* HomeView.swift in Sources */,
 				2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
 				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
 				2F4DDEAB2E1D48D100607760 /* AppleAuthRepository.swift in Sources */,
+				2F02F82A2E3DE7D1005273A5 /* AlarmCardFeature.swift in Sources */,
+				2F02F8222E3DD7FD005273A5 /* NavigationRouter.swift in Sources */,
 				2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */,
 				2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */,
 				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
@@ -651,28 +759,36 @@
 				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
 				2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */,
 				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
-				2F4DDDE52E19635D00607760 /* ContentView.swift in Sources */,
+				2F4DDDE52E19635D00607760 /* MainView.swift in Sources */,
 				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
 				2F4DDEAE2E209F1800607760 /* Logger.swift in Sources */,
+				2F02F8282E3DE709005273A5 /* AlarmCardView.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
 				2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */,
-				2F4DDE142E1979AF00607760 /* BaseText.swift in Sources */,
-				2F4DDE1E2E198CD500607760 /* BaseButton.swift in Sources */,
+				2F4DDE142E1979AF00607760 /* AppText.swift in Sources */,
+				2F4DDE1E2E198CD500607760 /* AppButton.swift in Sources */,
 				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
+				2FCBBE7E2E3E8E1400412543 /* AlarmTimePickerView.swift in Sources */,
 				2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */,
 				2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */,
+				2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */,
+				2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */,
 				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
+				2FCBBE722E3E54A100412543 /* HomeFeature.swift in Sources */,
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
 				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
+				2F02F81D2E3DD638005273A5 /* View+.swift in Sources */,
 				2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */,
 				2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
+				2FCBBE792E3E7D8B00412543 /* AppSearchBar.swift in Sources */,
 				2F4DDEB62E20EDA000607760 /* AuthInterceptor.swift in Sources */,
 				2F02F7C92E3C0B15005273A5 /* GoogleAuthRepository.swift in Sources */,
 				2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */,
 				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
 				2F02F7BC2E3C02A3005273A5 /* KakaoAuthRepository.swift in Sources */,
+				2F02F81B2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift in Sources */,
 				2F02F7BA2E3C00F0005273A5 /* AppDelegate.swift in Sources */,
 				2F02F7B02E3BE17B005273A5 /* DependencyValues.swift in Sources */,
 			);
@@ -820,6 +936,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -853,6 +970,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
