@@ -10,7 +10,7 @@ import Foundation
 struct Alarm {
     var id: Int
     var title: String
-    var morningNight: String
+    var ampm: String
     var time: String
     var repeatDays: String
     var address: String
@@ -21,7 +21,7 @@ extension Alarm {
     static let sampleData: Alarm = .init(
         id: 1,
         title: "눈 떠!",
-        morningNight: "오전",
+        ampm: "오전",
         time: "00:00",
         repeatDays: "월,수,금",
         address: "서울시 중랑구",
