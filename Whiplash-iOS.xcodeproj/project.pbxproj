@@ -88,6 +88,9 @@
 		2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */; };
 		2FCBBE7E2E3E8E1400412543 /* AlarmTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE7D2E3E8E1400412543 /* AlarmTimePickerView.swift */; };
 		2FCBBE802E3E94F400412543 /* WeekdayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE7F2E3E94F400412543 /* WeekdayPicker.swift */; };
+		2FCBBE822E3F296F00412543 /* SearchPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE812E3F296F00412543 /* SearchPlaceView.swift */; };
+		2FCBBE872E3F325300412543 /* SearchPlaceFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE862E3F325300412543 /* SearchPlaceFeature.swift */; };
+		2FCBBE892E3F32D800412543 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE882E3F32D800412543 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +171,9 @@
 		2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmView.swift; sourceTree = "<group>"; };
 		2FCBBE7D2E3E8E1400412543 /* AlarmTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTimePickerView.swift; sourceTree = "<group>"; };
 		2FCBBE7F2E3E94F400412543 /* WeekdayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayPicker.swift; sourceTree = "<group>"; };
+		2FCBBE812E3F296F00412543 /* SearchPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceView.swift; sourceTree = "<group>"; };
+		2FCBBE862E3F325300412543 /* SearchPlaceFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceFeature.swift; sourceTree = "<group>"; };
+		2FCBBE882E3F32D800412543 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -441,6 +447,7 @@
 				2F4DDE802E1D1C1600607760 /* SingInInfo.swift */,
 				2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */,
 				2F02F82C2E3DE95E005273A5 /* Alarm.swift */,
+				2FCBBE882E3F32D800412543 /* Place.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -609,11 +616,37 @@
 		2FCBBE7A2E3E809000412543 /* SetAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				2FCBBE852E3F321500412543 /* SearchPlace */,
+				2FCBBE842E3F320800412543 /* WeekdayPicker */,
+				2FCBBE832E3F31FC00412543 /* TimerPicker */,
 				2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */,
-				2FCBBE7D2E3E8E1400412543 /* AlarmTimePickerView.swift */,
-				2FCBBE7F2E3E94F400412543 /* WeekdayPicker.swift */,
 			);
 			path = SetAlarm;
+			sourceTree = "<group>";
+		};
+		2FCBBE832E3F31FC00412543 /* TimerPicker */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE7D2E3E8E1400412543 /* AlarmTimePickerView.swift */,
+			);
+			path = TimerPicker;
+			sourceTree = "<group>";
+		};
+		2FCBBE842E3F320800412543 /* WeekdayPicker */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE7F2E3E94F400412543 /* WeekdayPicker.swift */,
+			);
+			path = WeekdayPicker;
+			sourceTree = "<group>";
+		};
+		2FCBBE852E3F321500412543 /* SearchPlace */ = {
+			isa = PBXGroup;
+			children = (
+				2FCBBE812E3F296F00412543 /* SearchPlaceView.swift */,
+				2FCBBE862E3F325300412543 /* SearchPlaceFeature.swift */,
+			);
+			path = SearchPlace;
 			sourceTree = "<group>";
 		};
 		2FED143D2E0AC15300D9CEDE = {
@@ -757,6 +790,7 @@
 				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
 				2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */,
 				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
+				2FCBBE892E3F32D800412543 /* Place.swift in Sources */,
 				2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */,
 				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* MainView.swift in Sources */,
@@ -779,7 +813,9 @@
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
 				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
 				2F02F81D2E3DD638005273A5 /* View+.swift in Sources */,
+				2FCBBE872E3F325300412543 /* SearchPlaceFeature.swift in Sources */,
 				2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */,
+				2FCBBE822E3F296F00412543 /* SearchPlaceView.swift in Sources */,
 				2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 				2FCBBE792E3E7D8B00412543 /* AppSearchBar.swift in Sources */,
