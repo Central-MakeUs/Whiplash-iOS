@@ -8,31 +8,61 @@
 // PlaceSearchView.swift
 
 import SwiftUI
+import ComposableArchitecture
 
 struct PlaceSearchView: View {
-    @Binding var selectedText: String
-    @State private var searchText: String = ""
-
+    @Bindable var store: StoreOf<SearchLocationFeature>
+    
     var body: some View {
         VStack {
-            AppSearchBar(text: $searchText,
-                         placeholder: "도착 목표 장소는?")
-
-            List {
-                ForEach(searchResults, id: \.self) { place in
-                    Button(place) {
-                        selectedText = place
-                        // 화면 닫기 (presenting 방식에 따라 dismiss 구현 필요)
+            AppSearchBar(text: $store.query.sending(\.queryChanged),
+                         placeholder: "도착 목표 장소는?",
+                         onClear: { store.send(.clear) }
+            )
+            
+            if store.isLoading {
+                ProgressView()
+                    .padding()
+            }
+            
+            if !store.results.isEmpty {
+                List {
+                    ForEach(store.results, id: \ .self) { place in
+                        Button {
+                            store.send(.selectPlace(place))
+                        } label: {
+                            HStack {
+                                Text(place.name)
+                                    .foregroundColor(.white)
+                                Spacer()
+                            }
+                        }
+                        .listRowBackground(Color.gray900)
                     }
                 }
+                .listStyle(.plain)
+                .background(Color.gray900)
+            } else if !store.query.isEmpty && !store.isLoading {
+                VStack {
+                    Text("검색 결과가 없습니다.")
+                        .foregroundColor(.gray500)
+                        .padding()
+                    Spacer()
+                }
+            } else {
+                Spacer()
             }
+            
         }
         .background(Color.gray900.edgesIgnoringSafeArea(.all))
     }
-
-    var searchResults: [String] {
-        if searchText.isEmpty { return [] }
-        return ["구리시 갈매동", "구리시 도촌길", "구리시 갈매길"].filter { $0.contains(searchText) }
-    }
+    
 }
 
+#Preview {
+    PlaceSearchView(
+        store: Store(initialState: SearchLocationFeature.State()) {
+            SearchLocationFeature()
+        }
+    )
+}
