@@ -9,68 +9,69 @@ import Foundation
 import ComposableArchitecture
 
 @Reducer
-public struct SearchPlaceFeature {
-    
+public struct SearchLocationFeature {
     public init() {}
-    
+
     @ObservableState
     public struct State {
+        public var query: String = ""
+        public var results: [Place] = []
+        public var isLoading: Bool = false
+        public var selectedPlace: Place? = nil
         public init() {}
-        
-        var alarm: Alarm = .sampleData
-        
     }
-    
+
     public enum Action {
-        case loginButtonTapped(SocialLoginType)
-        case didFinishLogin(Result<SignInInfo, Error>)
-        case delegate(Delegate)
-        
-        
-        case bindingToggle(Bool)
+        case queryChanged(String)
+        case searchResponse(Result<[Place], Error>)
+        case selectPlace(Place)
+        case bindingQuery(String)
+        case clear
     }
-    
-    public enum Delegate {
-        case didFinishLogin(shouldCreateProfile: Bool)
-    }
-    
-    @Dependency(\.authUsecase) var authUseCase
-    @Dependency(\.appleRepository) var appleRepository
-    @Dependency(\.kakaoRepository) var kakaoRepository
-    @Dependency(\.googleRepository) var googleRepository
-    
+
+    @Dependency(\.placeRepository) var placeRepository
+
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case let .loginButtonTapped(type):
-                return .run { send in
-                    await send(.didFinishLogin(
-                        Result {
-                            switch type {
-                            case .apple:
-                                try await authUseCase.signIn(appleRepository)
-                            case .kakao:
-                                try await authUseCase.signIn(kakaoRepository)
-                            case .google:
-                                try await authUseCase.signIn(googleRepository)
-                            }
-                        }
-                    ))
+            case let .queryChanged(query):
+                state.query = query
+                state.isLoading = true
+                guard !query.isEmpty else {
+                    state.results = []
+                    state.isLoading = false
+                    return .none
                 }
-            case let .didFinishLogin(.success(info)):
-                KeychainProvider.shared.save(info.accessToken, key: .accessToken)
-                KeychainProvider.shared.save(info.refreshToken, key: .refreshToken)
-                return .send(.delegate(.didFinishLogin(shouldCreateProfile: true)))
-            case .didFinishLogin(.failure):
+                return .run { send in
+                    try await Task.sleep(nanoseconds: 300_000_000)
+                    do {
+                        let places = try await placeRepository.search(query)
+                        await send(.searchResponse(.success(places)))
+                    } catch {
+                        await send(.searchResponse(.failure(error)))
+                    }
+                }
+            case let .searchResponse(.success(places)):
+                state.results = places
+                state.isLoading = false
                 return .none
-            case .delegate:
+            case .searchResponse(.failure):
+                state.results = []
+                state.isLoading = false
                 return .none
-            case let .bindingToggle(onOff):
-                state.alarm.isToggleOn = onOff
+            case let .selectPlace(place):
+                state.selectedPlace = place
+                return .none
+            case .clear:
+                state.query = ""
+                state.results = []
+                state.selectedPlace = nil
+                return .none
+            case let .bindingQuery(query):
+                state.query = query
                 return .none
             }
+            
         }
     }
 }
-
-
