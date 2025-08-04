@@ -25,8 +25,8 @@ final class AuthInterceptor: NetworkRequestInterceptor {
             switch result {
             case .success(let response):
                 let data = response.result!
-                KeychainProvider.shared.save(data.accessToken, key: .accessToken)
-                KeychainProvider.shared.save(data.refreshToken, key: .refreshToken)
+                KeychainProvider.shared.save(data.accessToken.replacingOccurrences(of: "Bearer ", with: ""), key: .accessToken)
+                KeychainProvider.shared.save(data.refreshToken.replacingOccurrences(of: "Bearer ", with: ""), key: .refreshToken)
 
             case .failure(let error):
                 self.deleteAllTokens()
