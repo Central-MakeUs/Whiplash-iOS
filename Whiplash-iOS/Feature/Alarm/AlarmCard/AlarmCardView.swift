@@ -29,7 +29,7 @@ struct AlarmCardView: View {
                     HStack {
                         VStack(spacing: 8) {
                             HStack(spacing: 8) {
-                                AppText(text: store.alarm.morningNight, style: .subtitle2_m_20, color: .white)
+                                AppText(text: store.alarm.ampm, style: .subtitle2_m_20, color: .white)
                                 AppText(text: store.alarm.time, style: .number1_b_28, color: .white)
                                 Spacer()
                             }
