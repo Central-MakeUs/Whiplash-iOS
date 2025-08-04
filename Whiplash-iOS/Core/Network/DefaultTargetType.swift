@@ -12,6 +12,8 @@ public enum DefaultTargetType {
     /// 로그인
     case signIn(SignInRequestDTO)
     case reissueToken(TokenReissueRequestDTO)
+    case searchPlace(String)
+    case addAlarm(AlarmRequestDTO)
 }
 
 extension DefaultTargetType: TargetType {
@@ -32,6 +34,10 @@ extension DefaultTargetType: TargetType {
             return "/api/auth/social-login"
         case .reissueToken:
             return "/api/auth/reissue"
+        case .searchPlace:
+            return "/api/places/search"
+        case .addAlarm:
+            return "/api/alarms"
         }
     }
     
@@ -41,6 +47,10 @@ extension DefaultTargetType: TargetType {
             return .post
         case .reissueToken:
             return .post
+        case .searchPlace:
+            return .get
+        case .addAlarm:
+            return .post
         }
     }
     
@@ -49,6 +59,10 @@ extension DefaultTargetType: TargetType {
         case .signIn(let request):
             return .requestJSONEncodable(request)
         case .reissueToken(let request):
+            return .requestJSONEncodable(request)
+        case .searchPlace(let query):
+            return .requestParameters(parameters: ["query": query], encoding: URLEncoding.default)
+        case .addAlarm(let request):
             return .requestJSONEncodable(request)
         }
     }
