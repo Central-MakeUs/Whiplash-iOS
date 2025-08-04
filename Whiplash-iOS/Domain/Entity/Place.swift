@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Place {
+public struct Place: Hashable {
     var id = UUID()
     var name: String
     var address: String
@@ -22,4 +22,32 @@ extension Place {
         latitude: 37.5642371,
         longitude: 126.9760935
     )
+}
+
+public struct PlaceList {
+    var placeList: [Place]
+}
+
+extension PlaceList {
+    static let sampleData: PlaceList = .init(placeList: [
+        .init(
+            name: "유림면",
+            address: "서울특별시 중구 서소문동 16",
+            latitude: 37.5642371,
+            longitude: 126.9760935
+        ),
+        .init(
+            name: "유림면",
+            address: "서울특별시 중구 서소문동 16",
+            latitude: 37.5642371,
+            longitude: 126.9760935
+        )
+        ,.init(
+            name: "유림면",
+            address: "서울특별시 중구 서소문동 16",
+            latitude: 37.5642371,
+            longitude: 126.9760935
+        )
+        
+    ])
 }
