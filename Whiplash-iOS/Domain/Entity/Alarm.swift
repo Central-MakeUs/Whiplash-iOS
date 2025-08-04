@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Alarm {
+public struct Alarm {
     var id: Int
     var title: String
     var ampm: String
