@@ -29,4 +29,14 @@ extension DependencyValues {
         get { self[GoogleAuthRepositoryImpl.self] }
         set { self[GoogleAuthRepositoryImpl.self] = newValue }
     }
+    
+    var placeRepository: PlaceRepositoryImpl {
+        get { self[PlaceRepositoryImpl.self] }
+        set { self[PlaceRepositoryImpl.self] = newValue }
+    }
+    
+    var alarmRepository: AlarmRepositoryImpl {
+        get { self[AlarmRepositoryImpl.self] }
+        set { self[AlarmRepositoryImpl.self] = newValue }
+    }
 }
