@@ -1,0 +1,22 @@
+<svg width="76" height="78" viewBox="0 0 76 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_807_7788)">
+<path d="M55.9285 29.9672C55.9285 46.6763 38.1146 57.9998 38.1146 57.9998C38.1146 57.9998 20.3008 47.5049 20.3008 29.9672C20.3008 20.1295 28.277 12.1533 38.1146 12.1533C47.9523 12.1533 55.9285 20.1295 55.9285 29.9672Z" fill="#E3FE54"/>
+<g clip-path="url(#paint0_angular_807_7788_clip_path)" data-figma-skip-parse="true"><g transform="matrix(0.000135395 -0.0125664 0.0125664 0.000135395 38.1171 29.6914)"><foreignObject x="-1041.55" y="-1041.55" width="2083.09" height="2083.09"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(255, 255, 255, 0) 0deg,rgba(255, 255, 255, 1) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M45.204 19.3151L38.2884 29.6914V17.1305C38.2304 17.1305 38.1751 17.125 38.1171 17.125C31.1766 17.125 25.5508 22.7509 25.5508 29.6914C25.5508 36.6319 31.1766 42.2577 38.1171 42.2577C45.0576 42.2577 50.6835 36.6319 50.6835 29.6914C50.6835 25.3801 48.5127 21.5798 45.2068 19.3151H45.204Z" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:0.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:0.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;transform&#34;:{&#34;m00&#34;:0.27078968286514282,&#34;m01&#34;:25.132734298706055,&#34;m02&#34;:25.415386199951172,&#34;m10&#34;:-25.132734298706055,&#34;m11&#34;:0.27078968286514282,&#34;m12&#34;:42.122341156005859},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}"/>
+<path d="M45.1582 19.6104L38.2536 29.6911" stroke="black" stroke-width="2.30437" stroke-linecap="round"/>
+<path d="M47.6387 22.126L38.2503 29.691" stroke="black" stroke-opacity="0.4" stroke-width="2.30437" stroke-linecap="round"/>
+<path d="M49.6657 13.6261C52.4598 11.4751 56.3682 11.8673 58.3985 14.5022C60.4259 17.1371 59.8059 21.0157 57.0117 23.1668L49.6657 13.6261Z" fill="#E3FE54"/>
+<path d="M26.2504 13.6261C23.4562 11.4751 19.5478 11.8673 17.5176 14.5022C15.4901 17.1371 16.1101 21.0157 18.9043 23.1668L26.2504 13.6261Z" fill="#E3FE54"/>
+</g>
+<defs>
+<filter id="filter0_d_807_7788" x="0.324219" y="0.15332" width="75.2676" height="77.8467" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="8"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_807_7788"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_807_7788" result="shape"/>
+</filter>
+<clipPath id="paint0_angular_807_7788_clip_path"><path d="M45.204 19.3151L38.2884 29.6914V17.1305C38.2304 17.1305 38.1751 17.125 38.1171 17.125C31.1766 17.125 25.5508 22.7509 25.5508 29.6914C25.5508 36.6319 31.1766 42.2577 38.1171 42.2577C45.0576 42.2577 50.6835 36.6319 50.6835 29.6914C50.6835 25.3801 48.5127 21.5798 45.2068 19.3151H45.204Z"/></clipPath></defs>
+</svg>

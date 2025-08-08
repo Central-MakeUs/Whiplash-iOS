@@ -32,6 +32,7 @@ public struct LoginFeature {
     @Dependency(\.appleRepository) var appleRepository
     @Dependency(\.kakaoRepository) var kakaoRepository
     @Dependency(\.googleRepository) var googleRepository
+    @Dependency(\.autoLoginClient) var autoLogin
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -54,9 +55,8 @@ public struct LoginFeature {
             case let .didFinishLogin(.success(info)):
                 KeychainProvider.shared.save(info.accessToken.replacingOccurrences(of: "Bearer ", with: ""), key: .accessToken)
                 KeychainProvider.shared.save(info.refreshToken.replacingOccurrences(of: "Bearer ", with: ""), key: .refreshToken)
+                autoLogin.setEnabled(true)
                 return .send(.delegate(.didFinishLogin(shouldCreateProfile: true)))
-            case let .didFinish(.success(info)):
-                return .send(.delegate(.didFinish(shouldCreateProfile: true)))
             case .didFinishLogin(.failure):
                 return .none
             case .delegate:

@@ -30,6 +30,22 @@
 		2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F82C2E3DE95E005273A5 /* Alarm.swift */; };
 		2F22633A2E40FF4B0079CF4F /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = 2F2263392E40FF4B0079CF4F /* NMapsMap */; };
 		2F22633C2E40FFAD0079CF4F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22633B2E40FFAD0079CF4F /* MapView.swift */; };
+		2F22633E2E4258720079CF4F /* MapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22633D2E4258720079CF4F /* MapFeature.swift */; };
+		2F2263422E4658CE0079CF4F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263412E4658CE0079CF4F /* LocationManager.swift */; };
+		2F2263442E4659210079CF4F /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263432E4659200079CF4F /* LocationClient.swift */; };
+		2F2263462E4659C80079CF4F /* CLLocationCoordinate2D+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263452E4659C80079CF4F /* CLLocationCoordinate2D+.swift */; };
+		2F2263492E4667DE0079CF4F /* AutoLoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263482E4667DE0079CF4F /* AutoLoginClient.swift */; };
+		2F22634D2E466BDC0079CF4F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22634C2E466BDC0079CF4F /* SplashView.swift */; };
+		2F22634F2E466BE90079CF4F /* SplashFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22634E2E466BE90079CF4F /* SplashFeature.swift */; };
+		2F2263532E466CDA0079CF4F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263522E466CDA0079CF4F /* OnboardingView.swift */; };
+		2F2263552E466CEA0079CF4F /* OnboardingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263542E466CEA0079CF4F /* OnboardingFeature.swift */; };
+		2F2263572E466D190079CF4F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263562E466D190079CF4F /* Route.swift */; };
+		2F22635A2E466D940079CF4F /* AlarmRingingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263592E466D940079CF4F /* AlarmRingingView.swift */; };
+		2F22635D2E4678280079CF4F /* AppBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22635C2E4678280079CF4F /* AppBottomSheet.swift */; };
+		2F22635F2E4678840079CF4F /* SheetTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22635E2E4678840079CF4F /* SheetTitle.swift */; };
+		2F2263612E4678B50079CF4F /* SheetMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263602E4678B50079CF4F /* SheetMessage.swift */; };
+		2F2263632E4678D10079CF4F /* SheetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263622E4678D10079CF4F /* SheetButtons.swift */; };
+		2F2263652E46790A0079CF4F /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263642E46790A0079CF4F /* Sheet.swift */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
 		2F4DDDE52E19635D00607760 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* MainView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
@@ -120,6 +136,22 @@
 		2F02F8292E3DE7D1005273A5 /* AlarmCardFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCardFeature.swift; sourceTree = "<group>"; };
 		2F02F82C2E3DE95E005273A5 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		2F22633B2E40FFAD0079CF4F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		2F22633D2E4258720079CF4F /* MapFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFeature.swift; sourceTree = "<group>"; };
+		2F2263412E4658CE0079CF4F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		2F2263432E4659200079CF4F /* LocationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClient.swift; sourceTree = "<group>"; };
+		2F2263452E4659C80079CF4F /* CLLocationCoordinate2D+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+.swift"; sourceTree = "<group>"; };
+		2F2263482E4667DE0079CF4F /* AutoLoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginClient.swift; sourceTree = "<group>"; };
+		2F22634C2E466BDC0079CF4F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		2F22634E2E466BE90079CF4F /* SplashFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFeature.swift; sourceTree = "<group>"; };
+		2F2263522E466CDA0079CF4F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		2F2263542E466CEA0079CF4F /* OnboardingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFeature.swift; sourceTree = "<group>"; };
+		2F2263562E466D190079CF4F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		2F2263592E466D940079CF4F /* AlarmRingingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRingingView.swift; sourceTree = "<group>"; };
+		2F22635C2E4678280079CF4F /* AppBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBottomSheet.swift; sourceTree = "<group>"; };
+		2F22635E2E4678840079CF4F /* SheetTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetTitle.swift; sourceTree = "<group>"; };
+		2F2263602E4678B50079CF4F /* SheetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetMessage.swift; sourceTree = "<group>"; };
+		2F2263622E4678D10079CF4F /* SheetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtons.swift; sourceTree = "<group>"; };
+		2F2263642E46790A0079CF4F /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F4DDDE02E19635D00607760 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
@@ -255,6 +287,7 @@
 		2F02F8262E3DE6EF005273A5 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				2F2263582E466D7D0079CF4F /* AlarmRinging */,
 				2FCBBE7A2E3E809000412543 /* SetAlarm */,
 				2F02F82B2E3DE7D8005273A5 /* AlarmCard */,
 			);
@@ -268,6 +301,62 @@
 				2F02F8292E3DE7D1005273A5 /* AlarmCardFeature.swift */,
 			);
 			path = AlarmCard;
+			sourceTree = "<group>";
+		};
+		2F2263402E4658BE0079CF4F /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				2F2263412E4658CE0079CF4F /* LocationManager.swift */,
+				2F2263432E4659200079CF4F /* LocationClient.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		2F22634A2E4669BD0079CF4F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				2F22634C2E466BDC0079CF4F /* SplashView.swift */,
+				2F22634E2E466BE90079CF4F /* SplashFeature.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		2F22634B2E466B9C0079CF4F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2F02F8232E3DDA3E005273A5 /* AppFeature.swift */,
+				2F2263562E466D190079CF4F /* Route.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2F2263512E466CC20079CF4F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2F2263522E466CDA0079CF4F /* OnboardingView.swift */,
+				2F2263542E466CEA0079CF4F /* OnboardingFeature.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2F2263582E466D7D0079CF4F /* AlarmRinging */ = {
+			isa = PBXGroup;
+			children = (
+				2F2263592E466D940079CF4F /* AlarmRingingView.swift */,
+			);
+			path = AlarmRinging;
+			sourceTree = "<group>";
+		};
+		2F22635B2E4678140079CF4F /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				2F22635C2E4678280079CF4F /* AppBottomSheet.swift */,
+				2F22635E2E4678840079CF4F /* SheetTitle.swift */,
+				2F2263602E4678B50079CF4F /* SheetMessage.swift */,
+				2F2263622E4678D10079CF4F /* SheetButtons.swift */,
+				2F2263642E46790A0079CF4F /* Sheet.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
@@ -286,6 +375,7 @@
 		2F4DDDE72E19636400607760 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				2F22635B2E4678140079CF4F /* BottomSheet */,
 				2FCBBE6E2E3E368C00412543 /* ToggleStyle */,
 				2F4DDE6F2E1D030A00607760 /* Layout */,
 				2F4DDE1B2E198C9A00607760 /* Component */,
@@ -400,10 +490,13 @@
 		2F4DDE692E1D007200607760 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2F2263512E466CC20079CF4F /* Onboarding */,
+				2F22634B2E466B9C0079CF4F /* Router */,
+				2F22634A2E4669BD0079CF4F /* Splash */,
+				2F2263402E4658BE0079CF4F /* Location */,
 				2F02F8262E3DE6EF005273A5 /* Alarm */,
 				2F02F81E2E3DD79A005273A5 /* Home */,
 				2F4DDE6A2E1D007E00607760 /* Login */,
-				2F02F8232E3DDA3E005273A5 /* AppFeature.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -413,6 +506,7 @@
 			children = (
 				2F4DDE6B2E1D009F00607760 /* LoginView.swift */,
 				2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */,
+				2F2263482E4667DE0079CF4F /* AutoLoginClient.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -613,6 +707,7 @@
 			children = (
 				2F4DDEB92E20F21B00607760 /* Date+.swift */,
 				2F02F81C2E3DD638005273A5 /* View+.swift */,
+				2F2263452E4659C80079CF4F /* CLLocationCoordinate2D+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -674,6 +769,7 @@
 				2FCBBE812E3F296F00412543 /* SearchPlaceView.swift */,
 				2FCBBE862E3F325300412543 /* SearchPlaceFeature.swift */,
 				2F22633B2E40FFAD0079CF4F /* MapView.swift */,
+				2F22633D2E4258720079CF4F /* MapFeature.swift */,
 			);
 			path = SearchPlace;
 			sourceTree = "<group>";
@@ -818,20 +914,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2263532E466CDA0079CF4F /* OnboardingView.swift in Sources */,
 				2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */,
 				2F02F8242E3DDA3E005273A5 /* AppFeature.swift in Sources */,
 				2FCBBE752E3E58A600412543 /* AppTextField.swift in Sources */,
 				2FCBBE802E3E94F400412543 /* WeekdayPicker.swift in Sources */,
+				2F2263632E4678D10079CF4F /* SheetButtons.swift in Sources */,
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
+				2F2263462E4659C80079CF4F /* CLLocationCoordinate2D+.swift in Sources */,
 				2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */,
 				2F02F8202E3DD7A8005273A5 /* HomeView.swift in Sources */,
 				2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */,
+				2F22635D2E4678280079CF4F /* AppBottomSheet.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
 				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
 				2F4DDEAB2E1D48D100607760 /* AppleAuthRepository.swift in Sources */,
 				2F02F82A2E3DE7D1005273A5 /* AlarmCardFeature.swift in Sources */,
 				2F02F8222E3DD7FD005273A5 /* NavigationRouter.swift in Sources */,
+				2F2263492E4667DE0079CF4F /* AutoLoginClient.swift in Sources */,
 				2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */,
 				2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */,
 				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
@@ -840,6 +941,7 @@
 				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
 				2FCBBE892E3F32D800412543 /* Place.swift in Sources */,
 				2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */,
+				2F2263552E466CEA0079CF4F /* OnboardingFeature.swift in Sources */,
 				2FCBBE962E3F4FAF00412543 /* AlarmRequestDTO.swift in Sources */,
 				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* MainView.swift in Sources */,
@@ -849,30 +951,39 @@
 				2F02F8282E3DE709005273A5 /* AlarmCardView.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
 				2F4DDE8C2E1D307A00607760 /* DefaultTargetType.swift in Sources */,
+				2F22635A2E466D940079CF4F /* AlarmRingingView.swift in Sources */,
 				2F4DDE142E1979AF00607760 /* AppText.swift in Sources */,
 				2F4DDE1E2E198CD500607760 /* AppButton.swift in Sources */,
 				2F4DDE6C2E1D009F00607760 /* LoginView.swift in Sources */,
 				2FCBBE7E2E3E8E1400412543 /* AlarmTimePickerView.swift in Sources */,
+				2F2263612E4678B50079CF4F /* SheetMessage.swift in Sources */,
 				2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */,
 				2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */,
 				2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */,
 				2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */,
 				2FCBBE8B2E3F383E00412543 /* PlaceRepository.swift in Sources */,
+				2F2263652E46790A0079CF4F /* Sheet.swift in Sources */,
 				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
 				2FCBBE982E3F505F00412543 /* AlarmRepository.swift in Sources */,
+				2F22634D2E466BDC0079CF4F /* SplashView.swift in Sources */,
+				2F22634F2E466BE90079CF4F /* SplashFeature.swift in Sources */,
+				2F2263572E466D190079CF4F /* Route.swift in Sources */,
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
 				2FCBBE722E3E54A100412543 /* HomeFeature.swift in Sources */,
 				2FCBBE942E3F4FA400412543 /* AlarmResponseDTO.swift in Sources */,
+				2F2263422E4658CE0079CF4F /* LocationManager.swift in Sources */,
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
 				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
 				2F02F81D2E3DD638005273A5 /* View+.swift in Sources */,
 				2FCBBE872E3F325300412543 /* SearchPlaceFeature.swift in Sources */,
 				2F4DDE992E1D3D2200607760 /* SignInRequestDTO.swift in Sources */,
+				2F22635F2E4678840079CF4F /* SheetTitle.swift in Sources */,
 				2FCBBE8D2E3F388D00412543 /* SearchPlaceRequestDTO.swift in Sources */,
 				2FCBBE822E3F296F00412543 /* SearchPlaceView.swift in Sources */,
 				2FCBBE9B2E3F50C000412543 /* AlarmRepositoryImpl.swift in Sources */,
 				2F4DDE9E2E1D409E00607760 /* TokenReissueResponseDTO.swift in Sources */,
 				2FCBBE8F2E3F38B100412543 /* PlaceResponseDTO.swift in Sources */,
+				2F22633E2E4258720079CF4F /* MapFeature.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
 				2FCBBE792E3E7D8B00412543 /* AppSearchBar.swift in Sources */,
 				2F4DDEB62E20EDA000607760 /* AuthInterceptor.swift in Sources */,
@@ -883,6 +994,7 @@
 				2F02F81B2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift in Sources */,
 				2F02F7BA2E3C00F0005273A5 /* AppDelegate.swift in Sources */,
 				2F02F7B02E3BE17B005273A5 /* DependencyValues.swift in Sources */,
+				2F2263442E4659210079CF4F /* LocationClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,6 +1143,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1068,6 +1181,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

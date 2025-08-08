@@ -39,4 +39,14 @@ extension DependencyValues {
         get { self[AlarmRepositoryImpl.self] }
         set { self[AlarmRepositoryImpl.self] = newValue }
     }
+    
+    var locationClient: LocationClient {
+        get { self[LocationClient.self] }
+        set { self[LocationClient.self] = newValue }
+    }
+    
+    var autoLoginClient: AutoLoginClient {
+        get { self[AutoLoginClient.self] }
+        set { self[AutoLoginClient.self] = newValue }
+    }
 }
