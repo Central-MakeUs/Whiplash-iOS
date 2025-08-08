@@ -39,7 +39,7 @@ public struct HomeFeature {
                             try await alarmRepository.getAlarmList()
                         }
                     ))
-                    try await alarmRepository.alarmOff()
+                    try await alarmRepository.deleteAlarm()
                 }
                 
             case let .didFinishGetList(.success(alarmList)):

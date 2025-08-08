@@ -9,17 +9,20 @@ import Foundation
 import ComposableArchitecture
 
 public struct AlarmRepositoryImpl: AlarmRepository {
-    public var add: @Sendable () async throws -> Alarm
+    public var addAlarm: @Sendable () async throws -> Alarm
     public var getAlarmList: @Sendable () async throws -> [Alarm]
     public var alarmOff: @Sendable () async throws -> Void
+    public var deleteAlarm: @Sendable () async throws -> Void
     public init(
-        add: @escaping @Sendable () async throws -> Alarm,
+        addAlarm: @escaping @Sendable () async throws -> Alarm,
         getAlarmList: @escaping @Sendable () async throws -> [Alarm],
-        alarmOff: @escaping @Sendable () async throws -> Void
+        alarmOff: @escaping @Sendable () async throws -> Void,
+        deleteAlarm: @escaping @Sendable () async throws -> Void
     ) {
-        self.add = add
+        self.addAlarm = addAlarm
         self.getAlarmList = getAlarmList
         self.alarmOff = alarmOff
+        self.deleteAlarm = deleteAlarm
     }
 }
 
@@ -27,7 +30,7 @@ extension AlarmRepositoryImpl: DependencyKey {
     public static let liveValue: Self = {
         let apiClient = APIClient()
         return Self(
-            add: {
+            addAlarm: {
 
                 
                 let request = AlarmRequestDTO(address: "서울시 중구 퇴계로 24",
@@ -89,6 +92,19 @@ extension AlarmRepositoryImpl: DependencyKey {
                     
                 } else {
                     throw NSError(domain: "AlarmOff", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                }
+            },
+            deleteAlarm: {
+                let request = ReasonDTO(reason: "너무 자주 울려용")
+                
+                let response: Response<EmptyDTO> = try await apiClient.request(
+                    Response<EmptyDTO>.self,
+                    target: .deleteAlarm(18, request))
+                
+                if response.isSuccess, let dto = response.result {
+                    
+                } else {
+                    throw NSError(domain: "DeleteAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
             }
         )

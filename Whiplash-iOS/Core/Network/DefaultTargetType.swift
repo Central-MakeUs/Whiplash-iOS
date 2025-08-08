@@ -16,6 +16,7 @@ public enum DefaultTargetType {
     case addAlarm(AlarmRequestDTO)
     case getAlarmList
     case alarmOff(Int, AlarmOffRequestDTO)
+    case deleteAlarm(Int, ReasonDTO)
 }
 
 extension DefaultTargetType: TargetType {
@@ -44,6 +45,8 @@ extension DefaultTargetType: TargetType {
             return "/api/alarms"
         case let .alarmOff(alarmId, _):
             return "/api/alarms/\(alarmId)/off"
+        case let .deleteAlarm(alarmId, _):
+            return "/api/alarms/\(alarmId)"
         }
     }
     
@@ -61,6 +64,8 @@ extension DefaultTargetType: TargetType {
             return .get
         case .alarmOff:
             return .post
+        case .deleteAlarm:
+            return .delete
         }
     }
     
@@ -77,6 +82,8 @@ extension DefaultTargetType: TargetType {
         case .getAlarmList:
             return .requestPlain
         case let .alarmOff(_, request):
+            return .requestJSONEncodable(request)
+        case let .deleteAlarm(_, request):
             return .requestJSONEncodable(request)
         }
     }

@@ -8,7 +8,8 @@
 import Foundation
 
 public protocol AlarmRepository {
-    var add: @Sendable () async throws -> Alarm { get }
+    var addAlarm: @Sendable () async throws -> Alarm { get }
     var getAlarmList: @Sendable () async throws -> [Alarm] { get }
     var alarmOff: @Sendable () async throws -> Void { get }
+    var deleteAlarm: @Sendable () async throws -> Void { get }
 }
