@@ -23,6 +23,7 @@ struct Whiplash_iOSApp: App {
                     SearchLocationFeature()
                 }
             )*/
+            
             HomeView(store: Store(initialState: HomeFeature.State(),
                                    reducer: { HomeFeature() })
             )

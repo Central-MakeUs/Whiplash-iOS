@@ -47,6 +47,8 @@
 		2F2263632E4678D10079CF4F /* SheetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263622E4678D10079CF4F /* SheetButtons.swift */; };
 		2F2263652E46790A0079CF4F /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263642E46790A0079CF4F /* Sheet.swift */; };
 		2F3E8DB52E46984100E3C0D7 /* AlarmListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB42E46984100E3C0D7 /* AlarmListResponseDTO.swift */; };
+		2F3E8DB72E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */; };
+		2F3E8DB92E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB82E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
 		2F4DDDE52E19635D00607760 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* MainView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
@@ -154,6 +156,8 @@
 		2F2263622E4678D10079CF4F /* SheetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtons.swift; sourceTree = "<group>"; };
 		2F2263642E46790A0079CF4F /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		2F3E8DB42E46984100E3C0D7 /* AlarmListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListResponseDTO.swift; sourceTree = "<group>"; };
+		2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOffRequestDTO.swift; sourceTree = "<group>"; };
+		2F3E8DB82E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOffResponseDTO.swift; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F4DDDE02E19635D00607760 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
@@ -636,6 +640,7 @@
 				2F4DDE9F2E1D40B900607760 /* TokenReissueRequestDTO.swift */,
 				2FCBBE8C2E3F388D00412543 /* SearchPlaceRequestDTO.swift */,
 				2FCBBE952E3F4FAF00412543 /* AlarmRequestDTO.swift */,
+				2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -649,6 +654,7 @@
 				2FCBBE8E2E3F38B100412543 /* PlaceResponseDTO.swift */,
 				2FCBBE932E3F4FA300412543 /* AlarmResponseDTO.swift */,
 				2F3E8DB42E46984100E3C0D7 /* AlarmListResponseDTO.swift */,
+				2F3E8DB82E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -927,6 +933,7 @@
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F2263462E4659C80079CF4F /* CLLocationCoordinate2D+.swift in Sources */,
 				2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */,
+				2F3E8DB92E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift in Sources */,
 				2F02F8202E3DD7A8005273A5 /* HomeView.swift in Sources */,
 				2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */,
 				2F22635D2E4678280079CF4F /* AppBottomSheet.swift in Sources */,
@@ -964,6 +971,7 @@
 				2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */,
 				2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */,
 				2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */,
+				2F3E8DB72E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift in Sources */,
 				2FCBBE8B2E3F383E00412543 /* PlaceRepository.swift in Sources */,
 				2F2263652E46790A0079CF4F /* Sheet.swift in Sources */,
 				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,

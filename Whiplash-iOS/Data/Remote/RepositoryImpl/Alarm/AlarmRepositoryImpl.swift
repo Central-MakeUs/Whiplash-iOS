@@ -11,12 +11,15 @@ import ComposableArchitecture
 public struct AlarmRepositoryImpl: AlarmRepository {
     public var add: @Sendable () async throws -> Alarm
     public var getAlarmList: @Sendable () async throws -> [Alarm]
+    public var alarmOff: @Sendable () async throws -> Void
     public init(
         add: @escaping @Sendable () async throws -> Alarm,
-        getAlarmList: @escaping @Sendable () async throws -> [Alarm]
+        getAlarmList: @escaping @Sendable () async throws -> [Alarm],
+        alarmOff: @escaping @Sendable () async throws -> Void
     ) {
         self.add = add
         self.getAlarmList = getAlarmList
+        self.alarmOff = alarmOff
     }
 }
 
@@ -65,6 +68,28 @@ extension AlarmRepositoryImpl: DependencyKey {
                     throw NSError(domain: "GetAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
                 
+            },
+            alarmOff: {
+                let time: DateFormatter = {
+                    let f = DateFormatter()
+                    f.calendar = Calendar(identifier: .iso8601)
+                    f.locale = Locale(identifier: "ko_KR_POSIX")
+                    f.timeZone = TimeZone(identifier: "Asia/Seoul")
+                    f.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+                    return f
+                }()
+                
+                let request = AlarmOffRequestDTO(clientNow: time.string(from: Date()))
+
+                let response: Response<AlarmOffResponseDTO> = try await apiClient.request(
+                    Response<AlarmOffResponseDTO>.self,
+                    target: .alarmOff(18, request))
+                
+                if response.isSuccess, let dto = response.result {
+                    
+                } else {
+                    throw NSError(domain: "AlarmOff", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                }
             }
         )
     }()

@@ -7,14 +7,11 @@
 
 import Foundation
 
-struct AlarmListResponseDTO: Codable {
-    let isSuccess: Bool
-    let code: String
-    let message: String
+struct AlarmListResponseDTO: Respondable {
     let result: [AlarmDetailResponseDTO]
 }
 
-struct AlarmDetailResponseDTO: Codable {
+struct AlarmDetailResponseDTO: Respondable {
     let alarmId: Int
     let alarmPurpose: String
     let repeatsDays: [String]
