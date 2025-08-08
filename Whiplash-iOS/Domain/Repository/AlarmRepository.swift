@@ -9,4 +9,5 @@ import Foundation
 
 public protocol AlarmRepository {
     var add: @Sendable () async throws -> Alarm { get }
+    var getAlarmList: @Sendable () async throws -> [Alarm] { get }
 }

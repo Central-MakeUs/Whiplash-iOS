@@ -10,10 +10,13 @@ import ComposableArchitecture
 
 public struct AlarmRepositoryImpl: AlarmRepository {
     public var add: @Sendable () async throws -> Alarm
+    public var getAlarmList: @Sendable () async throws -> [Alarm]
     public init(
-        add: @escaping @Sendable () async throws -> Alarm
+        add: @escaping @Sendable () async throws -> Alarm,
+        getAlarmList: @escaping @Sendable () async throws -> [Alarm]
     ) {
         self.add = add
+        self.getAlarmList = getAlarmList
     }
 }
 
@@ -35,7 +38,6 @@ extension AlarmRepositoryImpl: DependencyKey {
                                                 "금"
                                               ],
                                               soundType: "알람 소리1")
-                print(request)
                 
                 let response: Response<AlarmResponseDTO> = try await apiClient.request(
                     Response<AlarmResponseDTO>.self,
@@ -43,11 +45,26 @@ extension AlarmRepositoryImpl: DependencyKey {
                 
                 if response.isSuccess, let dto = response.result {
                     
+                    return dto.toDomain(id: 0, isToggleOn: false)
+                    
+                } else {
+                    throw NSError(domain: "AddAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                }
+            },
+            getAlarmList: {
+                
+                let response: Response<AlarmListResponseDTO> = try await apiClient.request(
+                    Response<AlarmListResponseDTO>.self,
+                    target: .getAlarmList)
+                
+                if response.isSuccess, let dto = response.result {
+                    
                     return dto.toDomain
                     
                 } else {
-                    throw NSError(domain: "SignIn", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                    throw NSError(domain: "GetAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
+                
             }
         )
     }()

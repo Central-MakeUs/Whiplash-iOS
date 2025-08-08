@@ -15,13 +15,17 @@ struct Whiplash_iOSApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MapView(store: Store(initialState: MapFeature.State()) {MapFeature() })
+            /*
+            MapView(store: Store(initialState: MapFeature.State()) {MapFeature() })*/
             /*
             PlaceSearchView(
                 store: Store(initialState: SearchLocationFeature.State()) {
                     SearchLocationFeature()
                 }
             )*/
+            HomeView(store: Store(initialState: HomeFeature.State(),
+                                   reducer: { HomeFeature() })
+            )
             /*
             LoginView(store: Store(initialState: LoginFeature.State(), reducer: { LoginFeature() }))
                 .onOpenURL { url in

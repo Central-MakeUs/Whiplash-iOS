@@ -27,4 +27,25 @@ extension Alarm {
         address: "서울시 중랑구",
         isToggleOn: true
     )
+    
+    static let sampleList: [Alarm] = [
+            Alarm(
+                id: 1,
+                title: "도서관 정기 출석 알람",
+                ampm: "오전",
+                time: "08:30",
+                repeatDays: "수, 금",
+                address: "서울시 중구 퇴계로 24",
+                isToggleOn: true
+            ),
+            Alarm(
+                id: 2,
+                title: "독서실 가는 알람",
+                ampm: "오후",
+                time: "19:30",
+                repeatDays: "목, 토",
+                address: "서울시 중구 퇴계로 24",
+                isToggleOn: false
+            )
+        ]
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct HomeView: View {
-    let store: StoreOf<HomeFeature>
+    @Bindable var store: StoreOf<HomeFeature>
     
     init(store: StoreOf<HomeFeature>) {
         self.store = store
@@ -27,11 +27,23 @@ struct HomeView: View {
                 },
                 rightView: {
                     HStack(spacing: 8) {
-                        Image(.Image.icPius28)
-                        Image(.Image.icDot28)
+                        Button {
+                            
+                        } label: {
+                            Image(.Image.icPius28)
+                        }
+                        
+                        Button {
+                            
+                        } label: {
+                            Image(.Image.icDot28)
+                        }
                     }
                 }
             )
+        }
+        .onAppear {
+            store.send(.onAppear)
         }
     }
 }

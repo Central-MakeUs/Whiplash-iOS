@@ -14,6 +14,7 @@ public enum DefaultTargetType {
     case reissueToken(TokenReissueRequestDTO)
     case searchPlace(String)
     case addAlarm(AlarmRequestDTO)
+    case getAlarmList
 }
 
 extension DefaultTargetType: TargetType {
@@ -38,6 +39,8 @@ extension DefaultTargetType: TargetType {
             return "/api/places/search"
         case .addAlarm:
             return "/api/alarms"
+        case .getAlarmList:
+            return "/api/alarms"
         }
     }
     
@@ -51,6 +54,8 @@ extension DefaultTargetType: TargetType {
             return .get
         case .addAlarm:
             return .post
+        case .getAlarmList:
+            return .get
         }
     }
     
@@ -64,6 +69,8 @@ extension DefaultTargetType: TargetType {
             return .requestParameters(parameters: ["query": query], encoding: URLEncoding.default)
         case .addAlarm(let request):
             return .requestJSONEncodable(request)
+        case .getAlarmList:
+            return .requestPlain
         }
     }
 

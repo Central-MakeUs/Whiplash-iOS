@@ -17,58 +17,37 @@ public struct HomeFeature {
     public struct State {
         public init() {}
         
-        var alarm: Alarm = .sampleData
+        var alarm: [Alarm] = Alarm.sampleList
         
     }
     
     public enum Action {
-        case loginButtonTapped(SocialLoginType)
-        case didFinishLogin(Result<SignInInfo, Error>)
-        case delegate(Delegate)
-        
-        
-        case bindingToggle(Bool)
+        case onAppear
+        case didFinishGetList(Result<[Alarm], Error>)
     }
     
-    public enum Delegate {
-        case didFinishLogin(shouldCreateProfile: Bool)
-    }
-    
-    @Dependency(\.authUsecase) var authUseCase
-    @Dependency(\.appleRepository) var appleRepository
-    @Dependency(\.kakaoRepository) var kakaoRepository
-    @Dependency(\.googleRepository) var googleRepository
+    @Dependency(\.alarmRepository) var alarmRepository
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case let .loginButtonTapped(type):
+           
+            case .onAppear:
                 return .run { send in
-                    await send(.didFinishLogin(
+                    await send(.didFinishGetList(
                         Result {
-                            switch type {
-                            case .apple:
-                                try await authUseCase.signIn(appleRepository)
-                            case .kakao:
-                                try await authUseCase.signIn(kakaoRepository)
-                            case .google:
-                                try await authUseCase.signIn(googleRepository)
-                            }
+                            try await alarmRepository.getAlarmList()
                         }
                     ))
                 }
-            case let .didFinishLogin(.success(info)):
-                KeychainProvider.shared.save(info.accessToken.replacingOccurrences(of: "Bearer ", with: ""), key: .accessToken)
-                KeychainProvider.shared.save(info.refreshToken.replacingOccurrences(of: "Bearer ", with: ""), key: .refreshToken)
-                return .send(.delegate(.didFinishLogin(shouldCreateProfile: true)))
-            case .didFinishLogin(.failure):
+                
+            case let .didFinishGetList(.success(alarmList)):
+                state.alarm = alarmList
                 return .none
-            case .delegate:
-                return .none
-            case let .bindingToggle(onOff):
-                state.alarm.isToggleOn = onOff
+            case .didFinishGetList(.failure):
                 return .none
             }
+            
         }
     }
 }
