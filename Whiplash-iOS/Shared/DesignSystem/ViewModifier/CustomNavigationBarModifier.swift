@@ -38,12 +38,13 @@ struct CustomNavigationBarModifier<C, L, R> : ViewModifier where C : View, L : V
                     Spacer()
                 }
             }
-            .background(Color.clear)//.ignoresSafeArea(.all, edges: .top)
+            .background(Color.gray900)//.ignoresSafeArea(.all, edges: .top)
             
            content
 
             Spacer()
         }
+        .background(Color.gray900)
         .navigationBarBackButtonHidden(true)
     }
 }

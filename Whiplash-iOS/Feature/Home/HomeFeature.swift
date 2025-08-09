@@ -10,22 +10,19 @@ import ComposableArchitecture
 
 @Reducer
 public struct HomeFeature {
-    
     public init() {}
     
     @ObservableState
     public struct State: Equatable {
         public init() {}
-        
-        var alarm: [Alarm] = Alarm.sampleList
-        
+        var cards: IdentifiedArrayOf<AlarmCardFeature.State> = []
     }
     
     public enum Action {
         case onAppear
         case didFinishGetList(Result<[Alarm], Error>)
+        case card(IdentifiedActionOf<AlarmCardFeature>)
         case logoutTapped
-        
         case delegate(Delegate)
         
         public enum Delegate: Equatable {
@@ -33,26 +30,33 @@ public struct HomeFeature {
         }
     }
     
-
     @Dependency(\.alarmRepository) var alarmRepository
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-           
+                
             case .onAppear:
+                Logger.shared.log(category: .ui, "HomeFeature.onAppear 호출됨")
                 return .run { send in
-                    await send(.didFinishGetList(
-                        Result {
-                            try await alarmRepository.getAlarmList()
-                        }
-                    ))
+                    Logger.shared.log(category: .network, "알람 리스트 요청 시작")
+                    let result = await Result {
+                        try await alarmRepository.getAlarmList()
+                    }
+                    Logger.shared.log(category: .network, "알람 리스트 요청 완료 → \(result)")
+                    await send(.didFinishGetList(result))
                 }
                 
             case let .didFinishGetList(.success(alarmList)):
-                state.alarm = alarmList
+                Logger.shared.log(category: .database, "알람 리스트 수신 성공 → \(alarmList.count)개")
+                state.cards = IdentifiedArray(uniqueElements: alarmList.map { AlarmCardFeature.State(alarm: $0) })
                 return .none
-            case .didFinishGetList(.failure):
+                
+            case let .didFinishGetList(.failure(error)):
+                Logger.shared.log(level: .error, category: .network, "알람 리스트 요청 실패 → \(error.localizedDescription)")
+                return .none
+                
+            case .card:
                 return .none
                 
             case .logoutTapped:
@@ -61,8 +65,9 @@ public struct HomeFeature {
             case .delegate:
                 return .none
             }
-            
+        }
+        .forEach(\.cards, action: \.card) {
+            AlarmCardFeature()
         }
     }
 }
-

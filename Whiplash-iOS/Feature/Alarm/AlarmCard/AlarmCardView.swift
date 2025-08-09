@@ -52,6 +52,7 @@ struct AlarmCardView: View {
                             
                         }
                         .toggleStyle(AppToggleStyle())
+                        .allowsHitTesting(false)
                     }
                     
                 }

@@ -16,12 +16,20 @@ open class NetworkRequestInterceptor: RequestInterceptor {
                       for session: Session,
                       completion: @escaping (Result<URLRequest, any Error>) -> Void) {
         var urlRequest = urlRequest
-        
-        guard let accessToken = KeychainProvider.shared.read(.accessToken) else {
+        Logger.shared.log(level: .debug, category: .network, "url request : \(urlRequest)")
+        guard var accessToken = KeychainProvider.shared.read(.accessToken) else {
             completion(.success(urlRequest))
             return
         }
-        print(accessToken)
+        
+        if let url = urlRequest.url {
+            if url.absoluteString.contains("/api/auth/reissue") {
+                if let refreshToken = KeychainProvider.shared.read(.refreshToken) {
+                    accessToken = refreshToken
+                }
+            }
+        }
+
         urlRequest.headers.add(.authorization(bearerToken: accessToken))
         completion(.success(urlRequest))
     }

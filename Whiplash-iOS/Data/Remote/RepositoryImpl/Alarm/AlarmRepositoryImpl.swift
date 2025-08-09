@@ -59,13 +59,13 @@ extension AlarmRepositoryImpl: DependencyKey {
             },
             getAlarmList: {
                 
-                let response: Response<AlarmListResponseDTO> = try await apiClient.request(
-                    Response<AlarmListResponseDTO>.self,
+                let response: Response<[AlarmItemResponseDTO]> = try await apiClient.request(
+                    Response<[AlarmItemResponseDTO]>.self,
                     target: .getAlarmList)
                 
                 if response.isSuccess, let dto = response.result {
                     
-                    return dto.toDomain
+                    return dto.map { $0.toDomain }
                     
                 } else {
                     throw NSError(domain: "GetAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
