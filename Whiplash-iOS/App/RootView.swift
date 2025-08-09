@@ -22,8 +22,8 @@ struct RootView: View {
                     .onOpenURL { url in
                         _ = AppURLRouter.route(url)
                     }
-            } else if let s = store.scope(state: \.home, action: \.home) {
-                HomeView(store: s)
+            } else if let s = store.scope(state: \.main, action: \.main) {
+                MainView(store: s)
             } else {
                 Color.clear.onAppear { store.send(.splash(.onAppear)) }
             }

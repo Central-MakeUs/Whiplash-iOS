@@ -30,11 +30,12 @@ final class AuthInterceptor: NetworkRequestInterceptor {
                                   refreshToken: data.refreshToken)
                 Logger.shared.log(level: .debug, category: .network, "토큰 재발급 성공 : \(data)")
                 
-                completion(.doNotRetry)
+                completion(.retry)
 
             case .failure(let error):
                 Logger.shared.log(level: .debug, category: .network, "토큰 재발급 실패 : \(error)")
                 TokenStore().clear()
+                completion(.doNotRetryWithError(error))
             }
         }
     }

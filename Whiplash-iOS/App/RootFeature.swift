@@ -14,7 +14,7 @@ struct RootFeature {
         var splash: SplashFeature.State? = .init()
         var onboarding: OnboardingFeature.State?
         var login: LoginFeature.State?
-        var home: HomeFeature.State?
+        var main: MainFeature.State?
     }
     
     @CasePathable
@@ -22,7 +22,7 @@ struct RootFeature {
         case splash(SplashFeature.Action)
         case onboarding(OnboardingFeature.Action)
         case login(LoginFeature.Action)
-        case home(HomeFeature.Action)
+        case main(MainFeature.Action)
         case binding(BindingAction<State>)
     }
     
@@ -35,7 +35,7 @@ struct RootFeature {
             .ifLet(\.splash,     action: \.splash)     { SplashFeature() }
             .ifLet(\.onboarding, action: \.onboarding) { OnboardingFeature() }
             .ifLet(\.login,      action: \.login)      { LoginFeature() }
-            .ifLet(\.home,       action: \.home)       { HomeFeature() }
+            .ifLet(\.main,       action: \.main)       { MainFeature() }
         
         Reduce { state, action in
             switch action {
@@ -69,7 +69,7 @@ struct RootFeature {
                 Logger.shared.log(level: .debug, category: .etc, "홈화면")
                 state.splash = nil
                 state.login = nil
-                state.home = .init()
+                state.main = .init()
                 return .none
                 
             case .login(.delegate(.needLogin)):
@@ -77,18 +77,18 @@ struct RootFeature {
                 state.splash = nil
                 state.onboarding = nil
                 state.login = .init()
-                state.home = nil
+                state.main = nil
                 return .none
                 
-            case .home(.delegate(.logout)):
-                state.home = nil
+            case .main(.home(.delegate(.logout))):
+                state.main = nil
                 state.login = .init()
                 return .none
                 
             case .binding:
                 return .none
                 
-            case .splash, .onboarding, .login, .home:
+            case .splash, .onboarding, .login, .main:
                 return .none
             }
         }

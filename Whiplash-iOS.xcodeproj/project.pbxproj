@@ -29,6 +29,9 @@
 		2F0556F72E47021300BA067E /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0556F62E47021300BA067E /* AuthClient.swift */; };
 		2F0556F92E47022100BA067E /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0556F82E47022100BA067E /* TokenStore.swift */; };
 		2F0556FB2E472B1900BA067E /* RootFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0556FA2E472B1900BA067E /* RootFeature.swift */; };
+		2F0557002E47EA8900BA067E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0556FF2E47EA8900BA067E /* MainView.swift */; };
+		2F0557022E47EA9300BA067E /* MainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0557012E47EA9300BA067E /* MainFeature.swift */; };
+		2F0557042E47EAEC00BA067E /* SetAlarmFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0557032E47EAEC00BA067E /* SetAlarmFeature.swift */; };
 		2F22633A2E40FF4B0079CF4F /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = 2F2263392E40FF4B0079CF4F /* NMapsMap */; };
 		2F22633C2E40FFAD0079CF4F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22633B2E40FFAD0079CF4F /* MapView.swift */; };
 		2F22633E2E4258720079CF4F /* MapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22633D2E4258720079CF4F /* MapFeature.swift */; };
@@ -141,6 +144,9 @@
 		2F0556F62E47021300BA067E /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		2F0556F82E47022100BA067E /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
 		2F0556FA2E472B1900BA067E /* RootFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeature.swift; sourceTree = "<group>"; };
+		2F0556FF2E47EA8900BA067E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2F0557012E47EA9300BA067E /* MainFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeature.swift; sourceTree = "<group>"; };
+		2F0557032E47EAEC00BA067E /* SetAlarmFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmFeature.swift; sourceTree = "<group>"; };
 		2F22633B2E40FFAD0079CF4F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2F22633D2E4258720079CF4F /* MapFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFeature.swift; sourceTree = "<group>"; };
 		2F2263412E4658CE0079CF4F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -485,6 +491,8 @@
 				2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */,
 				2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */,
 				2F0556FA2E472B1900BA067E /* RootFeature.swift */,
+				2F0556FF2E47EA8900BA067E /* MainView.swift */,
+				2F0557012E47EA9300BA067E /* MainFeature.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -750,6 +758,7 @@
 				2FCBBE842E3F320800412543 /* WeekdayPicker */,
 				2FCBBE832E3F31FC00412543 /* TimerPicker */,
 				2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */,
+				2F0557032E47EAEC00BA067E /* SetAlarmFeature.swift */,
 			);
 			path = SetAlarm;
 			sourceTree = "<group>";
@@ -934,6 +943,7 @@
 				2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */,
 				2F3E8DB92E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift in Sources */,
 				2F02F8202E3DD7A8005273A5 /* HomeView.swift in Sources */,
+				2F0557022E47EA9300BA067E /* MainFeature.swift in Sources */,
 				2F02F7AD2E3BDC7A005273A5 /* Response.swift in Sources */,
 				2F22635D2E4678280079CF4F /* AppBottomSheet.swift in Sources */,
 				2F4DDE222E199DE300607760 /* LoginButton.swift in Sources */,
@@ -946,6 +956,7 @@
 				2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */,
 				2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */,
 				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
+				2F0557002E47EA8900BA067E /* MainView.swift in Sources */,
 				2F22633C2E40FFAD0079CF4F /* MapView.swift in Sources */,
 				2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */,
 				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
@@ -968,6 +979,7 @@
 				2FCBBE7E2E3E8E1400412543 /* AlarmTimePickerView.swift in Sources */,
 				2F2263612E4678B50079CF4F /* SheetMessage.swift in Sources */,
 				2F4DDE812E1D1C1600607760 /* SingInInfo.swift in Sources */,
+				2F0557042E47EAEC00BA067E /* SetAlarmFeature.swift in Sources */,
 				2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */,
 				2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */,
 				2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */,

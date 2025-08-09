@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct SetAlarmView: View {
+    @Bindable var store: StoreOf<SetAlarmFeature>
     @State var t = ""
     @State private var selectedDays: [Int] = []
     var body: some View {
@@ -131,5 +133,7 @@ struct SetAlarmView: View {
 }
 
 #Preview {
-    SetAlarmView()
+    SetAlarmView(store: Store(initialState: SetAlarmFeature.State(), reducer: {
+        SetAlarmFeature()
+    }))
 }

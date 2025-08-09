@@ -27,6 +27,7 @@ public struct HomeFeature {
         
         public enum Delegate: Equatable {
             case logout
+            case addAlarmTapped
         }
     }
     
