@@ -35,7 +35,15 @@ open class NetworkRequestInterceptor: RequestInterceptor {
             completion(.doNotRetryWithError(error))
             return
         }
+        
+        // 무한 재시도 방지
+        guard request.retryCount == 0 else {
+            completion(.doNotRetryWithError(error))
+            return
+        }
+        
         self.reissueTokens(completion: completion)
+        
     }
     
     func reissueTokens(completion: @escaping (RetryResult) -> Void) {}
