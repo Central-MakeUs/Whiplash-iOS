@@ -50,6 +50,7 @@
 		2F3E8DB72E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */; };
 		2F3E8DB92E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB82E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift */; };
 		2F3E8DBB2E46AB9400E3C0D7 /* ReasonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DBA2E46AB9400E3C0D7 /* ReasonDTO.swift */; };
+		2F3E8DBD2E46BDE300E3C0D7 /* OnboardingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DBC2E46BDE300E3C0D7 /* OnboardingClient.swift */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
 		2F4DDDE52E19635D00607760 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* MainView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
@@ -160,6 +161,7 @@
 		2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOffRequestDTO.swift; sourceTree = "<group>"; };
 		2F3E8DB82E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOffResponseDTO.swift; sourceTree = "<group>"; };
 		2F3E8DBA2E46AB9400E3C0D7 /* ReasonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonDTO.swift; sourceTree = "<group>"; };
+		2F3E8DBC2E46BDE300E3C0D7 /* OnboardingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingClient.swift; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F4DDDE02E19635D00607760 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 			children = (
 				2F2263522E466CDA0079CF4F /* OnboardingView.swift */,
 				2F2263542E466CEA0079CF4F /* OnboardingFeature.swift */,
+				2F3E8DBC2E46BDE300E3C0D7 /* OnboardingClient.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -977,6 +980,7 @@
 				2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */,
 				2F3E8DB72E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift in Sources */,
 				2FCBBE8B2E3F383E00412543 /* PlaceRepository.swift in Sources */,
+				2F3E8DBD2E46BDE300E3C0D7 /* OnboardingClient.swift in Sources */,
 				2F2263652E46790A0079CF4F /* Sheet.swift in Sources */,
 				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
 				2FCBBE982E3F505F00412543 /* AlarmRepository.swift in Sources */,
