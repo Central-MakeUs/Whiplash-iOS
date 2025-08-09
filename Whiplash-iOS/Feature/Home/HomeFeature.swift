@@ -14,7 +14,7 @@ public struct HomeFeature {
     public init() {}
     
     @ObservableState
-    public struct State {
+    public struct State: Equatable {
         public init() {}
         
         var alarm: [Alarm] = Alarm.sampleList
@@ -24,8 +24,16 @@ public struct HomeFeature {
     public enum Action {
         case onAppear
         case didFinishGetList(Result<[Alarm], Error>)
+        case logoutTapped
+        
+        case delegate(Delegate)
+        
+        public enum Delegate: Equatable {
+            case logout
+        }
     }
     
+
     @Dependency(\.alarmRepository) var alarmRepository
     
     public var body: some ReducerOf<Self> {
@@ -39,13 +47,18 @@ public struct HomeFeature {
                             try await alarmRepository.getAlarmList()
                         }
                     ))
-                    try await alarmRepository.deleteAlarm()
                 }
                 
             case let .didFinishGetList(.success(alarmList)):
                 state.alarm = alarmList
                 return .none
             case .didFinishGetList(.failure):
+                return .none
+                
+            case .logoutTapped:
+                return .send(.delegate(.logout))
+                
+            case .delegate:
                 return .none
             }
             

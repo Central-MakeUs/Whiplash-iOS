@@ -9,7 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct SplashView: View {
-    //@Bindable var store: StoreOf<SearchLocationFeature>
+    @Bindable var store: StoreOf<SplashFeature>
     
     var body: some View {
         ZStack {
@@ -26,9 +26,16 @@ struct SplashView: View {
         }
         .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onAppear {
+            store.send(.onAppear)
+        }
     }
 }
 
 #Preview {
-    SplashView()
+    SplashView(
+        store: Store(initialState: SplashFeature.State()) {
+            SplashFeature()
+        }
+    )
 }

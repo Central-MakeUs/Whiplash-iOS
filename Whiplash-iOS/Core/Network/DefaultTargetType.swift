@@ -20,6 +20,9 @@ public enum DefaultTargetType {
 }
 
 extension DefaultTargetType: TargetType {
+    
+    public var validationType: ValidationType { .successCodes }
+    
     public var baseURL: URL {
         guard let baseUrlString = Bundle.current.object(forInfoDictionaryKey: "BASE_URL") as? String else {
             fatalError("BASE_URL not found in Info.plist")

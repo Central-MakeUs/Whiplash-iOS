@@ -33,8 +33,7 @@ extension AppleAuthRepositoryImpl: DependencyKey {
                 let identityToken = try await AppleAuthService().signIn()
                 let request = SignInRequestDTO(socialType: "APPLE",
                                                token: identityToken,
-                                               deviceId: "1",
-                                               originalNonce: "1")
+                                               deviceId: "1")
                 
                 let response: Response<SignInResponseDTO> = try await apiClient.request(
                     Response<SignInResponseDTO>.self,

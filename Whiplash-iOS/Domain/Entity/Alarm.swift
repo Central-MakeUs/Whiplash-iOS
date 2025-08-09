@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Alarm {
+public struct Alarm: Equatable {
     var id: Int
     var title: String
     var ampm: String

@@ -32,8 +32,7 @@ extension GoogleAuthRepositoryImpl: DependencyKey {
 
                 let request = SignInRequestDTO(socialType: "GOOGLE",
                                                token: idToken,
-                                               deviceId: "1",
-                                               originalNonce: "")
+                                               deviceId: "1")
                 
                 let response: Response<SignInResponseDTO> = try await apiClient.request(
                     Response<SignInResponseDTO>.self,

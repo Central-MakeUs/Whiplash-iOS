@@ -27,7 +27,7 @@ struct OnboardingFeature {
         case delegate(Delegate)
 
         enum Delegate: Equatable {
-            case finished // 온보딩 종료 -> AppFeature로 알림
+            case finished 
         }
     }
 

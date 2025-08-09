@@ -24,8 +24,9 @@ public struct LoginFeature {
         case delegate(Delegate)
     }
     
-    public enum Delegate {
+    public enum Delegate: Equatable {
         case didFinishLogin(shouldCreateProfile: Bool)
+        case needLogin // 추가
     }
     
     @Dependency(\.authUsecase) var authUseCase
@@ -53,8 +54,8 @@ public struct LoginFeature {
                     ))
                 }
             case let .didFinishLogin(.success(info)):
-                KeychainProvider.shared.save(info.accessToken.replacingOccurrences(of: "Bearer ", with: ""), key: .accessToken)
-                KeychainProvider.shared.save(info.refreshToken.replacingOccurrences(of: "Bearer ", with: ""), key: .refreshToken)
+                TokenStore().save(accessToken: info.accessToken,
+                                  refreshToken: info.refreshToken)
                 autoLogin.setEnabled(true)
                 return .send(.delegate(.didFinishLogin(shouldCreateProfile: true)))
             case .didFinishLogin(.failure):
@@ -65,3 +66,5 @@ public struct LoginFeature {
         }
     }
 }
+
+

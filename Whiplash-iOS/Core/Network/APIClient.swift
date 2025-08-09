@@ -49,6 +49,8 @@ public final class APIClient {
     ) async throws -> T {
         return try await withCheckedThrowingContinuation { continuation in
             request(T.self, target: target) { result in
+                Logger.shared.log(category: .network, "request: \(T))")
+                Logger.shared.log(category: .network, "target: \(target))")
                 switch result {
                 case .success(let response):
                     continuation.resume(returning: response)

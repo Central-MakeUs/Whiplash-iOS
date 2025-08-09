@@ -30,6 +30,7 @@ open class NetworkRequestInterceptor: RequestInterceptor {
                       for session: Session,
                       dueTo error: any Error,
                       completion: @escaping (RetryResult) -> Void) {
+        Logger.shared.log(level: .debug, category: .network, "retry 호출됨")
         guard let response = request.task?.response as? HTTPURLResponse,
               response.statusCode == 401 else {
             completion(.doNotRetryWithError(error))

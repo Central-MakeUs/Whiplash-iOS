@@ -23,11 +23,12 @@
 		2F02F81B2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F81A2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift */; };
 		2F02F81D2E3DD638005273A5 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F81C2E3DD638005273A5 /* View+.swift */; };
 		2F02F8202E3DD7A8005273A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F81F2E3DD7A8005273A5 /* HomeView.swift */; };
-		2F02F8222E3DD7FD005273A5 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8212E3DD7FD005273A5 /* NavigationRouter.swift */; };
-		2F02F8242E3DDA3E005273A5 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8232E3DDA3E005273A5 /* AppFeature.swift */; };
 		2F02F8282E3DE709005273A5 /* AlarmCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8272E3DE709005273A5 /* AlarmCardView.swift */; };
 		2F02F82A2E3DE7D1005273A5 /* AlarmCardFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F8292E3DE7D1005273A5 /* AlarmCardFeature.swift */; };
 		2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F82C2E3DE95E005273A5 /* Alarm.swift */; };
+		2F0556F72E47021300BA067E /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0556F62E47021300BA067E /* AuthClient.swift */; };
+		2F0556F92E47022100BA067E /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0556F82E47022100BA067E /* TokenStore.swift */; };
+		2F0556FB2E472B1900BA067E /* RootFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0556FA2E472B1900BA067E /* RootFeature.swift */; };
 		2F22633A2E40FF4B0079CF4F /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = 2F2263392E40FF4B0079CF4F /* NMapsMap */; };
 		2F22633C2E40FFAD0079CF4F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22633B2E40FFAD0079CF4F /* MapView.swift */; };
 		2F22633E2E4258720079CF4F /* MapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22633D2E4258720079CF4F /* MapFeature.swift */; };
@@ -39,7 +40,6 @@
 		2F22634F2E466BE90079CF4F /* SplashFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22634E2E466BE90079CF4F /* SplashFeature.swift */; };
 		2F2263532E466CDA0079CF4F /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263522E466CDA0079CF4F /* OnboardingView.swift */; };
 		2F2263552E466CEA0079CF4F /* OnboardingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263542E466CEA0079CF4F /* OnboardingFeature.swift */; };
-		2F2263572E466D190079CF4F /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263562E466D190079CF4F /* Route.swift */; };
 		2F22635A2E466D940079CF4F /* AlarmRingingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263592E466D940079CF4F /* AlarmRingingView.swift */; };
 		2F22635D2E4678280079CF4F /* AppBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22635C2E4678280079CF4F /* AppBottomSheet.swift */; };
 		2F22635F2E4678840079CF4F /* SheetTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22635E2E4678840079CF4F /* SheetTitle.swift */; };
@@ -52,7 +52,7 @@
 		2F3E8DBB2E46AB9400E3C0D7 /* ReasonDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DBA2E46AB9400E3C0D7 /* ReasonDTO.swift */; };
 		2F3E8DBD2E46BDE300E3C0D7 /* OnboardingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DBC2E46BDE300E3C0D7 /* OnboardingClient.swift */; };
 		2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDDF2E19635D00607760 /* Assets.xcassets */; };
-		2F4DDDE52E19635D00607760 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* MainView.swift */; };
+		2F4DDDE52E19635D00607760 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE02E19635D00607760 /* RootView.swift */; };
 		2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */; };
 		2F4DDDF32E19667700607760 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEE2E19667700607760 /* Pretendard-Light.otf */; };
 		2F4DDDF42E19667700607760 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDDEC2E19667700607760 /* Pretendard-ExtraBold.otf */; };
@@ -135,11 +135,12 @@
 		2F02F81A2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarModifier.swift; sourceTree = "<group>"; };
 		2F02F81C2E3DD638005273A5 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		2F02F81F2E3DD7A8005273A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		2F02F8212E3DD7FD005273A5 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
-		2F02F8232E3DDA3E005273A5 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		2F02F8272E3DE709005273A5 /* AlarmCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCardView.swift; sourceTree = "<group>"; };
 		2F02F8292E3DE7D1005273A5 /* AlarmCardFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCardFeature.swift; sourceTree = "<group>"; };
 		2F02F82C2E3DE95E005273A5 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		2F0556F62E47021300BA067E /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
+		2F0556F82E47022100BA067E /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
+		2F0556FA2E472B1900BA067E /* RootFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeature.swift; sourceTree = "<group>"; };
 		2F22633B2E40FFAD0079CF4F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2F22633D2E4258720079CF4F /* MapFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFeature.swift; sourceTree = "<group>"; };
 		2F2263412E4658CE0079CF4F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -150,7 +151,6 @@
 		2F22634E2E466BE90079CF4F /* SplashFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFeature.swift; sourceTree = "<group>"; };
 		2F2263522E466CDA0079CF4F /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2F2263542E466CEA0079CF4F /* OnboardingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFeature.swift; sourceTree = "<group>"; };
-		2F2263562E466D190079CF4F /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		2F2263592E466D940079CF4F /* AlarmRingingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRingingView.swift; sourceTree = "<group>"; };
 		2F22635C2E4678280079CF4F /* AppBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBottomSheet.swift; sourceTree = "<group>"; };
 		2F22635E2E4678840079CF4F /* SheetTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetTitle.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		2F3E8DBA2E46AB9400E3C0D7 /* ReasonDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReasonDTO.swift; sourceTree = "<group>"; };
 		2F3E8DBC2E46BDE300E3C0D7 /* OnboardingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingClient.swift; sourceTree = "<group>"; };
 		2F4DDDDF2E19635D00607760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F4DDDE02E19635D00607760 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2F4DDDE02E19635D00607760 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whiplash_iOSApp.swift; sourceTree = "<group>"; };
 		2F4DDDEA2E19667700607760 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		2F4DDDEB2E19667700607760 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -272,7 +272,6 @@
 			children = (
 				2F02F7BE2E3C03B3005273A5 /* Handler */,
 				2F02F7C12E3C03F1005273A5 /* AppURLRouter.swift */,
-				2F02F8212E3DD7FD005273A5 /* NavigationRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -329,15 +328,6 @@
 				2F22634E2E466BE90079CF4F /* SplashFeature.swift */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		2F22634B2E466B9C0079CF4F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				2F02F8232E3DDA3E005273A5 /* AppFeature.swift */,
-				2F2263562E466D190079CF4F /* Route.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		2F2263512E466CC20079CF4F /* Onboarding */ = {
@@ -491,9 +481,10 @@
 			isa = PBXGroup;
 			children = (
 				2F4DDDE12E19635D00607760 /* Whiplash_iOSApp.swift */,
-				2F4DDDE02E19635D00607760 /* MainView.swift */,
+				2F4DDDE02E19635D00607760 /* RootView.swift */,
 				2F02F7AF2E3BE17B005273A5 /* DependencyValues.swift */,
 				2F02F7B92E3C00F0005273A5 /* AppDelegate.swift */,
+				2F0556FA2E472B1900BA067E /* RootFeature.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -502,7 +493,6 @@
 			isa = PBXGroup;
 			children = (
 				2F2263512E466CC20079CF4F /* Onboarding */,
-				2F22634B2E466B9C0079CF4F /* Router */,
 				2F22634A2E4669BD0079CF4F /* Splash */,
 				2F2263402E4658BE0079CF4F /* Location */,
 				2F02F8262E3DE6EF005273A5 /* Alarm */,
@@ -518,6 +508,8 @@
 				2F4DDE6B2E1D009F00607760 /* LoginView.swift */,
 				2F4DDE6D2E1D00AF00607760 /* LoginFeature.swift */,
 				2F2263482E4667DE0079CF4F /* AutoLoginClient.swift */,
+				2F0556F62E47021300BA067E /* AuthClient.swift */,
+				2F0556F82E47022100BA067E /* TokenStore.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -930,12 +922,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2263532E466CDA0079CF4F /* OnboardingView.swift in Sources */,
+				2F0556F92E47022100BA067E /* TokenStore.swift in Sources */,
 				2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */,
-				2F02F8242E3DDA3E005273A5 /* AppFeature.swift in Sources */,
 				2FCBBE752E3E58A600412543 /* AppTextField.swift in Sources */,
 				2FCBBE802E3E94F400412543 /* WeekdayPicker.swift in Sources */,
 				2F2263632E4678D10079CF4F /* SheetButtons.swift in Sources */,
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
+				2F0556F72E47021300BA067E /* AuthClient.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
 				2F2263462E4659C80079CF4F /* CLLocationCoordinate2D+.swift in Sources */,
 				2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */,
@@ -947,9 +940,9 @@
 				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
 				2F4DDEAB2E1D48D100607760 /* AppleAuthRepository.swift in Sources */,
 				2F02F82A2E3DE7D1005273A5 /* AlarmCardFeature.swift in Sources */,
-				2F02F8222E3DD7FD005273A5 /* NavigationRouter.swift in Sources */,
 				2F3E8DBB2E46AB9400E3C0D7 /* ReasonDTO.swift in Sources */,
 				2F2263492E4667DE0079CF4F /* AutoLoginClient.swift in Sources */,
+				2F0556FB2E472B1900BA067E /* RootFeature.swift in Sources */,
 				2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */,
 				2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */,
 				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
@@ -961,7 +954,7 @@
 				2F2263552E466CEA0079CF4F /* OnboardingFeature.swift in Sources */,
 				2FCBBE962E3F4FAF00412543 /* AlarmRequestDTO.swift in Sources */,
 				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
-				2F4DDDE52E19635D00607760 /* MainView.swift in Sources */,
+				2F4DDDE52E19635D00607760 /* RootView.swift in Sources */,
 				2FCBBE922E3F39A700412543 /* PlaceRepositoryImpl.swift in Sources */,
 				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
 				2F4DDEAE2E209F1800607760 /* Logger.swift in Sources */,
@@ -987,7 +980,6 @@
 				2F22634D2E466BDC0079CF4F /* SplashView.swift in Sources */,
 				2F3E8DB52E46984100E3C0D7 /* AlarmListResponseDTO.swift in Sources */,
 				2F22634F2E466BE90079CF4F /* SplashFeature.swift in Sources */,
-				2F2263572E466D190079CF4F /* Route.swift in Sources */,
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
 				2FCBBE722E3E54A100412543 /* HomeFeature.swift in Sources */,
 				2FCBBE942E3F4FA400412543 /* AlarmResponseDTO.swift in Sources */,

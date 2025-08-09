@@ -33,8 +33,7 @@ extension KakaoAuthRepositoryImpl: DependencyKey {
                 let token = try await KakaoAuthService().signIn()
                 let request = SignInRequestDTO(socialType: "KAKAO",
                                                token: token,
-                                               deviceId: "1",
-                                               originalNonce: "")
+                                               deviceId: "3")
                 
                 let response: Response<SignInResponseDTO> = try await apiClient.request(
                     Response<SignInResponseDTO>.self,
