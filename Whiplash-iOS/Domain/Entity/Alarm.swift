@@ -15,6 +15,7 @@ public struct Alarm: Equatable {
     var repeatDays: String
     var address: String
     var isToggleOn: Bool
+    var soundType: String
 }
 
 extension Alarm {
@@ -22,20 +23,22 @@ extension Alarm {
         id: 1,
         title: "눈 떠!",
         ampm: "오전",
-        time: "00:00",
+        time: "01:00",
         repeatDays: "월,수,금",
         address: "서울시 중랑구",
-        isToggleOn: true
+        isToggleOn: true,
+        soundType: ""
     )
     
     static let emptyData: Alarm = .init(
         id: 1,
         title: "",
         ampm: "",
-        time: "00:00",
+        time: "01:00",
         repeatDays: "",
         address: "",
-        isToggleOn: true
+        isToggleOn: true,
+        soundType: ""
     )
     
     static let sampleList: [Alarm] = [
@@ -46,7 +49,8 @@ extension Alarm {
                 time: "08:30",
                 repeatDays: "수, 금",
                 address: "서울시 중구 퇴계로 24",
-                isToggleOn: true
+                isToggleOn: true,
+                soundType: ""
             ),
             Alarm(
                 id: 2,
@@ -55,7 +59,9 @@ extension Alarm {
                 time: "19:30",
                 repeatDays: "목, 토",
                 address: "서울시 중구 퇴계로 24",
-                isToggleOn: false
+                isToggleOn: false,
+                soundType: ""
             )
         ]
 }
+

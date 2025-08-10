@@ -9,12 +9,12 @@ import Foundation
 import ComposableArchitecture
 
 public struct AlarmRepositoryImpl: AlarmRepository {
-    public var addAlarm: @Sendable () async throws -> Alarm
+    public var addAlarm: @Sendable (_ alarm: Alarm, _ place: Place) async throws -> Void
     public var getAlarmList: @Sendable () async throws -> [Alarm]
     public var alarmOff: @Sendable () async throws -> Void
     public var deleteAlarm: @Sendable () async throws -> Void
     public init(
-        addAlarm: @escaping @Sendable () async throws -> Alarm,
+        addAlarm: @escaping @Sendable (_ alarm: Alarm, _ place: Place) async throws -> Void,
         getAlarmList: @escaping @Sendable () async throws -> [Alarm],
         alarmOff: @escaping @Sendable () async throws -> Void,
         deleteAlarm: @escaping @Sendable () async throws -> Void
@@ -30,32 +30,26 @@ extension AlarmRepositoryImpl: DependencyKey {
     public static let liveValue: Self = {
         let apiClient = APIClient()
         return Self(
-            addAlarm: {
-
-                
-                let request = AlarmRequestDTO(address: "서울시 중구 퇴계로 24",
-                                              latitude: 37.564213,
-                                              longitude: 127.001698,
-                                              alarmPurpose: "도서관 정기 출석 알람",
-                                              time: "08:30",
-                                              repeatDays:  [
-                                                "월",
-                                                "수",
-                                                "금"
-                                              ],
+            addAlarm: { alarm, place in
+                let time = TimeConverter.convert12To24(time: alarm.time, ampm: alarm.ampm)!
+                let request = AlarmRequestDTO(address: place.address,
+                                              latitude: place.latitude,
+                                              longitude: place.longitude,
+                                              alarmPurpose: alarm.title,
+                                              time: time,
+                                              repeatDays: StringArrayConverter.stringToArray(alarm.repeatDays),
                                               soundType: "알람 소리1")
                 
                 let response: Response<AlarmResponseDTO> = try await apiClient.request(
                     Response<AlarmResponseDTO>.self,
                     target: .addAlarm(request))
                 
-                if response.isSuccess, let dto = response.result {
-                    
-                    return dto.toDomain(id: 0, isToggleOn: false)
-                    
+                if response.isSuccess {
+                    return
                 } else {
                     throw NSError(domain: "AddAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
+                
             },
             getAlarmList: {
                 

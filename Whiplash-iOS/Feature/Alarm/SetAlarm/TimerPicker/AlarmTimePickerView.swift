@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct AlarmTimePicker: View {
-    @State private var ampm: String = "오전"
-    @State private var hour: Int = 0
-    @State private var minute: Int = 0
+    @Binding var ampm: Ampm
+    @Binding var hour: Int
+    @Binding var minute: Int
     
-    private let ampmList = ["오전", "오후"]
-    private let hours = Array(0...11)
+    private let ampmList: [Ampm] = [.am, .pm]
+    private let hours = Array(1...12)
     private let minutes = Array(0...59)
     
     var body: some View {
@@ -21,7 +21,7 @@ struct AlarmTimePicker: View {
             // 오전/오후 피커
             Picker("", selection: $ampm) {
                 ForEach(ampmList, id: \.self) { value in
-                    AppText(text: value,
+                    AppText(text: value.rawValue,
                             style: .title3_b_28,
                             color: ampm == value
                             ? .white
@@ -79,15 +79,6 @@ struct AlarmTimePicker: View {
         }
         .frame(height: 120)
         .background(Color.clear)
-    }
-}
-
-struct AlarmTimePicker_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
-            AlarmTimePicker()
-        }
     }
 }
 

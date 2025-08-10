@@ -24,12 +24,12 @@ struct SetAlarmView: View {
                                     color: .gray300)
                             Spacer()
                         }
-
+                        
                         AppSearchBarPreView(text: $store.place.name.sending(\.selectedPlaceName),
                                             placeholder: "도착 목표 장소는?")
-                            .onTapGesture {
-                                store.send(.searchBarTapped)
-                            }
+                        .onTapGesture {
+                            store.send(.searchBarTapped)
+                        }
                         
                         HStack() {
                             Spacer()
@@ -68,7 +68,11 @@ struct SetAlarmView: View {
                             Spacer()
                         }
                         
-                        AlarmTimePicker()
+                        AlarmTimePicker(
+                            ampm: $store.ampm.sending(\.setAmpm),
+                            hour: $store.hour.sending(\.setHour),
+                            minute: $store.minute.sending(\.setMinute)
+                        )
                         
                     }
                     
@@ -80,7 +84,12 @@ struct SetAlarmView: View {
                             Spacer()
                         }
                         
-                        WeekdayPicker(selectedDays: $selectedDays)
+                        WeekdayPicker(
+                            selected: store.selectedDays,
+                            onToggle: { day in
+                                store.send(.toggleWeekday(day))
+                            }
+                        )
                         
                     }
                     
@@ -100,15 +109,15 @@ struct SetAlarmView: View {
                     .padding(.vertical, 12)
                 }
             }
-        
+            
             
             VStack {
                 Spacer()
                 AppButton(title: "저장하기",
                           size: .h48,
                           type: .line,
-                          state: .disabled) {
-                    
+                          state: store.canSave ? .normal : .disabled) {
+                    store.send(.saveTapped)
                 }
                 Spacer().frame(height: 40)
             }

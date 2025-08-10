@@ -30,7 +30,8 @@ extension AlarmResponseDTO {
             time: displayTime,
             repeatDays: repeatDays.joined(separator: ", "),
             address: address,
-            isToggleOn: isToggleOn
+            isToggleOn: isToggleOn,
+            soundType: ""
         )
     }
     

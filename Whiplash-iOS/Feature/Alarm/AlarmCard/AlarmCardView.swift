@@ -52,17 +52,18 @@ struct AlarmCardView: View {
                             
                         }
                         .toggleStyle(AppToggleStyle())
-                        .allowsHitTesting(false)
+                        //.allowsHitTesting(false)
                     }
                     
                 }
                 
+                /*
                 AppButton(title: "도착 인증!",
                            size: .h44,
                            type: .black,
                            state: .normal) {
                     
-                }
+                }*/
                 
                 Rectangle()
                     .foregroundStyle(Color.gray700)

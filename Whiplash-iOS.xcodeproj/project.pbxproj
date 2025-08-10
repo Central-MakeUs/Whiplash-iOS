@@ -132,6 +132,9 @@
 		2FED86C22E48F573003D6F71 /* 김두한_알람.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BD2E48F573003D6F71 /* 김두한_알람.mp3 */; };
 		2FED86C32E48F573003D6F71 /* 대피_사이렌_소리.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */; };
 		2FED86C42E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */; };
+		2FED86C62E492CE1003D6F71 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C52E492CE1003D6F71 /* Weekday.swift */; };
+		2FED86C82E493FE2003D6F71 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C72E493FE2003D6F71 /* TimeConverter.swift */; };
+		2FED86CA2E4942F8003D6F71 /* StringArrayConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C92E4942F8003D6F71 /* StringArrayConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +259,9 @@
 		2FED86BE2E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "네모바지_스폰지밥_뚱이_일어나_움직여.mp3"; sourceTree = "<group>"; };
 		2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "대피_사이렌_소리.mp3"; sourceTree = "<group>"; };
 		2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "카리나_모닝콜_배경음악.mp3"; sourceTree = "<group>"; };
+		2FED86C52E492CE1003D6F71 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
+		2FED86C72E493FE2003D6F71 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
+		2FED86C92E4942F8003D6F71 /* StringArrayConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringArrayConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +597,7 @@
 				2FCBBE882E3F32D800412543 /* Place.swift */,
 				2FED86B62E48AF0F003D6F71 /* MapStyle.swift */,
 				2FED86BA2E48F2E7003D6F71 /* CancelID.swift */,
+				2FED86C52E492CE1003D6F71 /* Weekday.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -730,6 +737,7 @@
 		2F4DDEB72E20F20200607760 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2FED86CB2E494308003D6F71 /* Converter */,
 				2F4DDEB82E20F20C00607760 /* Extension */,
 			);
 			path = Util;
@@ -850,6 +858,15 @@
 				2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */,
 			);
 			path = AlarmSound;
+			sourceTree = "<group>";
+		};
+		2FED86CB2E494308003D6F71 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				2FED86C72E493FE2003D6F71 /* TimeConverter.swift */,
+				2FED86C92E4942F8003D6F71 /* StringArrayConverter.swift */,
+			);
+			path = Converter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1002,6 +1019,7 @@
 				2F4DDDE52E19635D00607760 /* RootView.swift in Sources */,
 				2FCBBE922E3F39A700412543 /* PlaceRepositoryImpl.swift in Sources */,
 				2F4DDE932E1D34D000607760 /* Respondable.swift in Sources */,
+				2FED86C82E493FE2003D6F71 /* TimeConverter.swift in Sources */,
 				2F4DDEAE2E209F1800607760 /* Logger.swift in Sources */,
 				2F02F8282E3DE709005273A5 /* AlarmCardView.swift in Sources */,
 				2F4DDE7E2E1D145700607760 /* AuthUseCase.swift in Sources */,
@@ -1025,6 +1043,7 @@
 				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
 				2FCBBE982E3F505F00412543 /* AlarmRepository.swift in Sources */,
 				2F22634D2E466BDC0079CF4F /* SplashView.swift in Sources */,
+				2FED86CA2E4942F8003D6F71 /* StringArrayConverter.swift in Sources */,
 				2F3E8DB52E46984100E3C0D7 /* AlarmListResponseDTO.swift in Sources */,
 				2F22634F2E466BE90079CF4F /* SplashFeature.swift in Sources */,
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
@@ -1032,6 +1051,7 @@
 				2FCBBE942E3F4FA400412543 /* AlarmResponseDTO.swift in Sources */,
 				2F2263422E4658CE0079CF4F /* LocationManager.swift in Sources */,
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
+				2FED86C62E492CE1003D6F71 /* Weekday.swift in Sources */,
 				2F4DDE852E1D1DB700607760 /* AuthRepository.swift in Sources */,
 				2F02F81D2E3DD638005273A5 /* View+.swift in Sources */,
 				2FCBBE872E3F325300412543 /* SearchPlaceFeature.swift in Sources */,

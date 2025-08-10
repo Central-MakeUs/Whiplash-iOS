@@ -45,7 +45,8 @@ extension AlarmItemResponseDTO {
             time: formattedTime,
             repeatDays: repeatDaysString,
             address: address,
-            isToggleOn: isToggleOn
+            isToggleOn: isToggleOn,
+            soundType: ""
         )
     }
     
