@@ -54,7 +54,7 @@ public struct LoginFeature {
                     ))
                 }
             case let .didFinishLogin(.success(info)):
-                TokenStore().save(accessToken: info.accessToken,
+                TokenStore.shared.save(accessToken: info.accessToken,
                                   refreshToken: info.refreshToken)
                 autoLogin.setEnabled(true)
                 return .send(.delegate(.didFinishLogin(shouldCreateProfile: true)))

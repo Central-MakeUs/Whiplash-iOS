@@ -21,7 +21,7 @@ struct HomeView: View {
                 AlarmEmptyView()
             } else {
                 ScrollView {
-                    LazyVStack(spacing: 12) {
+                    VStack(spacing: 12) {
                         ForEach(store.scope(state: \.cards, action: \.card)) { cardStore in
                             AlarmCardView(store: cardStore)
                         }
@@ -45,7 +45,7 @@ struct HomeView: View {
                     }
                     
                     Button {
-                        
+                        store.send(.settingButtonTapped)
                     } label: {
                         Image(.Image.icDot28)
                     }

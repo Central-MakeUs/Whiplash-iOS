@@ -14,18 +14,18 @@ enum SessionState: Equatable {
 
 struct AuthClient {
     var sessionState: @Sendable () async -> SessionState
-    var signOut: @Sendable () async -> Void
+    var signout: @Sendable () async -> Void
 }
 
 extension AuthClient: DependencyKey {
     static let liveValue = Self(
         sessionState: {
             
-            if TokenStore().accessToken() != nil { return .valid }
+            if TokenStore.shared.accessToken() != nil { return .valid }
             return .needLogin
         },
-        signOut: {
-            TokenStore().clear()
+        signout: {
+            TokenStore.shared.clear()
         }
     )
 }

@@ -18,6 +18,8 @@ public enum DefaultTargetType {
     case alarmOff(Int, AlarmOffRequestDTO)
     case deleteAlarm(Int, ReasonDTO)
     case getPlaceDetail(String, String)
+    case logout
+    case signout
 }
 
 extension DefaultTargetType: TargetType {
@@ -53,6 +55,10 @@ extension DefaultTargetType: TargetType {
             return "/api/alarms/\(alarmId)"
         case let .getPlaceDetail(latitude, longitude):
             return "/api/places/detail"
+        case .logout:
+            return "/api/auth/logout"
+        case .signout:
+            return "/api/members"
         }
     }
     
@@ -74,6 +80,10 @@ extension DefaultTargetType: TargetType {
             return .delete
         case .getPlaceDetail:
             return .get
+        case .logout:
+            return .post
+        case .signout:
+            return .delete
         }
     }
     
@@ -97,6 +107,10 @@ extension DefaultTargetType: TargetType {
             return .requestParameters(parameters: ["latitude": latitude,
                                                    "longitude" : longitude],
                                       encoding: URLEncoding.default)
+        case .logout:
+            return .requestPlain
+        case .signout:
+            return .requestPlain
         }
     }
 

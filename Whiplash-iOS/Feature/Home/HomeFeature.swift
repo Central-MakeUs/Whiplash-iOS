@@ -22,13 +22,13 @@ public struct HomeFeature {
         case onAppear
         case didFinishGetList(Result<[Alarm], Error>)
         case card(IdentifiedActionOf<AlarmCardFeature>)
-        case logoutTapped
         case addButtonTapped
+        case settingButtonTapped
         case delegate(Delegate)
         
         public enum Delegate: Equatable {
-            case logout
             case addAlarmTapped
+            case moveToSetting
         }
     }
     
@@ -40,6 +40,7 @@ public struct HomeFeature {
                 
             case .onAppear:
                 Logger.shared.log(category: .ui, "HomeFeature.onAppear 호출됨")
+
                 return .run { send in
                     Logger.shared.log(category: .network, "알람 리스트 요청 시작")
                     let result = await Result {
@@ -61,18 +62,16 @@ public struct HomeFeature {
             case .card:
                 return .none
                 
-            case .logoutTapped:
-                return .send(.delegate(.logout))
-                
             case .addButtonTapped:
                 return .send(.delegate(.addAlarmTapped))
-                
-                
+            
+            case .settingButtonTapped:
+                return .send(.delegate(.moveToSetting))
+                   
             case .delegate:
                 return .none
-                
             }
-            
+                
         }
         .forEach(\.cards, action: \.card) {
             AlarmCardFeature()

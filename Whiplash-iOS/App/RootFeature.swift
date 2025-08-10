@@ -49,6 +49,7 @@ struct RootFeature {
                     state.onboarding = .init()
                     return .none
                 }
+
                 return .run { send in
                     let ses = await authClient.sessionState()
                     Logger.shared.log(level: .debug, category: .etc, "authClient.sessionState() \(ses))")
@@ -79,8 +80,15 @@ struct RootFeature {
                 state.login = .init()
                 state.main = nil
                 return .none
+            
+            case .main(.delegate(.logout)):
+                Logger.shared.log(level: .debug, category: .etc, "루트에서 로그아웃 수신됨")
+                state.main = nil
+                state.login = .init()
+                return .none
                 
-            case .main(.home(.delegate(.logout))):
+            case .main(.delegate(.signout)):
+                Logger.shared.log(level: .debug, category: .etc, "루트에서 회원탈퇴 수신됨")
                 state.main = nil
                 state.login = .init()
                 return .none

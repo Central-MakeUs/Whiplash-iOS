@@ -36,6 +36,11 @@ struct MainView: View {
                          action: MainFeature.Path.Action.selectPlace) { store in
                     MapView(store: store)
                 }
+            case .setting(_):
+                CaseLet(/MainFeature.Path.State.setting,
+                         action: MainFeature.Path.Action.setting) { store in
+                    SettingView(store: store)
+                }
             }
         }
     }

@@ -19,7 +19,8 @@ protocol TokenStoring {
     func clear()
 }
 
-struct TokenStore: TokenStoring {
+class TokenStore: TokenStoring {
+    static let shared = TokenStore()
     func accessToken() -> String? { KeychainProvider.shared.read(.accessToken) }
     func refreshToken() -> String? { KeychainProvider.shared.read(.refreshToken) }
     func save(accessToken: String, refreshToken: String) {

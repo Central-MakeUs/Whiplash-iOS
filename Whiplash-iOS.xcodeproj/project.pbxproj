@@ -135,6 +135,9 @@
 		2FED86C62E492CE1003D6F71 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C52E492CE1003D6F71 /* Weekday.swift */; };
 		2FED86C82E493FE2003D6F71 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C72E493FE2003D6F71 /* TimeConverter.swift */; };
 		2FED86CA2E4942F8003D6F71 /* StringArrayConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C92E4942F8003D6F71 /* StringArrayConverter.swift */; };
+		2FED86CE2E494D2A003D6F71 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86CD2E494D2A003D6F71 /* SettingView.swift */; };
+		2FED86D02E494D35003D6F71 /* SettingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86CF2E494D35003D6F71 /* SettingFeature.swift */; };
+		2FED86D22E495C88003D6F71 /* MailComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86D12E495C88003D6F71 /* MailComposeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +265,9 @@
 		2FED86C52E492CE1003D6F71 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 		2FED86C72E493FE2003D6F71 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
 		2FED86C92E4942F8003D6F71 /* StringArrayConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringArrayConverter.swift; sourceTree = "<group>"; };
+		2FED86CD2E494D2A003D6F71 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		2FED86CF2E494D35003D6F71 /* SettingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeature.swift; sourceTree = "<group>"; };
+		2FED86D12E495C88003D6F71 /* MailComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailComposeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +528,7 @@
 		2F4DDE692E1D007200607760 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2FED86CC2E494C9E003D6F71 /* Setting */,
 				2F2263512E466CC20079CF4F /* Onboarding */,
 				2F22634A2E4669BD0079CF4F /* Splash */,
 				2F2263402E4658BE0079CF4F /* Location */,
@@ -869,6 +876,16 @@
 			path = Converter;
 			sourceTree = "<group>";
 		};
+		2FED86CC2E494C9E003D6F71 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2FED86CD2E494D2A003D6F71 /* SettingView.swift */,
+				2FED86CF2E494D35003D6F71 /* SettingFeature.swift */,
+				2FED86D12E495C88003D6F71 /* MailComposeView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -985,6 +1002,7 @@
 				2F02F7C02E3C03CA005273A5 /* KakaoURLHandler.swift in Sources */,
 				2FCBBE752E3E58A600412543 /* AppTextField.swift in Sources */,
 				2FCBBE802E3E94F400412543 /* WeekdayPicker.swift in Sources */,
+				2FED86D22E495C88003D6F71 /* MailComposeView.swift in Sources */,
 				2F2263632E4678D10079CF4F /* SheetButtons.swift in Sources */,
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F0556F72E47021300BA067E /* AuthClient.swift in Sources */,
@@ -1004,6 +1022,7 @@
 				2F3E8DBB2E46AB9400E3C0D7 /* ReasonDTO.swift in Sources */,
 				2F2263492E4667DE0079CF4F /* AutoLoginClient.swift in Sources */,
 				2F0556FB2E472B1900BA067E /* RootFeature.swift in Sources */,
+				2FED86D02E494D35003D6F71 /* SettingFeature.swift in Sources */,
 				2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */,
 				2F4DDEA22E1D43CC00607760 /* SocialLoginType.swift in Sources */,
 				2F4DDEB32E20DDC800607760 /* NetworkRequestInterceptor.swift in Sources */,
@@ -1049,6 +1068,7 @@
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
 				2FCBBE722E3E54A100412543 /* HomeFeature.swift in Sources */,
 				2FCBBE942E3F4FA400412543 /* AlarmResponseDTO.swift in Sources */,
+				2FED86CE2E494D2A003D6F71 /* SettingView.swift in Sources */,
 				2F2263422E4658CE0079CF4F /* LocationManager.swift in Sources */,
 				2F4DDE712E1D031C00607760 /* AppLayout.swift in Sources */,
 				2FED86C62E492CE1003D6F71 /* Weekday.swift in Sources */,

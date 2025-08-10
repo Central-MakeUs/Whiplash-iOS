@@ -26,7 +26,7 @@ final class AuthInterceptor: NetworkRequestInterceptor {
             case .success(let response):
                 let data = response.result!
 
-                TokenStore().save(accessToken: data.accessToken,
+                TokenStore.shared.save(accessToken: data.accessToken,
                                   refreshToken: data.refreshToken)
                 Logger.shared.log(level: .debug, category: .network, "토큰 재발급 성공 : \(data)")
                 
@@ -34,7 +34,7 @@ final class AuthInterceptor: NetworkRequestInterceptor {
 
             case .failure(let error):
                 Logger.shared.log(level: .debug, category: .network, "토큰 재발급 실패 : \(error)")
-                TokenStore().clear()
+                TokenStore.shared.clear()
                 completion(.doNotRetryWithError(error))
             }
         }

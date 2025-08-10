@@ -10,16 +10,18 @@ import ComposableArchitecture
 import Moya
 
 public struct AppleAuthRepositoryImpl: AuthRepository {
-    
     public var signIn: @Sendable () async throws -> SignInInfo
     public var logout: @Sendable () async throws -> Void
+    public var signout: @Sendable () async throws -> Void
     
     public init(
         signIn: @escaping @Sendable () async throws -> SignInInfo,
-        logout: @escaping @Sendable () async throws -> Void
+        logout: @escaping @Sendable () async throws -> Void,
+        signout: @escaping @Sendable () async throws -> Void
     ) {
         self.signIn = signIn
         self.logout = logout
+        self.signout = signout
     }
 }
 
@@ -49,7 +51,30 @@ extension AppleAuthRepositoryImpl: DependencyKey {
 
             },
             logout: {
+                let response: Response<EmptyDTO> = try await apiClient.request(
+                    Response<EmptyDTO>.self,
+                    target: .logout)
                 
+                if response.isSuccess {
+                    
+                    return
+                    
+                } else {
+                    throw NSError(domain: "logout", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                }
+            },
+            signout: {
+                let response: Response<EmptyDTO> = try await apiClient.request(
+                    Response<EmptyDTO>.self,
+                    target: .signout)
+                
+                if response.isSuccess {
+                    
+                    return
+                    
+                } else {
+                    throw NSError(domain: "signout", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                }
             }
         )
     }()

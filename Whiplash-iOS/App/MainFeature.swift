@@ -21,6 +21,13 @@ struct MainFeature {
         case home(HomeFeature.Action)
         case path(StackAction<Path.State, Path.Action>)
         case binding(BindingAction<State>)
+        case delegate(Delegate)
+        
+    }
+    
+    public enum Delegate: Equatable {
+        case logout
+        case signout
     }
     
     struct Path: Reducer {
@@ -28,11 +35,13 @@ struct MainFeature {
             case setAlarm(SetAlarmFeature.State)
             case searchPlace(SearchPlaceFeature.State)
             case selectPlace(MapFeature.State)
+            case setting(SettingFeature.State)
         }
         enum Action {
             case setAlarm(SetAlarmFeature.Action)
             case searchPlace(SearchPlaceFeature.Action)
             case selectPlace(MapFeature.Action)
+            case setting(SettingFeature.Action)
         }
         var body: some ReducerOf<Self> {
             Scope(state: /State.setAlarm, action: /Action.setAlarm) {
@@ -43,6 +52,9 @@ struct MainFeature {
             }
             Scope(state: /State.selectPlace, action: /Action.selectPlace){
                 MapFeature()
+            }
+            Scope(state: /State.setting, action: /Action.setting){
+                SettingFeature()
             }
         }
     }
@@ -60,6 +72,18 @@ struct MainFeature {
                 state.path.append(.setAlarm(.init()))
                 return .none
                 
+            case .home(.delegate(.moveToSetting)):
+                state.path.append(.setting(.init()))
+                return .none
+            
+            case .path(.element(_, action: .setting(.delegate(.logout)))):
+                Logger.shared.log(level: .debug, category: .etc, "메인에서 로그아웃 수신됨")
+                return .send(.delegate(.logout))
+                
+            case .path(.element(_, action: .setting(.delegate(.signout)))):
+                Logger.shared.log(level: .debug, category: .etc, "메인에서 회원탈퇴 수신됨")
+                return .send(.delegate(.signout))
+                
             case .path(.element(_, action: .setAlarm(.delegate(.searchPlace)))):
                 state.path.append(.searchPlace(.init()))
                 return .send(.home(.onAppear))
@@ -73,6 +97,10 @@ struct MainFeature {
                 return .send(.home(.onAppear))
                 
             case .path(.element(_, action: .setAlarm(.delegate(.backButtonTapped)))):
+                state.path.popLast()
+                return .send(.home(.onAppear))
+                
+            case .path(.element(_, action: .setting(.delegate(.backButtonTapped)))):
                 state.path.popLast()
                 return .send(.home(.onAppear))
                 
@@ -107,6 +135,8 @@ struct MainFeature {
                 return .none
                 
             case .binding(_):
+                return .none
+            case .delegate(_):
                 return .none
             }
         }
