@@ -19,9 +19,18 @@ struct Whiplash_iOSApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RootView(store: appStore)
             /*
-            MapView(store: Store(initialState: MapFeature.State()) {MapFeature() })*/
+             RootView(store: appStore)*/
+            
+            MapView(
+                store: Store(initialState: MapFeature.State(mapStyle: .sampleData)) {
+                    MapFeature()
+                }
+            )
+            
+            
+            /*
+             MapView(store: Store(initialState: MapFeature.State()) {MapFeature() })*/
             /*
             PlaceSearchView(
                 store: Store(initialState: SearchLocationFeature.State()) {

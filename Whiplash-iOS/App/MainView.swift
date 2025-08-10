@@ -31,6 +31,11 @@ struct MainView: View {
                          action: MainFeature.Path.Action.searchPlace) { store in
                     SearchPlaceView(store: store)
                 }
+            case .map(_):
+                CaseLet(/MainFeature.Path.State.map,
+                         action: MainFeature.Path.Action.map) { store in
+                    MapView(store: store)
+                }
             }
         }
     }

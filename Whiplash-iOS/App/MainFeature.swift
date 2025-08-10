@@ -27,10 +27,12 @@ struct MainFeature {
         enum State: Equatable {
             case setAlarm(SetAlarmFeature.State)
             case searchPlace(SearchPlaceFeature.State)
+            case map(MapFeature.State)
         }
         enum Action {
             case setAlarm(SetAlarmFeature.Action)
             case searchPlace(SearchPlaceFeature.Action)
+            case map(MapFeature.Action)
         }
         var body: some ReducerOf<Self> {
             Scope(state: /State.setAlarm, action: /Action.setAlarm) {
@@ -38,6 +40,9 @@ struct MainFeature {
             }
             Scope(state: /State.searchPlace, action: /Action.searchPlace) {
                 SearchPlaceFeature()
+            }
+            Scope(state: /State.map, action: /Action.map){
+                MapFeature()
             }
         }
     }
@@ -59,6 +64,10 @@ struct MainFeature {
                 state.path.append(.searchPlace(.init()))
                 return .send(.home(.onAppear))
                 
+            case .path(.element(_, action: .searchPlace(.delegate(.backButtonTapped)))):
+                state.path.popLast()
+                return .send(.home(.onAppear))
+                
             case .path(.element(_, action: .setAlarm(.delegate(.didCreateAlarm)))):
                 state.path.popLast()
                 return .send(.home(.onAppear))
@@ -66,6 +75,17 @@ struct MainFeature {
             case .path(.element(_, action: .setAlarm(.delegate(.backButtonTapped)))):
                 state.path.popLast()
                 return .send(.home(.onAppear))
+                // ✅ SearchPlace에서 장소 선택 → Map 화면 푸시
+            case let .path(.element(_, action: .searchPlace(.delegate(.didSelectPlace(mapStyle))))):
+                state.path.append(.map(.init(
+                    mapStyle: mapStyle            // 넘길 타이틀
+                )))
+                return .none
+                
+                // SearchPlace 뒤로 버튼 → pop
+            case .path(.element(_, action: .searchPlace(.delegate(.backButtonTapped)))):
+                state.path.popLast()
+                return .none
                 
             case .path, .home:
                 return .none

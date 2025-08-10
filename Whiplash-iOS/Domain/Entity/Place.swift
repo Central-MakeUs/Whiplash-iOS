@@ -7,8 +7,8 @@
 
 import Foundation
 
-public struct Place: Hashable {
-    var id = UUID()
+public struct Place: Identifiable, Equatable, Hashable {
+    public var id: String { "\(name)|\(address)|\(latitude)|\(longitude)" }
     var name: String
     var address: String
     var latitude: Double
@@ -50,4 +50,16 @@ extension PlaceList {
         )
         
     ])
+}
+
+public struct PlaceDetail: Equatable {
+    var name: String
+    var address: String
+}
+
+extension PlaceDetail {
+    static let sampleData: PlaceDetail = .init(
+        name: "유림면",
+        address: "서울특별시 중구 서소문동 16"
+    )
 }

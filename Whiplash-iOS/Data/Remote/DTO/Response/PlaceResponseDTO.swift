@@ -35,3 +35,23 @@ extension PlaceResponseDTO {
     }
     
 }
+
+struct PlaceDetailDTO: Decodable {
+    let name: String
+    let address: String
+    
+    init(name: String,
+         address: String) {
+        self.name = name
+        self.address = address
+    }
+}
+
+extension PlaceDetailDTO {
+    
+    var toDomain: PlaceDetail {
+        .init(name: name,
+              address: address)
+    }
+    
+}

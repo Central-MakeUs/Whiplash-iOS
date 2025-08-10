@@ -17,6 +17,7 @@ public enum DefaultTargetType {
     case getAlarmList
     case alarmOff(Int, AlarmOffRequestDTO)
     case deleteAlarm(Int, ReasonDTO)
+    case getPlaceDetail(String, String)
 }
 
 extension DefaultTargetType: TargetType {
@@ -50,6 +51,8 @@ extension DefaultTargetType: TargetType {
             return "/api/alarms/\(alarmId)/off"
         case let .deleteAlarm(alarmId, _):
             return "/api/alarms/\(alarmId)"
+        case let .getPlaceDetail(latitude, longitude):
+            return "/api/places/detail"
         }
     }
     
@@ -69,6 +72,8 @@ extension DefaultTargetType: TargetType {
             return .post
         case .deleteAlarm:
             return .delete
+        case .getPlaceDetail:
+            return .get
         }
     }
     
@@ -88,6 +93,10 @@ extension DefaultTargetType: TargetType {
             return .requestJSONEncodable(request)
         case let .deleteAlarm(_, request):
             return .requestJSONEncodable(request)
+        case let .getPlaceDetail(latitude, longitude):
+            return .requestParameters(parameters: ["latitude": latitude,
+                                                   "longitude" : longitude],
+                                      encoding: URLEncoding.default)
         }
     }
 

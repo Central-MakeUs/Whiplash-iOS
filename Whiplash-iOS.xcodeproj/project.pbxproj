@@ -125,6 +125,9 @@
 		2FCBBE962E3F4FAF00412543 /* AlarmRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE952E3F4FAF00412543 /* AlarmRequestDTO.swift */; };
 		2FCBBE982E3F505F00412543 /* AlarmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE972E3F505F00412543 /* AlarmRepository.swift */; };
 		2FCBBE9B2E3F50C000412543 /* AlarmRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE9A2E3F50C000412543 /* AlarmRepositoryImpl.swift */; };
+		2FED86B72E48AF0F003D6F71 /* MapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86B62E48AF0F003D6F71 /* MapStyle.swift */; };
+		2FED86B92E48B263003D6F71 /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86B82E48B263003D6F71 /* NaverMapView.swift */; };
+		2FED86BB2E48F2E7003D6F71 /* CancelID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86BA2E48F2E7003D6F71 /* CancelID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -242,6 +245,9 @@
 		2FCBBE972E3F505F00412543 /* AlarmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepository.swift; sourceTree = "<group>"; };
 		2FCBBE9A2E3F50C000412543 /* AlarmRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepositoryImpl.swift; sourceTree = "<group>"; };
 		2FED14462E0AC15300D9CEDE /* Whiplash-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whiplash-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FED86B62E48AF0F003D6F71 /* MapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyle.swift; sourceTree = "<group>"; };
+		2FED86B82E48B263003D6F71 /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
+		2FED86BA2E48F2E7003D6F71 /* CancelID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +327,7 @@
 		2F2263402E4658BE0079CF4F /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				2FCBBE852E3F321500412543 /* SearchPlace */,
 				2F2263412E4658CE0079CF4F /* LocationManager.swift */,
 				2F2263432E4659200079CF4F /* LocationClient.swift */,
 			);
@@ -573,6 +580,8 @@
 				2F4DDEA12E1D43CC00607760 /* SocialLoginType.swift */,
 				2F02F82C2E3DE95E005273A5 /* Alarm.swift */,
 				2FCBBE882E3F32D800412543 /* Place.swift */,
+				2FED86B62E48AF0F003D6F71 /* MapStyle.swift */,
+				2FED86BA2E48F2E7003D6F71 /* CancelID.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -754,7 +763,6 @@
 		2FCBBE7A2E3E809000412543 /* SetAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				2FCBBE852E3F321500412543 /* SearchPlace */,
 				2FCBBE842E3F320800412543 /* WeekdayPicker */,
 				2FCBBE832E3F31FC00412543 /* TimerPicker */,
 				2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */,
@@ -786,6 +794,7 @@
 				2FCBBE862E3F325300412543 /* SearchPlaceFeature.swift */,
 				2F22633B2E40FFAD0079CF4F /* MapView.swift */,
 				2F22633D2E4258720079CF4F /* MapFeature.swift */,
+				2FED86B82E48B263003D6F71 /* NaverMapView.swift */,
 			);
 			path = SearchPlace;
 			sourceTree = "<group>";
@@ -950,6 +959,7 @@
 				2F4DDE8E2E1D328800607760 /* APIClient.swift in Sources */,
 				2F4DDEAB2E1D48D100607760 /* AppleAuthRepository.swift in Sources */,
 				2F02F82A2E3DE7D1005273A5 /* AlarmCardFeature.swift in Sources */,
+				2FED86BB2E48F2E7003D6F71 /* CancelID.swift in Sources */,
 				2F3E8DBB2E46AB9400E3C0D7 /* ReasonDTO.swift in Sources */,
 				2F2263492E4667DE0079CF4F /* AutoLoginClient.swift in Sources */,
 				2F0556FB2E472B1900BA067E /* RootFeature.swift in Sources */,
@@ -983,6 +993,7 @@
 				2F4DDEA92E1D462100607760 /* GoogleAuthService.swift in Sources */,
 				2F02F82D2E3DE95E005273A5 /* Alarm.swift in Sources */,
 				2FCBBE7C2E3E80CB00412543 /* SetAlarmView.swift in Sources */,
+				2FED86B92E48B263003D6F71 /* NaverMapView.swift in Sources */,
 				2F3E8DB72E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift in Sources */,
 				2FCBBE8B2E3F383E00412543 /* PlaceRepository.swift in Sources */,
 				2F3E8DBD2E46BDE300E3C0D7 /* OnboardingClient.swift in Sources */,
@@ -1014,6 +1025,7 @@
 				2F02F7C92E3C0B15005273A5 /* GoogleAuthRepository.swift in Sources */,
 				2F4DDE902E1D34B000607760 /* Requestable.swift in Sources */,
 				2F4DDE6E2E1D00AF00607760 /* LoginFeature.swift in Sources */,
+				2FED86B72E48AF0F003D6F71 /* MapStyle.swift in Sources */,
 				2F02F7BC2E3C02A3005273A5 /* KakaoAuthRepository.swift in Sources */,
 				2F02F81B2E3DD5EF005273A5 /* CustomNavigationBarModifier.swift in Sources */,
 				2F02F7BA2E3C00F0005273A5 /* AppDelegate.swift in Sources */,

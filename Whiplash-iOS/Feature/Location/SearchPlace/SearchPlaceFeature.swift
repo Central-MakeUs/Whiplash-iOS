@@ -15,7 +15,7 @@ public struct SearchPlaceFeature {
     @ObservableState
     public struct State: Equatable {
         public var query: String = ""
-        public var results: [Place] = []
+        public var places: [Place] = []
         public var isLoading: Bool = false
         public var selectedPlace: Place? = nil
         public init() {}
@@ -27,6 +27,12 @@ public struct SearchPlaceFeature {
         case selectPlace(Place)
         case bindingQuery(String)
         case clear
+        case backButtonTapped
+        case delegate(Delegate)
+        public enum Delegate: Equatable {
+            case didSelectPlace(MapStyle)
+            case backButtonTapped
+        }
     }
 
     @Dependency(\.placeRepository) var placeRepository
@@ -35,10 +41,11 @@ public struct SearchPlaceFeature {
         Reduce { state, action in
             switch action {
             case let .queryChanged(query):
+                Logger.shared.log(category: .ui, "queryChanged: \(query)")
                 state.query = query
                 state.isLoading = true
                 guard !query.isEmpty else {
-                    state.results = []
+                    state.places = []
                     state.isLoading = false
                     return .none
                 }
@@ -51,25 +58,45 @@ public struct SearchPlaceFeature {
                         await send(.searchResponse(.failure(error)))
                     }
                 }
+                .cancellable(id: CancelID.search, cancelInFlight: true)
+                
             case let .searchResponse(.success(places)):
-                state.results = places
+                Logger.shared.log(category: .network, "searchResponse success: \(places.count)개")
+                var seen = Set<String>()
+                  let unique = places.filter {
+                    let ok = seen.insert($0.id).inserted
+                    if !ok { Logger.shared.log(level: .error, category: .ui, "중복 Place id: \($0.id)") }
+                    return ok
+                  }
+                state.places = places
                 state.isLoading = false
                 return .none
             case .searchResponse(.failure):
-                state.results = []
+                Logger.shared.log(level: .error, category: .network, " searchResponse error")
+                state.places = []
                 state.isLoading = false
                 return .none
             case let .selectPlace(place):
+                Logger.shared.log(category: .ui, "selectPlace: \(place.id)")
                 state.selectedPlace = place
-                return .none
+                var mapStyle = MapStyle(place: place,
+                                        navigationConfig: .init(style: .leftCenter,
+                                                                title: "장소 선택"),
+                                        bottomSheetType: .registerPlace,
+                                        dim: false)
+                return .send(.delegate(.didSelectPlace(mapStyle)))
             case .clear:
                 state.query = ""
-                state.results = []
+                state.places = []
                 state.selectedPlace = nil
                 return .none
             case let .bindingQuery(query):
                 state.query = query
                 return .none
+            case .delegate(_):
+                return .none
+            case .backButtonTapped:
+                return .send(.delegate(.backButtonTapped))
             }
             
         }

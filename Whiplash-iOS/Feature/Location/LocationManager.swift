@@ -22,7 +22,10 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private override init() {
         super.init()
         locationManager.delegate = self
+        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.showsBackgroundLocationIndicator = true
         authorizationStatus = locationManager.authorizationStatus
         
         Logger.shared.log(level: .debug, category: .etc, "Core.LocationManager 초기화됨")
@@ -46,7 +49,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func authorizationStatusStream() -> AsyncStream<CLAuthorizationStatus> {
         AsyncStream { continuation in
             self.authorizationContinuation = continuation
-            continuation.yield(authorizationStatus) // 현재 상태 즉시 전송
+            continuation.yield(locationManager.authorizationStatus) // 현재 상태 즉시 전송
         }
     }
     

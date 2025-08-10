@@ -113,7 +113,7 @@ struct SetAlarmView: View {
             }
             
         }
-        .padding(.horizontal, 20)
+        .padding(.horizontal, AppLayout.horizontalPadding)
         .customNavigationBar(
             leftView: {
                 Button {

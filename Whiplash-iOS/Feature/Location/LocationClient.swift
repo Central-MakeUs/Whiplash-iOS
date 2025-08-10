@@ -27,7 +27,7 @@ extension LocationClient: DependencyKey {
             await LocationManager.shared.locationStream()
         }
     )
-    
+    /*
     static let testValue = LocationClient(
         requestWhenInUseAuthorization: {
             // Test implementation
@@ -45,5 +45,5 @@ extension LocationClient: DependencyKey {
                 continuation.finish()
             }
         }
-    )
+    )*/
 }

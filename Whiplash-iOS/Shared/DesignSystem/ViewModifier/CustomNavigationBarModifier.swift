@@ -29,7 +29,7 @@ struct CustomNavigationBarModifier<C, L, R> : ViewModifier where C : View, L : V
                 .frame(height: 46.0)
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 20)
-                        
+                
                 HStack {
                     Spacer()
                     
@@ -38,14 +38,13 @@ struct CustomNavigationBarModifier<C, L, R> : ViewModifier where C : View, L : V
                     Spacer()
                 }
             }
-            .background(Color.gray900)//.ignoresSafeArea(.all, edges: .top)
+            .background(Color.clear)//.ignoresSafeArea(.all, edges: .top)
             
-           content
-
+            content
+            
             Spacer()
         }
-        .background(Color.gray900)
+        
         .navigationBarBackButtonHidden(true)
     }
 }
-
