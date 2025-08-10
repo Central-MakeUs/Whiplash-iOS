@@ -25,6 +25,12 @@ struct MainView: View {
                          action: MainFeature.Path.Action.setAlarm) { store in
                     SetAlarmView(store:store)
                 }
+                
+            case .searchPlace(_):
+                CaseLet(/MainFeature.Path.State.searchPlace,
+                         action: MainFeature.Path.Action.searchPlace) { store in
+                    SearchPlaceView(store: store)
+                }
             }
         }
     }

@@ -26,13 +26,18 @@ struct MainFeature {
     struct Path: Reducer {
         enum State: Equatable {
             case setAlarm(SetAlarmFeature.State)
+            case searchPlace(SearchPlaceFeature.State)
         }
         enum Action {
             case setAlarm(SetAlarmFeature.Action)
+            case searchPlace(SearchPlaceFeature.Action)
         }
         var body: some ReducerOf<Self> {
             Scope(state: /State.setAlarm, action: /Action.setAlarm) {
                 SetAlarmFeature()
+            }
+            Scope(state: /State.searchPlace, action: /Action.searchPlace) {
+                SearchPlaceFeature()
             }
         }
     }
@@ -49,8 +54,16 @@ struct MainFeature {
             case .home(.delegate(.addAlarmTapped)):
                 state.path.append(.setAlarm(.init()))
                 return .none
+            
+            case .path(.element(_, action: .setAlarm(.delegate(.searchPlace)))):
+                state.path.append(.searchPlace(.init()))
+                return .send(.home(.onAppear))
                 
             case .path(.element(_, action: .setAlarm(.delegate(.didCreateAlarm)))):
+                state.path.popLast()
+                return .send(.home(.onAppear))
+            
+            case .path(.element(_, action: .setAlarm(.delegate(.backButtonTapped)))):
                 state.path.popLast()
                 return .send(.home(.onAppear))
                 

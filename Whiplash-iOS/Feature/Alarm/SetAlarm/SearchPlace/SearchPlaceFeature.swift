@@ -9,11 +9,11 @@ import Foundation
 import ComposableArchitecture
 
 @Reducer
-public struct SearchLocationFeature {
+public struct SearchPlaceFeature {
     public init() {}
 
     @ObservableState
-    public struct State {
+    public struct State: Equatable {
         public var query: String = ""
         public var results: [Place] = []
         public var isLoading: Bool = false

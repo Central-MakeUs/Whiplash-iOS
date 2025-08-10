@@ -26,6 +26,9 @@ struct SetAlarmView: View {
                         }
 
                         AppSearchBarPreView(placeholder: "도착 목표 장소는?")
+                            .onTapGesture {
+                                store.send(.searchBarTapped)
+                            }
                         
                         HStack() {
                             Spacer()
@@ -114,7 +117,7 @@ struct SetAlarmView: View {
         .customNavigationBar(
             leftView: {
                 Button {
-                    
+                    store.send(.backButtonTapped)
                 } label: {
                     Image(.Image.icLeftArrowBlack28)
                 }

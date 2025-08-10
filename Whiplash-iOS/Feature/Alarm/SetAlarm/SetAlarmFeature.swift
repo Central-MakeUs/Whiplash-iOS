@@ -22,9 +22,13 @@ public struct SetAlarmFeature {
         case onAppear
         case saveTapped
         case closeTapped
+        case searchBarTapped
+        case backButtonTapped
         case delegate(Delegate)
         public enum Delegate: Equatable {
             case didCreateAlarm  // 저장 완료 후 부모에게 알림
+            case searchPlace
+            case backButtonTapped
         }
     }
     
@@ -34,10 +38,13 @@ public struct SetAlarmFeature {
             case .onAppear:
                 return .none
             case .saveTapped:
-                // TODO: 저장 API 호출 후 성공 시 delegate로 알리기
                 return .send(.delegate(.didCreateAlarm))
+            case .searchBarTapped:
+                return .send(.delegate(.searchPlace))
             case .closeTapped:
                 return .none
+            case .backButtonTapped:
+                return .send(.delegate(.backButtonTapped))
             case .delegate:
                 return .none
             }

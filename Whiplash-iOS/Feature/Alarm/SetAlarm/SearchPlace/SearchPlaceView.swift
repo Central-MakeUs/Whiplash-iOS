@@ -10,8 +10,8 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct PlaceSearchView: View {
-    @Bindable var store: StoreOf<SearchLocationFeature>
+struct SearchPlaceView: View {
+    @Bindable var store: StoreOf<SearchPlaceFeature>
     
     var body: some View {
         VStack {
@@ -60,9 +60,9 @@ struct PlaceSearchView: View {
 }
 
 #Preview {
-    PlaceSearchView(
-        store: Store(initialState: SearchLocationFeature.State()) {
-            SearchLocationFeature()
+    SearchPlaceView(
+        store: Store(initialState: SearchPlaceFeature.State()) {
+            SearchPlaceFeature()
         }
     )
 }
