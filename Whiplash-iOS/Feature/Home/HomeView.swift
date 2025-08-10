@@ -39,7 +39,7 @@ struct HomeView: View {
             rightView: {
                 HStack(spacing: 8) {
                     Button {
-                        
+                        store.send(.addButtonTapped)
                     } label: {
                         Image(.Image.icPius28)
                     }

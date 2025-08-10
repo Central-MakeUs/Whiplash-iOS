@@ -12,15 +12,20 @@ struct MainView: View {
     @Bindable var store: StoreOf<MainFeature>
     
     var body: some View {
-        ZStack {
+        NavigationStackStore(
+            store.scope(
+                state: \.path, action: { .path($0) }
+            )
+        ) {
             HomeView(store: store.scope(state: \.home, action: \.home))
-        }
-        .sheet(
-            store: store.scope(state: \.$destination, action: \.destination),
-            state: /Destination.State.setAlarm,
-            action: Destination.Action.setAlarm
-        ) { setAlarmStore in
-            SetAlarmView(store: setAlarmStore)
+        } destination: { state in
+            switch state {
+            case .setAlarm(_):
+                CaseLet(/MainFeature.Path.State.setAlarm,
+                         action: MainFeature.Path.Action.setAlarm) { store in
+                    SetAlarmView(store:store)
+                }
+            }
         }
     }
 }

@@ -13,14 +13,28 @@ struct MainFeature {
     @ObservableState
     struct State: Equatable {
         var home = HomeFeature.State()
-        @Presents var destination: Destination.State?
+        var path = StackState<Path.State>()
     }
     
     @CasePathable
     enum Action: BindableAction {
         case home(HomeFeature.Action)
-        case destination(PresentationAction<Destination.Action>)
+        case path(StackAction<Path.State, Path.Action>)
         case binding(BindingAction<State>)
+    }
+    
+    struct Path: Reducer {
+        enum State: Equatable {
+            case setAlarm(SetAlarmFeature.State)
+        }
+        enum Action {
+            case setAlarm(SetAlarmFeature.Action)
+        }
+        var body: some ReducerOf<Self> {
+            Scope(state: /State.setAlarm, action: /Action.setAlarm) {
+                SetAlarmFeature()
+            }
+        }
     }
     
     var body: some ReducerOf<Self> {
@@ -33,26 +47,22 @@ struct MainFeature {
         Reduce { state, action in
             switch action {
             case .home(.delegate(.addAlarmTapped)):
-                state.destination = .setAlarm(.init())
+                state.path.append(.setAlarm(.init()))
                 return .none
                 
-            case .destination(.presented(.setAlarm(.delegate(.didCreateAlarm)))):
-                state.destination = nil 
+            case .path(.element(_, action: .setAlarm(.delegate(.didCreateAlarm)))):
+                state.path.popLast()
                 return .send(.home(.onAppear))
                 
-            case .destination(.dismiss):
-                state.destination = nil
-                return .none
-                
-            case .destination, .home:
+            case .path, .home:
                 return .none
                 
             case .binding(_):
                 return .none
             }
         }
-        .ifLet(\.$destination, action: \.destination) {
-            Destination()
+        .forEach(\.path, action: \.path) {
+            Path()
         }
     }
 }

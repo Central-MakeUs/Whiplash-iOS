@@ -23,6 +23,7 @@ public struct HomeFeature {
         case didFinishGetList(Result<[Alarm], Error>)
         case card(IdentifiedActionOf<AlarmCardFeature>)
         case logoutTapped
+        case addButtonTapped
         case delegate(Delegate)
         
         public enum Delegate: Equatable {
@@ -63,9 +64,15 @@ public struct HomeFeature {
             case .logoutTapped:
                 return .send(.delegate(.logout))
                 
+            case .addButtonTapped:
+                return .send(.delegate(.addAlarmTapped))
+                
+                
             case .delegate:
                 return .none
+                
             }
+            
         }
         .forEach(\.cards, action: \.card) {
             AlarmCardFeature()
