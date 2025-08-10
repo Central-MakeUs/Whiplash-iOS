@@ -57,8 +57,8 @@ struct MapView: View {
                         RegisterPlaceSheet(
                             title: store.updatedPlace.name,
                             message: store.updatedPlace.address,
-                            onRegister: { store.send(.registerPlace(store.mapStyle.place.name)) },
-                            onCancel: { store.send(.setSheetPresented(false)) }
+                            onRegister: { store.send(.registerPlace) },
+                            onCancel: { store.send(.backButtonTapped) }
                         )
                     case .confirmRadius:
                         EmptyView()

@@ -62,6 +62,7 @@ struct AppSearchBar: View {
 }
 
 struct AppSearchBarPreView: View {
+    @Binding var text: String
     var placeholder: String = "검색"
 
     var body: some View {
@@ -70,10 +71,16 @@ struct AppSearchBarPreView: View {
             Image(.Image.icSearchGray22)
         
             HStack {
-                
-                AppText(text: placeholder,
-                        style: .body1_m_16,
-                        color: .gray500)
+                if text.isEmpty {
+                    AppText(text: placeholder,
+                            style: .body1_m_16,
+                            color: .gray500)
+                } else {
+                    AppText(text: text,
+                            style: .body1_m_16,
+                            color: .white)
+                }
+                    
                 Spacer()
                 
             }

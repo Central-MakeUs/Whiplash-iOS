@@ -27,12 +27,12 @@ struct MainFeature {
         enum State: Equatable {
             case setAlarm(SetAlarmFeature.State)
             case searchPlace(SearchPlaceFeature.State)
-            case map(MapFeature.State)
+            case selectPlace(MapFeature.State)
         }
         enum Action {
             case setAlarm(SetAlarmFeature.Action)
             case searchPlace(SearchPlaceFeature.Action)
-            case map(MapFeature.Action)
+            case selectPlace(MapFeature.Action)
         }
         var body: some ReducerOf<Self> {
             Scope(state: /State.setAlarm, action: /Action.setAlarm) {
@@ -41,7 +41,7 @@ struct MainFeature {
             Scope(state: /State.searchPlace, action: /Action.searchPlace) {
                 SearchPlaceFeature()
             }
-            Scope(state: /State.map, action: /Action.map){
+            Scope(state: /State.selectPlace, action: /Action.selectPlace){
                 MapFeature()
             }
         }
@@ -59,7 +59,7 @@ struct MainFeature {
             case .home(.delegate(.addAlarmTapped)):
                 state.path.append(.setAlarm(.init()))
                 return .none
-            
+                
             case .path(.element(_, action: .setAlarm(.delegate(.searchPlace)))):
                 state.path.append(.searchPlace(.init()))
                 return .send(.home(.onAppear))
@@ -71,21 +71,37 @@ struct MainFeature {
             case .path(.element(_, action: .setAlarm(.delegate(.didCreateAlarm)))):
                 state.path.popLast()
                 return .send(.home(.onAppear))
-            
+                
             case .path(.element(_, action: .setAlarm(.delegate(.backButtonTapped)))):
                 state.path.popLast()
                 return .send(.home(.onAppear))
-                // ✅ SearchPlace에서 장소 선택 → Map 화면 푸시
+                
             case let .path(.element(_, action: .searchPlace(.delegate(.didSelectPlace(mapStyle))))):
-                state.path.append(.map(.init(
-                    mapStyle: mapStyle            // 넘길 타이틀
+                state.path.append(.selectPlace(.init(
+                    mapStyle: mapStyle
                 )))
                 return .none
                 
-                // SearchPlace 뒤로 버튼 → pop
-            case .path(.element(_, action: .searchPlace(.delegate(.backButtonTapped)))):
+            case let .path(.element(id, action: .selectPlace(.delegate(.registerPlace(place))))):
+                for index in state.path.ids {
+                    if case var .setAlarm(setAlarmState) = state.path[id: index] {
+                        Logger.shared.log(level: .debug, category: .etc, "index: \(index)")
+                        Logger.shared.log(level: .debug, category: .etc, ".setAlarm(setAlarmState): \(state.path[id: index])")
+                        setAlarmState.place = place
+                        Logger.shared.log(level: .debug, category: .etc, "setAlarmState.place \(setAlarmState.place)")
+                        state.path[id: index] = .setAlarm(setAlarmState)
+                        Logger.shared.log(level: .debug, category: .etc, ".setAlarm(setAlarmState): \(state.path[id: index])")
+                        break
+                    }
+                }
+                state.path.popLast()
                 state.path.popLast()
                 return .none
+                
+            case .path(.element(_, action: .selectPlace(.delegate(.backButtonTapped)))):
+                state.path.popLast()
+                return .none
+                
                 
             case .path, .home:
                 return .none

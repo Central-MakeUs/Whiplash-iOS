@@ -28,6 +28,16 @@ extension Alarm {
         isToggleOn: true
     )
     
+    static let emptyData: Alarm = .init(
+        id: 1,
+        title: "",
+        ampm: "",
+        time: "00:00",
+        repeatDays: "",
+        address: "",
+        isToggleOn: true
+    )
+    
     static let sampleList: [Alarm] = [
             Alarm(
                 id: 1,

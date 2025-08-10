@@ -25,7 +25,6 @@ public struct MapFeature {
             self.updatedPlace.address = mapStyle.place.address
         }
         var mapStyle: MapStyle = .sampleData
-        // 선택된 장소 좌표(사용자가 바꿀 수 있음; center 스타일이면 고정)
         var selectedLocation: CLLocationCoordinate2D?
         var currentLocation: CLLocationCoordinate2D?
         var updatedPlace: PlaceDetail = .sampleData
@@ -47,7 +46,7 @@ public struct MapFeature {
         case mapTapped(CLLocationCoordinate2D)
         case setSheetPresented(Bool)
         case registrationSheet(Bool)
-        case registerPlace(String)
+        case registerPlace
         case backButtonTapped
         case cancelAction
         case placeDetailResponse(Result<PlaceDetail, Error>)
@@ -55,6 +54,7 @@ public struct MapFeature {
         
         public enum Delegate: Equatable {
             case backButtonTapped
+            case registerPlace(Place)
         }
     }
     
@@ -70,7 +70,6 @@ public struct MapFeature {
             case .requestLocationPermission:
                 Logger.shared.log(level: .debug, category: .etc, "위치 권한 요청 시작")
                 return .merge(
-                    // 1) 권한 상태 스트림 먼저 구독 (레이스 방지)
                     .run { send in
                       for await status in await locationClient.authorizationStatusStream() {
                         Logger.shared.log(level: .debug, category: .etc, "권한 상태 변경: \(status.rawValue)")
@@ -91,7 +90,7 @@ public struct MapFeature {
                     },
 
                     .run { send in
-                      try await Task.sleep(nanoseconds: 3_000_000_000)
+                      try await Task.sleep(nanoseconds: 2_000_000_000)
                       await send(.setTestLocation)
                     }
                 )
@@ -158,10 +157,13 @@ public struct MapFeature {
                 state.isRegistrationSheetPresented = status
                 return .none
                 
-            case let .registerPlace(name):
-                state.mapStyle.place.name = name
-                state.isRegistrationSheetPresented = false
-                return .none
+            case .registerPlace:
+                let place = Place(name: state.updatedPlace.name,
+                                  address: state.updatedPlace.address,
+                                  latitude: state.selectedLocation?.latitude ?? 0,
+                                  longitude: state.selectedLocation?.longitude ?? 0)
+                
+                return .send(.delegate(.registerPlace(place)))
                 
             case .cancelAction:
                 return .none

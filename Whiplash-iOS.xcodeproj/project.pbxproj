@@ -131,7 +131,7 @@
 		2FED86C12E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BE2E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 */; };
 		2FED86C22E48F573003D6F71 /* 김두한_알람.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BD2E48F573003D6F71 /* 김두한_알람.mp3 */; };
 		2FED86C32E48F573003D6F71 /* 대피_사이렌_소리.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */; };
-		2FED86C42E48F573003D6F71 /* 카리나_모닝콜 배경음악.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86C02E48F573003D6F71 /* 카리나_모닝콜 배경음악.mp3 */; };
+		2FED86C42E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -255,7 +255,7 @@
 		2FED86BD2E48F573003D6F71 /* 김두한_알람.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "김두한_알람.mp3"; sourceTree = "<group>"; };
 		2FED86BE2E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "네모바지_스폰지밥_뚱이_일어나_움직여.mp3"; sourceTree = "<group>"; };
 		2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "대피_사이렌_소리.mp3"; sourceTree = "<group>"; };
-		2FED86C02E48F573003D6F71 /* 카리나_모닝콜 배경음악.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "카리나_모닝콜 배경음악.mp3"; sourceTree = "<group>"; };
+		2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "카리나_모닝콜_배경음악.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -847,7 +847,7 @@
 				2FED86BD2E48F573003D6F71 /* 김두한_알람.mp3 */,
 				2FED86BE2E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 */,
 				2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */,
-				2FED86C02E48F573003D6F71 /* 카리나_모닝콜 배경음악.mp3 */,
+				2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */,
 			);
 			path = AlarmSound;
 			sourceTree = "<group>";
@@ -950,7 +950,7 @@
 				2FED86C12E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 in Resources */,
 				2FED86C22E48F573003D6F71 /* 김두한_알람.mp3 in Resources */,
 				2FED86C32E48F573003D6F71 /* 대피_사이렌_소리.mp3 in Resources */,
-				2FED86C42E48F573003D6F71 /* 카리나_모닝콜 배경음악.mp3 in Resources */,
+				2FED86C42E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 in Resources */,
 				2F4DDDFA2E19667700607760 /* Pretendard-Black.otf in Resources */,
 				2F4DDDFB2E19667700607760 /* Pretendard-Thin.otf in Resources */,
 			);

@@ -22,6 +22,13 @@ extension Place {
         latitude: 37.5642371,
         longitude: 126.9760935
     )
+    
+    static let emptyData: Place = .init(
+        name: "",
+        address: "",
+        latitude: 0,
+        longitude: 0
+    )
 }
 
 public struct PlaceList {

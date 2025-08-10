@@ -25,7 +25,8 @@ struct SetAlarmView: View {
                             Spacer()
                         }
 
-                        AppSearchBarPreView(placeholder: "도착 목표 장소는?")
+                        AppSearchBarPreView(text: $store.place.name.sending(\.selectedPlaceName),
+                                            placeholder: "도착 목표 장소는?")
                             .onTapGesture {
                                 store.send(.searchBarTapped)
                             }
@@ -54,7 +55,7 @@ struct SetAlarmView: View {
                             Spacer()
                         }
                         
-                        AppTextField(text: $t,
+                        AppTextField(text: $store.alarm.title.sending(\.alarmTitle),
                                      placeholder: "눈 떠!")
                         
                     }
