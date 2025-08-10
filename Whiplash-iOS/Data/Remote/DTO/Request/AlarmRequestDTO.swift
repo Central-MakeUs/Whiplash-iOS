@@ -15,5 +15,4 @@ public struct AlarmRequestDTO: Requestable {
     let time: String
     let repeatDays: [String]
     let soundType: String
-    
 }
