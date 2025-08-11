@@ -62,11 +62,5 @@
 		<string>Paperlogy-8ExtraBold.ttf</string>
 		<string>Paperlogy-9Black.ttf</string>
 	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-		<string>processing</string>
-		<string>location</string>
-	</array>
 </dict>
 </plist>
