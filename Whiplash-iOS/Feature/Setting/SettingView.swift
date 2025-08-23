@@ -12,7 +12,7 @@ struct SettingView: View {
     @Bindable var store: StoreOf<SettingFeature>
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 0) {
                 // 버전 정보 섹션
                 versionSection
@@ -36,9 +36,11 @@ struct SettingView: View {
                 Button {
                     store.send(.backButtonTapped)
                 } label: {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(.white)
-                        .font(.title2)
+                    Button {
+                        store.send(.backButtonTapped)
+                    } label: {
+                        Image(.Image.icLeftArrowBlack28)
+                    }
                 }
             },
             centerView: {
@@ -98,7 +100,7 @@ struct SettingView: View {
             sectionHeader("버전 정보")
             
             settingRow(
-                icon: "info.circle",
+                icon: "Image/ic_profile_version",
                 title: "현재 버전",
                 subtitle: store.currentVersion,
                 hasChevron: false
@@ -117,14 +119,14 @@ struct SettingView: View {
             
             VStack(spacing: 0) {
                 settingRow(
-                    icon: "doc.text",
+                    icon: "Image/ic_profile_terms",
                     title: "이용약관"
                 ) {
                     store.send(.termsOfUseTapped)
                 }
                 
                 settingRow(
-                    icon: "hand.raised",
+                    icon: "Image/ic_profile_private_info",
                     title: "개인정보처리방침"
                 ) {
                     store.send(.privacyPolicyTapped)
@@ -148,7 +150,7 @@ struct SettingView: View {
             sectionHeader("서비스 설정")
             
             settingRow(
-                icon: "headphones",
+                icon: "Image/ic_profile_ask",
                 title: "문의하기"
             ) {
                 store.send(.inquiryTapped)
@@ -165,14 +167,14 @@ struct SettingView: View {
             
             VStack(spacing: 0) {
                 settingRow(
-                    icon: "person.2",
+                    icon: "Image/ic_profile_logout",
                     title: "로그아웃하기"
                 ) {
                     store.send(.showLogoutAlert(true))
                 }
                 
                 settingRow(
-                    icon: "video",
+                    icon: "Image/ic_profile_out",
                     title: "회원 탈퇴"
                 ) {
                     store.send(.showSignoutAlert(true))
@@ -203,10 +205,10 @@ struct SettingView: View {
         Button(action: action) {
             HStack(spacing: 12) {
                 // 아이콘
-                Image(systemName: icon)
+                Image(icon)
                     .foregroundColor(.white)
                     .font(.system(size: 20))
-                    .frame(width: 24, height: 24)
+                    .frame(width: 32, height: 32)
                 
                 // 제목과 부제목
                 VStack(alignment: .leading, spacing: 2) {

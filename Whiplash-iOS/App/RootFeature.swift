@@ -24,6 +24,7 @@ struct RootFeature {
         case login(LoginFeature.Action)
         case main(MainFeature.Action)
         case binding(BindingAction<State>)
+        case alarmNotificationReceived(Int, String)
     }
     
     @Dependency(\.onboardingClient) var onboardingClient
@@ -98,6 +99,17 @@ struct RootFeature {
                 
             case .splash, .onboarding, .login, .main:
                 return .none
+                
+            case let .alarmNotificationReceived(alarmId, soundId):
+                Logger.shared.log(category: .ui, "📱 RootFeature에서 알람 이벤트 수신: \(alarmId) 사운드 : \(soundId)")
+                
+                // MainFeature가 있을 때만 알람 화면 표시
+                if state.main != nil {
+                    return .send(.main(.showAlarmScreen(alarmId, soundId)))
+                } else {
+                    Logger.shared.log(category: .ui, "⚠️ MainFeature가 없어서 알람 화면 표시 불가")
+                    return .none
+                }
             }
         }
     }

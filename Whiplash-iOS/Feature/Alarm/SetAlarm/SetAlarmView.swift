@@ -10,8 +10,8 @@ import ComposableArchitecture
 
 struct SetAlarmView: View {
     @Bindable var store: StoreOf<SetAlarmFeature>
-    @State var t = ""
-    @State private var selectedDays: [Int] = []
+
+    @State var showSheet: Bool = false
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
@@ -100,13 +100,16 @@ struct SetAlarmView: View {
                         
                         Spacer()
                         
-                        AppText(text: "진동모드",
+                        AppText(text: store.selectedSound.displayName,
                                 style: .body4_m_12,
                                 color: .gray500)
                         
                         Image(.Image.icRightArrowWhite22)
                     }
                     .padding(.vertical, 12)
+                    .onTapGesture {
+                        showSheet = true
+                    }
                 }
             }
             
@@ -117,6 +120,7 @@ struct SetAlarmView: View {
                           size: .h48,
                           type: .line,
                           state: store.canSave ? .normal : .disabled) {
+                    store.state.alarm.soundType = store.state.selectedSound.id
                     store.send(.saveTapped)
                 }
                 Spacer().frame(height: 40)
@@ -139,6 +143,11 @@ struct SetAlarmView: View {
             }
         )
         .background(Color.gray900)
+        .overlay {
+            if showSheet {
+                AlarmToneSheet(isPresented: $showSheet, selected: $store.selectedSound.sending(\.setAlarmSound))
+            }
+        }
         .onTapGesture {
             hideKeyboard()
         }

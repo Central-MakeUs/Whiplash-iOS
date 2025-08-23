@@ -20,7 +20,7 @@ struct AlarmCardView: View {
             
             Color.gray900
             VStack(spacing: 24) {
-                Spacer()
+                Spacer().frame(height: 0)
                 VStack(spacing: 10) {
                     HStack {
                         AppText(text: store.alarm.title, style: .subtitle6_b_14, color: .gray300)
@@ -57,20 +57,19 @@ struct AlarmCardView: View {
                     
                 }
                 
-                /*
+                
                 AppButton(title: "도착 인증!",
                            size: .h44,
                            type: .black,
                            state: .normal) {
-                    
-                }*/
+                    store.send(.verifyButtonTapped)
+                }
                 
                 Rectangle()
                     .foregroundStyle(Color.gray700)
                     .frame(height: 1)
             }
         }
-        .frame(height: 147)
     }
 }
 

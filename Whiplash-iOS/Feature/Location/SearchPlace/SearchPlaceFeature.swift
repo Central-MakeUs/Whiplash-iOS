@@ -79,7 +79,9 @@ public struct SearchPlaceFeature {
             case let .selectPlace(place):
                 Logger.shared.log(category: .ui, "selectPlace: \(place.id)")
                 state.selectedPlace = place
-                var mapStyle = MapStyle(place: place,
+                var mapStyle = MapStyle(alarmId: 0,
+                                        alarmSound: "nonesound",
+                                        place: place,
                                         navigationConfig: .init(style: .leftCenter,
                                                                 title: "장소 선택"),
                                         bottomSheetType: .registerPlace,

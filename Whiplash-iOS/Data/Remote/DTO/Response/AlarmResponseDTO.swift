@@ -18,6 +18,10 @@ public struct AlarmResponseDTO: Respondable {
     
 }
 
+public struct AlarmDTO: Respondable {
+    let alarmId: Int
+}
+
 extension AlarmResponseDTO {
     
     func toDomain(id: Int, isToggleOn: Bool) -> Alarm {

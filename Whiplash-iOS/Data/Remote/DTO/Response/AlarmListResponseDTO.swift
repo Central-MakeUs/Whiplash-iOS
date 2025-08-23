@@ -24,7 +24,7 @@ struct AlarmItemResponseDTO: Respondable {
 }
 
 extension AlarmItemResponseDTO {
-    var toDomain: Alarm {
+    var toDomain: (Alarm, Place) {
         let components = time.split(separator: ":")
         let hour = Int(components[0]) ?? 0
         let ampm = hour < 12 ? "오전" : "오후"
@@ -38,7 +38,7 @@ extension AlarmItemResponseDTO {
         
         let repeatDaysString = repeatsDays.joined(separator: ", ")
         
-        return Alarm(
+        return (Alarm(
             id: alarmId,
             title: alarmPurpose,
             ampm: ampm,
@@ -47,7 +47,10 @@ extension AlarmItemResponseDTO {
             address: address,
             isToggleOn: isToggleOn,
             soundType: ""
-        )
+        ), Place(name: alarmPurpose,
+                 address: address,
+                 latitude: latitude,
+                 longitude: longitude))
     }
     
 }

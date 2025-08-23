@@ -11,16 +11,26 @@ import ComposableArchitecture
 @main
 struct Whiplash_iOSApp: App {
     
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @State var appStore = Store(
         initialState: RootFeature.State(), reducer: {
-        RootFeature()
-    })
+            RootFeature()
+        })
+    
+    init() {
+        let store = appStore
+        let delegate = appDelegate
+        
+        DispatchQueue.main.async {
+            delegate.rootStore = store
+            print("AppDelegate에 RootStore 참조 설정 완료 (Method 2)")
+        }
+    }
     
     var body: some Scene {
         WindowGroup {
             
-             RootView(store: appStore)
+            RootView(store: appStore)
             
             
             /*

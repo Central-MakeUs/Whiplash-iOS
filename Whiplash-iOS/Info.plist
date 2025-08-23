@@ -39,8 +39,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>Privacy - Location When in Use Usage Description</key>
-	<string>현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.</string>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>눈떠가 알림을 보낼 수 있도록 권한을 허용합니다.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pretendard-Black.otf</string>
@@ -61,6 +61,13 @@
 		<string>Paperlogy-7Bold.ttf</string>
 		<string>Paperlogy-8ExtraBold.ttf</string>
 		<string>Paperlogy-9Black.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+		<string>remote-notification</string>
+		<string>audio</string>
+		<string>bluetooth-central</string>
 	</array>
 </dict>
 </plist>

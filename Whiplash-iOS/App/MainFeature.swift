@@ -22,6 +22,10 @@ struct MainFeature {
         case path(StackAction<Path.State, Path.Action>)
         case binding(BindingAction<State>)
         case delegate(Delegate)
+        // 알람 화면 관련 액션 추가
+        case showAlarmScreen(Int, String)           // 알람 화면 표시
+        case hideAlarmScreen                // 알람 화면 숨김
+        //case alarmMap(MapFeature.Action)    // 알람 MapView 액션
         
     }
     
@@ -75,7 +79,16 @@ struct MainFeature {
             case .home(.delegate(.moveToSetting)):
                 state.path.append(.setting(.init()))
                 return .none
-            
+                
+            case let .home(.delegate(.verifyAlarm(mapStyle))):
+                Logger.shared.log(category: .ui, "verifyAlarm 수신됨! MapStyle: \(mapStyle)")
+                
+                Logger.shared.log(level: .debug,category: .etc, "홈에서 메인으로 델리게이트 넘어옴")
+                state.path.append(.selectPlace(.init(
+                    mapStyle: mapStyle
+                )))
+                return .none
+                
             case .path(.element(_, action: .setting(.delegate(.logout)))):
                 Logger.shared.log(level: .debug, category: .etc, "메인에서 로그아웃 수신됨")
                 return .send(.delegate(.logout))
@@ -138,11 +151,67 @@ struct MainFeature {
                 return .none
             case .delegate(_):
                 return .none
+                
+                // 🔥 알람 화면 표시 (핵심!)
+            case let .showAlarmScreen(alarmId, soundId):
+                Logger.shared.log(category: .ui, "🚨 HomeFeature에서 알람 화면 표시: \(alarmId)")
+                
+                // 알람 ID로 실제 알람 정보 조회
+                guard let alarm = state.home.card.first(where: { $0.alarm.id == alarmId }) else {
+                    Logger.shared.log(category: .ui, "⚠️ 알람 ID \(alarmId)에 해당하는 알람을 찾을 수 없음")
+                    return .none
+                }
+                guard let place = state.home.card.first(where: { $0.place.address == alarm.alarm.address }) else {
+                    Logger.shared.log(category: .ui, "⚠️ 플레이스를 찾을 수 없음")
+                    return .none
+                }
+                
+                // 알람 정보로 MapStyle 생성
+                let alarmMapStyle = createAlarmMapStyle(alarm: alarm.alarm, place: place.place, alarmSoundId: soundId)
+                
+                state.path.append(.selectPlace(.init(
+                    mapStyle: alarmMapStyle
+                )))
+                
+                Logger.shared.log(category: .ui, "✅ 알람 화면 표시 완료")
+                
+                return .none
+                
+                // 🔥 알람 화면 숨김
+            case .hideAlarmScreen:
+                Logger.shared.log(category: .ui, "🚨 HomeFeature에서 알람 화면 숨김")
+                
+                //state.alarmMapState = nil
+                //state.isShowingAlarmScreen = false
+                
+                return .none
+                
             }
         }
         .forEach(\.path, action: \.path) {
             Path()
         }
+    }
+    // 🔥 알람 정보로 MapStyle 생성하는 헬퍼 함수
+    private func createAlarmMapStyle(alarm: Alarm, place: Place, alarmSoundId: String) -> MapStyle {
+        // Alarm 모델의 place 정보 사용
+        let place = Place(
+            name: place.name ?? "알람 위치",
+            address: place.address,
+            latitude: place.latitude ?? 37.4979,
+            longitude: place.longitude ?? 127.0276
+        )
+        
+        return MapStyle(
+            alarmId: alarm.id,
+            alarmSound: alarmSoundId,
+            place: place,
+            navigationConfig: NavigationConfig(
+                style: .center,
+                title: alarm.title
+            ), bottomSheetType: .ringAlarm,  // 알람이 울릴 때는 RingAlarmView
+            dim: true
+        )
     }
 }
 

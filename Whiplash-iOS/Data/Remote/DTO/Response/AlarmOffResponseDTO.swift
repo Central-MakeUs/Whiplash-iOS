@@ -15,6 +15,10 @@ public struct AlarmOffResponseDTO: Decodable {
     let remainingOffCount: Int
 }
 
+public struct AlarmOffCountDTO: Decodable {
+    let remainingOffCount: Int
+}
+
 extension AlarmOffResponseDTO {
     /*
     var toDomain: AlarmOffResult {

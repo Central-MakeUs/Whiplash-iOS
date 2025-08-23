@@ -16,3 +16,13 @@ struct SheetTitle: View {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
+
+struct SheetTitle2: View {
+    let text: String
+    var body: some View {
+        Text(text)
+            .font(TextStyle.subtitle3_b_18.font)
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity, alignment: .center)
+    }
+}

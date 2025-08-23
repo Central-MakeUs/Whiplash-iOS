@@ -49,6 +49,12 @@
 		2F2263612E4678B50079CF4F /* SheetMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263602E4678B50079CF4F /* SheetMessage.swift */; };
 		2F2263632E4678D10079CF4F /* SheetButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263622E4678D10079CF4F /* SheetButtons.swift */; };
 		2F2263652E46790A0079CF4F /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2263642E46790A0079CF4F /* Sheet.swift */; };
+		2F34A9282E5851E400472B5E /* AlarmSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34A9272E5851E400472B5E /* AlarmSound.swift */; };
+		2F34A92A2E585A7700472B5E /* AlarmSoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34A9292E585A7700472B5E /* AlarmSoundManager.swift */; };
+		2F34A9302E58A2C700472B5E /* nonesound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F34A92F2E58A2C700472B5E /* nonesound.mp3 */; };
+		2F34A9322E58ACA200472B5E /* AlarmSoundBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34A9312E58ACA200472B5E /* AlarmSoundBottomSheet.swift */; };
+		2F3C8E7F2E57628300797052 /* NotificationAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C8E7E2E57628300797052 /* NotificationAlarm.swift */; };
+		2F3C8E822E5762D700797052 /* NotificationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3C8E812E5762D700797052 /* NotificationClient.swift */; };
 		2F3E8DB52E46984100E3C0D7 /* AlarmListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB42E46984100E3C0D7 /* AlarmListResponseDTO.swift */; };
 		2F3E8DB72E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */; };
 		2F3E8DB92E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3E8DB82E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift */; };
@@ -108,6 +114,8 @@
 		2F4DDEBA2E20F21B00607760 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DDEB92E20F21B00607760 /* Date+.swift */; };
 		2F4DDEBC2E222E6900607760 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F4DDEBB2E222E6900607760 /* GoogleService-Info.plist */; };
 		2F60A79F2E4F1DE00042CA58 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60A79E2E4F1DE00042CA58 /* SuccessView.swift */; };
+		2F60A7A12E4F53680042CA58 /* TimerBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60A7A02E4F53680042CA58 /* TimerBottomSheet.swift */; };
+		2F60A7A52E504B9D0042CA58 /* AlarmCheckInRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60A7A42E504B9D0042CA58 /* AlarmCheckInRequestDTO.swift */; };
 		2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE6F2E3E36A600412543 /* AppToggleStyle.swift */; };
 		2FCBBE722E3E54A100412543 /* HomeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE712E3E54A100412543 /* HomeFeature.swift */; };
 		2FCBBE752E3E58A600412543 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBBE742E3E58A600412543 /* AppTextField.swift */; };
@@ -129,10 +137,10 @@
 		2FED86B72E48AF0F003D6F71 /* MapStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86B62E48AF0F003D6F71 /* MapStyle.swift */; };
 		2FED86B92E48B263003D6F71 /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86B82E48B263003D6F71 /* NaverMapView.swift */; };
 		2FED86BB2E48F2E7003D6F71 /* CancelID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86BA2E48F2E7003D6F71 /* CancelID.swift */; };
-		2FED86C12E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BE2E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 */; };
-		2FED86C22E48F573003D6F71 /* 김두한_알람.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BD2E48F573003D6F71 /* 김두한_알람.mp3 */; };
-		2FED86C32E48F573003D6F71 /* 대피_사이렌_소리.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */; };
-		2FED86C42E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */; };
+		2FED86C12E48F573003D6F71 /* sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BE2E48F573003D6F71 /* sound2.mp3 */; };
+		2FED86C22E48F573003D6F71 /* sound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BD2E48F573003D6F71 /* sound4.mp3 */; };
+		2FED86C32E48F573003D6F71 /* sound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86BF2E48F573003D6F71 /* sound3.mp3 */; };
+		2FED86C42E48F573003D6F71 /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FED86C02E48F573003D6F71 /* sound1.mp3 */; };
 		2FED86C62E492CE1003D6F71 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C52E492CE1003D6F71 /* Weekday.swift */; };
 		2FED86C82E493FE2003D6F71 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C72E493FE2003D6F71 /* TimeConverter.swift */; };
 		2FED86CA2E4942F8003D6F71 /* StringArrayConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED86C92E4942F8003D6F71 /* StringArrayConverter.swift */; };
@@ -177,6 +185,12 @@
 		2F2263602E4678B50079CF4F /* SheetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetMessage.swift; sourceTree = "<group>"; };
 		2F2263622E4678D10079CF4F /* SheetButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetButtons.swift; sourceTree = "<group>"; };
 		2F2263642E46790A0079CF4F /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+		2F34A9272E5851E400472B5E /* AlarmSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSound.swift; sourceTree = "<group>"; };
+		2F34A9292E585A7700472B5E /* AlarmSoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSoundManager.swift; sourceTree = "<group>"; };
+		2F34A92F2E58A2C700472B5E /* nonesound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nonesound.mp3; sourceTree = "<group>"; };
+		2F34A9312E58ACA200472B5E /* AlarmSoundBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSoundBottomSheet.swift; sourceTree = "<group>"; };
+		2F3C8E7E2E57628300797052 /* NotificationAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAlarm.swift; sourceTree = "<group>"; };
+		2F3C8E812E5762D700797052 /* NotificationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationClient.swift; sourceTree = "<group>"; };
 		2F3E8DB42E46984100E3C0D7 /* AlarmListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListResponseDTO.swift; sourceTree = "<group>"; };
 		2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOffRequestDTO.swift; sourceTree = "<group>"; };
 		2F3E8DB82E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOffResponseDTO.swift; sourceTree = "<group>"; };
@@ -238,6 +252,8 @@
 		2F4DDEB92E20F21B00607760 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		2F4DDEBB2E222E6900607760 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F60A79E2E4F1DE00042CA58 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		2F60A7A02E4F53680042CA58 /* TimerBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBottomSheet.swift; sourceTree = "<group>"; };
+		2F60A7A42E504B9D0042CA58 /* AlarmCheckInRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCheckInRequestDTO.swift; sourceTree = "<group>"; };
 		2FCBBE6F2E3E36A600412543 /* AppToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToggleStyle.swift; sourceTree = "<group>"; };
 		2FCBBE712E3E54A100412543 /* HomeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeature.swift; sourceTree = "<group>"; };
 		2FCBBE742E3E58A600412543 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
@@ -260,10 +276,10 @@
 		2FED86B62E48AF0F003D6F71 /* MapStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyle.swift; sourceTree = "<group>"; };
 		2FED86B82E48B263003D6F71 /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
 		2FED86BA2E48F2E7003D6F71 /* CancelID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelID.swift; sourceTree = "<group>"; };
-		2FED86BD2E48F573003D6F71 /* 김두한_알람.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "김두한_알람.mp3"; sourceTree = "<group>"; };
-		2FED86BE2E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "네모바지_스폰지밥_뚱이_일어나_움직여.mp3"; sourceTree = "<group>"; };
-		2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "대피_사이렌_소리.mp3"; sourceTree = "<group>"; };
-		2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "카리나_모닝콜_배경음악.mp3"; sourceTree = "<group>"; };
+		2FED86BD2E48F573003D6F71 /* sound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound4.mp3; sourceTree = "<group>"; };
+		2FED86BE2E48F573003D6F71 /* sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound2.mp3; sourceTree = "<group>"; };
+		2FED86BF2E48F573003D6F71 /* sound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound3.mp3; sourceTree = "<group>"; };
+		2FED86C02E48F573003D6F71 /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		2FED86C52E492CE1003D6F71 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 		2FED86C72E493FE2003D6F71 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
 		2FED86C92E4942F8003D6F71 /* StringArrayConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringArrayConverter.swift; sourceTree = "<group>"; };
@@ -330,6 +346,7 @@
 		2F02F8262E3DE6EF005273A5 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				2F3C8E802E5762C500797052 /* Notification */,
 				2F60A79D2E4F1DAB0042CA58 /* Success */,
 				2F2263582E466D7D0079CF4F /* AlarmRinging */,
 				2FCBBE7A2E3E809000412543 /* SetAlarm */,
@@ -380,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				2F2263592E466D940079CF4F /* AlarmRingingView.swift */,
+				2F60A7A02E4F53680042CA58 /* TimerBottomSheet.swift */,
 			);
 			path = AlarmRinging;
 			sourceTree = "<group>";
@@ -394,6 +412,15 @@
 				2F2263642E46790A0079CF4F /* Sheet.swift */,
 			);
 			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		2F3C8E802E5762C500797052 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				2F3C8E812E5762D700797052 /* NotificationClient.swift */,
+				2F34A9292E585A7700472B5E /* AlarmSoundManager.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		2F4DDDE22E19635D00607760 /* Whiplash-iOS */ = {
@@ -608,6 +635,8 @@
 				2FED86B62E48AF0F003D6F71 /* MapStyle.swift */,
 				2FED86BA2E48F2E7003D6F71 /* CancelID.swift */,
 				2FED86C52E492CE1003D6F71 /* Weekday.swift */,
+				2F3C8E7E2E57628300797052 /* NotificationAlarm.swift */,
+				2F34A9272E5851E400472B5E /* AlarmSound.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -682,6 +711,7 @@
 				2FCBBE952E3F4FAF00412543 /* AlarmRequestDTO.swift */,
 				2F3E8DB62E46A41B00E3C0D7 /* AlarmOffRequestDTO.swift */,
 				2F3E8DBA2E46AB9400E3C0D7 /* ReasonDTO.swift */,
+				2F60A7A42E504B9D0042CA58 /* AlarmCheckInRequestDTO.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -802,6 +832,7 @@
 				2FCBBE832E3F31FC00412543 /* TimerPicker */,
 				2FCBBE7B2E3E80CB00412543 /* SetAlarmView.swift */,
 				2F0557032E47EAEC00BA067E /* SetAlarmFeature.swift */,
+				2F34A9312E58ACA200472B5E /* AlarmSoundBottomSheet.swift */,
 			);
 			path = SetAlarm;
 			sourceTree = "<group>";
@@ -870,10 +901,11 @@
 		2FED86BC2E48F51E003D6F71 /* AlarmSound */ = {
 			isa = PBXGroup;
 			children = (
-				2FED86BD2E48F573003D6F71 /* 김두한_알람.mp3 */,
-				2FED86BE2E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 */,
-				2FED86BF2E48F573003D6F71 /* 대피_사이렌_소리.mp3 */,
-				2FED86C02E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 */,
+				2F34A92F2E58A2C700472B5E /* nonesound.mp3 */,
+				2FED86BD2E48F573003D6F71 /* sound4.mp3 */,
+				2FED86BE2E48F573003D6F71 /* sound2.mp3 */,
+				2FED86BF2E48F573003D6F71 /* sound3.mp3 */,
+				2FED86C02E48F573003D6F71 /* sound1.mp3 */,
 			);
 			path = AlarmSound;
 			sourceTree = "<group>";
@@ -975,6 +1007,7 @@
 			files = (
 				2F4DDDE42E19635D00607760 /* Assets.xcassets in Resources */,
 				2F4DDDF32E19667700607760 /* Pretendard-Light.otf in Resources */,
+				2F34A9302E58A2C700472B5E /* nonesound.mp3 in Resources */,
 				2F4DDDF42E19667700607760 /* Pretendard-ExtraBold.otf in Resources */,
 				2F4DDDF52E19667700607760 /* Pretendard-Medium.otf in Resources */,
 				2F4DDDF62E19667700607760 /* Pretendard-Regular.otf in Resources */,
@@ -992,10 +1025,10 @@
 				2F4DDDF82E19667700607760 /* Pretendard-ExtraLight.otf in Resources */,
 				2F4DDE8A2E1D2E3000607760 /* Config.xcconfig in Resources */,
 				2F4DDDF92E19667700607760 /* Pretendard-Bold.otf in Resources */,
-				2FED86C12E48F573003D6F71 /* 네모바지_스폰지밥_뚱이_일어나_움직여.mp3 in Resources */,
-				2FED86C22E48F573003D6F71 /* 김두한_알람.mp3 in Resources */,
-				2FED86C32E48F573003D6F71 /* 대피_사이렌_소리.mp3 in Resources */,
-				2FED86C42E48F573003D6F71 /* 카리나_모닝콜_배경음악.mp3 in Resources */,
+				2FED86C12E48F573003D6F71 /* sound2.mp3 in Resources */,
+				2FED86C22E48F573003D6F71 /* sound4.mp3 in Resources */,
+				2FED86C32E48F573003D6F71 /* sound3.mp3 in Resources */,
+				2FED86C42E48F573003D6F71 /* sound1.mp3 in Resources */,
 				2F4DDDFA2E19667700607760 /* Pretendard-Black.otf in Resources */,
 				2F4DDDFB2E19667700607760 /* Pretendard-Thin.otf in Resources */,
 			);
@@ -1018,6 +1051,7 @@
 				2F4DDE192E1983D600607760 /* ShadowModifier.swift in Sources */,
 				2F0556F72E47021300BA067E /* AuthClient.swift in Sources */,
 				2F4DDDFE2E1966D900607760 /* TextStyle.swift in Sources */,
+				2F34A9322E58ACA200472B5E /* AlarmSoundBottomSheet.swift in Sources */,
 				2F2263462E4659C80079CF4F /* CLLocationCoordinate2D+.swift in Sources */,
 				2FCBBE702E3E36A600412543 /* AppToggleStyle.swift in Sources */,
 				2F3E8DB92E46A45C00E3C0D7 /* AlarmOffResponseDTO.swift in Sources */,
@@ -1040,12 +1074,15 @@
 				2F0557002E47EA8900BA067E /* MainView.swift in Sources */,
 				2F22633C2E40FFAD0079CF4F /* MapView.swift in Sources */,
 				2F4DDEA72E1D461500607760 /* KakaoAuthService.swift in Sources */,
+				2F60A7A52E504B9D0042CA58 /* AlarmCheckInRequestDTO.swift in Sources */,
+				2F34A9282E5851E400472B5E /* AlarmSound.swift in Sources */,
 				2F4DDEA02E1D40B900607760 /* TokenReissueRequestDTO.swift in Sources */,
 				2FCBBE892E3F32D800412543 /* Place.swift in Sources */,
 				2F02F7C22E3C03F1005273A5 /* AppURLRouter.swift in Sources */,
 				2F2263552E466CEA0079CF4F /* OnboardingFeature.swift in Sources */,
 				2FCBBE962E3F4FAF00412543 /* AlarmRequestDTO.swift in Sources */,
 				2F4DDEA52E1D460600607760 /* AppleAuthService.swift in Sources */,
+				2F3C8E822E5762D700797052 /* NotificationClient.swift in Sources */,
 				2F4DDDE52E19635D00607760 /* RootView.swift in Sources */,
 				2FCBBE922E3F39A700412543 /* PlaceRepositoryImpl.swift in Sources */,
 				2F60A79F2E4F1DE00042CA58 /* SuccessView.swift in Sources */,
@@ -1074,7 +1111,9 @@
 				2F4DDE9B2E1D3D5400607760 /* SignInResponseDTO.swift in Sources */,
 				2FCBBE982E3F505F00412543 /* AlarmRepository.swift in Sources */,
 				2F22634D2E466BDC0079CF4F /* SplashView.swift in Sources */,
+				2F34A92A2E585A7700472B5E /* AlarmSoundManager.swift in Sources */,
 				2FED86CA2E4942F8003D6F71 /* StringArrayConverter.swift in Sources */,
+				2F3C8E7F2E57628300797052 /* NotificationAlarm.swift in Sources */,
 				2F3E8DB52E46984100E3C0D7 /* AlarmListResponseDTO.swift in Sources */,
 				2F22634F2E466BE90079CF4F /* SplashFeature.swift in Sources */,
 				2F4DDE7C2E1D12FD00607760 /* KeychainProvider.swift in Sources */,
@@ -1096,6 +1135,7 @@
 				2FCBBE8F2E3F38B100412543 /* PlaceResponseDTO.swift in Sources */,
 				2F22633E2E4258720079CF4F /* MapFeature.swift in Sources */,
 				2F4DDDE62E19635D00607760 /* Whiplash_iOSApp.swift in Sources */,
+				2F60A7A12E4F53680042CA58 /* TimerBottomSheet.swift in Sources */,
 				2FCBBE792E3E7D8B00412543 /* AppSearchBar.swift in Sources */,
 				2F4DDEB62E20EDA000607760 /* AuthInterceptor.swift in Sources */,
 				2F02F7C92E3C0B15005273A5 /* GoogleAuthRepository.swift in Sources */,
@@ -1252,6 +1292,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1263,7 +1304,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akuma.calling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1273,7 +1314,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1295,6 +1336,7 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 기반으로 알람 장소를 설정하기 위해 위치 권한을 혀용합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1306,7 +1348,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akuma.calling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1317,7 +1359,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

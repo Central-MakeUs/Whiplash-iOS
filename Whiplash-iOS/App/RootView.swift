@@ -28,6 +28,14 @@ struct RootView: View {
                 Color.clear.onAppear { store.send(.splash(.onAppear)) }
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: .alarmTriggeredFromDelegate)) { notification in
+            
+            if let alarmId = notification.userInfo?["alarmId"] as? Int,
+            let soundId = notification.userInfo?["soundId"] as? String {
+                print("NotificationCenter를 통한 백업 이벤트 수신: \(alarmId)")
+                store.send(.alarmNotificationReceived(alarmId, soundId))
+            }
+        }
         
     }
 }

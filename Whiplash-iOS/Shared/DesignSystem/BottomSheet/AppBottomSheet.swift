@@ -9,19 +9,19 @@ import SwiftUI
 
 struct AppBottomSheet<Content: View>: View {
     @Binding var isPresented: Bool
+    @Binding var snapHeights: CGFloat
     var allowSwipeToDismiss: Bool = true
-    var snapHeights: [CGFloat] = [232]
     
     private let contentBuilder: () -> Content
     init(
         isPresented: Binding<Bool>,
+        snapHeights: Binding<CGFloat>,
         allowSwipeToDismiss: Bool = true,
-        snapHeights: [CGFloat] = [232],
         @ViewBuilder content: @escaping () -> Content
     ) {
         self._isPresented = isPresented
+        self._snapHeights = snapHeights
         self.allowSwipeToDismiss = allowSwipeToDismiss
-        self.snapHeights = snapHeights
         self.contentBuilder = content
     }
     
@@ -50,7 +50,7 @@ struct AppBottomSheet<Content: View>: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .frame(height: currentHeight)
+                .frame(height: snapHeights)
                 .background(
                     UnevenRoundedRectangle(
                         topLeadingRadius: 16,
@@ -74,10 +74,8 @@ struct AppBottomSheet<Content: View>: View {
                                 if value.translation.height > 140 {
                                     isPresented = false
                                 } else {
-                                    let end = currentHeight + value.translation.height
-                                    let nearest = snapHeights.min(by: {
-                                        abs($0 - end) < abs($1 - end)
-                                    }) ?? (snapHeights.first ?? 232)
+                                    let end = snapHeights + value.translation.height
+                                    let nearest = snapHeights
                                     currentHeight = nearest
                                 }
                                 translation = 0
@@ -87,9 +85,6 @@ struct AppBottomSheet<Content: View>: View {
                 )
             }
             .ignoresSafeArea(edges: .bottom)
-        }
-        .onAppear {
-            currentHeight = snapHeights.first ?? 232
         }
         .animation(.spring(response: 0.28, dampingFraction: 0.86), value: isPresented)
     }

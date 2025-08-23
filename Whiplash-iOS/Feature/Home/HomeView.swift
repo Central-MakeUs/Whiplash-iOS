@@ -17,12 +17,12 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            if store.cards.isEmpty {
+            if store.card.isEmpty {
                 AlarmEmptyView()
             } else {
                 ScrollView {
                     VStack(spacing: 12) {
-                        ForEach(store.scope(state: \.cards, action: \.card)) { cardStore in
+                        ForEach(store.scope(state: \.card, action: \.card)) { cardStore in
                             AlarmCardView(store: cardStore)
                         }
                     }

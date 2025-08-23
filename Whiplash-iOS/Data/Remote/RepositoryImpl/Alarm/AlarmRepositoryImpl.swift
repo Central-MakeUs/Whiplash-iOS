@@ -9,20 +9,26 @@ import Foundation
 import ComposableArchitecture
 
 public struct AlarmRepositoryImpl: AlarmRepository {
-    public var addAlarm: @Sendable (_ alarm: Alarm, _ place: Place) async throws -> Void
-    public var getAlarmList: @Sendable () async throws -> [Alarm]
-    public var alarmOff: @Sendable () async throws -> Void
+    public var addAlarm: @Sendable (_ alarm: Alarm, _ place: Place) async throws -> Int
+    public var getAlarmList: @Sendable () async throws -> ([Alarm], [Place])
+    public var alarmOff: @Sendable (_ alarmId: Int) async throws -> Void
     public var deleteAlarm: @Sendable () async throws -> Void
+    public var checkInAlarm: @Sendable (_ alarmId: Int, _ place: Place) async throws -> Void
+    public var offCount: @Sendable () async throws -> Int
     public init(
-        addAlarm: @escaping @Sendable (_ alarm: Alarm, _ place: Place) async throws -> Void,
-        getAlarmList: @escaping @Sendable () async throws -> [Alarm],
-        alarmOff: @escaping @Sendable () async throws -> Void,
-        deleteAlarm: @escaping @Sendable () async throws -> Void
+        addAlarm: @escaping @Sendable (_ alarm: Alarm, _ place: Place) async throws -> Int,
+        getAlarmList: @escaping @Sendable () async throws -> ([Alarm], [Place]),
+        alarmOff: @escaping @Sendable (_ alarmId: Int) async throws -> Void,
+        deleteAlarm: @escaping @Sendable () async throws -> Void,
+        checkInAlarm: @escaping @Sendable (_ alarmId: Int, _ place: Place) async throws -> Void,
+        offCount: @escaping @Sendable () async throws -> Int
     ) {
         self.addAlarm = addAlarm
         self.getAlarmList = getAlarmList
         self.alarmOff = alarmOff
         self.deleteAlarm = deleteAlarm
+        self.checkInAlarm = checkInAlarm
+        self.offCount = offCount
     }
 }
 
@@ -38,14 +44,14 @@ extension AlarmRepositoryImpl: DependencyKey {
                                               alarmPurpose: alarm.title,
                                               time: time,
                                               repeatDays: StringArrayConverter.stringToArray(alarm.repeatDays),
-                                              soundType: "알람 소리1")
+                                              soundType: alarm.soundType)
                 
-                let response: Response<AlarmResponseDTO> = try await apiClient.request(
-                    Response<AlarmResponseDTO>.self,
+                let response: Response<AlarmDTO> = try await apiClient.request(
+                    Response<AlarmDTO>.self,
                     target: .addAlarm(request))
                 
                 if response.isSuccess {
-                    return
+                    return response.result?.alarmId ?? 0
                 } else {
                     throw NSError(domain: "AddAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
@@ -59,14 +65,17 @@ extension AlarmRepositoryImpl: DependencyKey {
                 
                 if response.isSuccess, let dto = response.result {
                     
-                    return dto.map { $0.toDomain }
+                    let alarm = dto.map { $0.toDomain.0 }
+                    let place = dto.map { $0.toDomain.1 }
+                    
+                    return (alarm, place)
                     
                 } else {
                     throw NSError(domain: "GetAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
                 
             },
-            alarmOff: {
+            alarmOff: { alarmId in
                 let time: DateFormatter = {
                     let f = DateFormatter()
                     f.calendar = Calendar(identifier: .iso8601)
@@ -80,7 +89,7 @@ extension AlarmRepositoryImpl: DependencyKey {
 
                 let response: Response<AlarmOffResponseDTO> = try await apiClient.request(
                     Response<AlarmOffResponseDTO>.self,
-                    target: .alarmOff(18, request))
+                    target: .alarmOff(alarmId, request))
                 
                 if response.isSuccess, let dto = response.result {
                     
@@ -99,6 +108,33 @@ extension AlarmRepositoryImpl: DependencyKey {
                     
                 } else {
                     throw NSError(domain: "DeleteAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                }
+            },
+            checkInAlarm: { alarmId, place in
+                let request = AlarmCheckInRequestDTO(latitude: place.latitude,
+                                                     longitude: place.longitude)
+                
+                let response: Response<EmptyDTO> = try await apiClient.request(
+                    Response<EmptyDTO>.self,
+                    target: .checkInAlarm(alarmId, request))
+                
+                if response.isSuccess, let dto = response.result {
+                    
+                } else {
+                    throw NSError(domain: "CheckInAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
+                }
+            },
+            offCount: {
+
+                
+                let response: Response<AlarmOffCountDTO> = try await apiClient.request(
+                    Response<AlarmOffCountDTO>.self,
+                    target: .offCount)
+                
+                if response.isSuccess, let dto = response.result {
+                    return dto.remainingOffCount
+                } else {
+                    throw NSError(domain: "CheckInAlarm", code: 0, userInfo: [NSLocalizedDescriptionKey: response.message])
                 }
             }
         )

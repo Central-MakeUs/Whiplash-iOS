@@ -49,4 +49,9 @@ extension DependencyValues {
         get { self[AutoLoginClient.self] }
         set { self[AutoLoginClient.self] = newValue }
     }
+    
+    var notificationClient: NotificationClient {
+        get { self[NotificationClient.self] }
+        set { self[NotificationClient.self] = newValue }
+    }
 }

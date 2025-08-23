@@ -74,13 +74,13 @@ struct NaverMapView: UIViewRepresentable {
             context.coordinator.clearSelected()
         }
         
-        /*
+        
         // 현재 위치 마커
         if let cur = currentLocation {
             context.coordinator.updateCurrentMarker(location: cur, mapView: uiView)
         } else {
             context.coordinator.clearCurrent()
-        }*/
+        }
     }
     
     func makeCoordinator() -> Coordinator {

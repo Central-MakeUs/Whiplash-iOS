@@ -35,6 +35,7 @@ public struct SetAlarmFeature {
         }
         
         var canSave: Bool = false
+        var selectedSound: AlarmSound = .sample
         
     }
     
@@ -57,6 +58,7 @@ public struct SetAlarmFeature {
         case alarmSaveStarted
         case alarmSaveSucceeded
         case alarmSaveFailed(Error)
+        case setAlarmSound(AlarmSound)
         public enum Delegate: Equatable {
             case didCreateAlarm
             case searchPlace
@@ -65,6 +67,7 @@ public struct SetAlarmFeature {
     }
     
     @Dependency(\.alarmRepository) var alarmRepository
+    @Dependency(\.notificationClient) var notificationClient
     
     public var body: some ReducerOf<Self> {
         
@@ -77,6 +80,7 @@ public struct SetAlarmFeature {
                 state.alarm.time = state.formattedTime
                 state.alarm.repeatDays = state.repeatDaysString
                 state.alarm.address = state.place.address
+                state.alarm.soundType = state.selectedSound.id
                 Logger.shared.log(level: .debug, category: .etc, "sync 확인 : \(state.alarm)")
             }
             
@@ -95,13 +99,16 @@ public struct SetAlarmFeature {
                 let place = state.place
                 
                 Logger.shared.log(level: .debug, category: .etc, "알람 저장 시작")
+                var notificationAlarm = state.alarm.toNotificationAlarm
                 
                 return .run { send in
                     await send(.alarmSaveStarted)
                     
                     do {
 
-                        try await alarmRepository.addAlarm(alarm, place)
+                        let alarmId = try await alarmRepository.addAlarm(alarm, place)
+                        notificationAlarm.id = alarmId
+                        try await notificationClient.scheduleRepeatingAlarm(notificationAlarm, 10, 64)
                         
                         // 성공 시
                         await send(.alarmSaveSucceeded)
@@ -173,6 +180,12 @@ public struct SetAlarmFeature {
                 
             case .binding(_):
                 return .none
+                
+            case let .setAlarmSound(sound):
+                state.selectedSound = sound
+                state.alarm.soundType = sound.id
+                syncAlarmPreview()
+                return updateCanSaveState()
             }
             
             func updateCanSaveState() -> Effect<Action> {

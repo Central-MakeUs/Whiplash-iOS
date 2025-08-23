@@ -20,6 +20,8 @@ public enum DefaultTargetType {
     case getPlaceDetail(String, String)
     case logout
     case signout
+    case checkInAlarm(Int, AlarmCheckInRequestDTO)
+    case offCount
 }
 
 extension DefaultTargetType: TargetType {
@@ -59,6 +61,11 @@ extension DefaultTargetType: TargetType {
             return "/api/auth/logout"
         case .signout:
             return "/api/members"
+        case let .checkInAlarm(alarmId, _):
+            return "/api/alarms/\(alarmId)/checkin"
+        case .offCount:
+            return "/api/alarms/off-count"
+            
         }
     }
     
@@ -84,6 +91,10 @@ extension DefaultTargetType: TargetType {
             return .post
         case .signout:
             return .delete
+        case .checkInAlarm:
+            return .post
+        case .offCount:
+            return .get
         }
     }
     
@@ -110,6 +121,10 @@ extension DefaultTargetType: TargetType {
         case .logout:
             return .requestPlain
         case .signout:
+            return .requestPlain
+        case let .checkInAlarm(_, request):
+            return .requestJSONEncodable(request)
+        case .offCount:
             return .requestPlain
         }
     }

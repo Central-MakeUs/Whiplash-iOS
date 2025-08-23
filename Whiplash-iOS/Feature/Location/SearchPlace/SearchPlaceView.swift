@@ -33,7 +33,7 @@ struct SearchPlaceView: View {
                     LazyVStack(spacing: 0) {
                         ForEach(store.places) { place in
                             HStack {
-                                VStack(alignment: .leading, spacing: 2) {
+                                VStack(alignment: .leading, spacing: 4) {
                                     AppText(text: place.name,
                                             style: .body1_m_16,
                                             color: .white)
@@ -45,13 +45,13 @@ struct SearchPlaceView: View {
                             }
                             .contentShape(Rectangle())
                             .onTapGesture { store.send(.selectPlace(place)) }
-                            .padding(.vertical, 12)
+                            .padding(.vertical, 16)
                             .background(Color.gray900)
                             
                             Divider().background(Color.gray800)
                         }
                     }
-                    .padding(.horizontal, AppLayout.horizontalPadding)
+                    .padding(.horizontal, 4)
                 }
                 
             } else if !store.query.isEmpty && !store.isLoading {
