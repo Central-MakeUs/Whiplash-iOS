@@ -29,4 +29,29 @@ extension DependencyValues {
         get { self[GoogleAuthRepositoryImpl.self] }
         set { self[GoogleAuthRepositoryImpl.self] = newValue }
     }
+    
+    var placeRepository: PlaceRepositoryImpl {
+        get { self[PlaceRepositoryImpl.self] }
+        set { self[PlaceRepositoryImpl.self] = newValue }
+    }
+    
+    var alarmRepository: AlarmRepositoryImpl {
+        get { self[AlarmRepositoryImpl.self] }
+        set { self[AlarmRepositoryImpl.self] = newValue }
+    }
+    
+    var locationClient: LocationClient {
+        get { self[LocationClient.self] }
+        set { self[LocationClient.self] = newValue }
+    }
+    
+    var autoLoginClient: AutoLoginClient {
+        get { self[AutoLoginClient.self] }
+        set { self[AutoLoginClient.self] = newValue }
+    }
+    
+    var notificationClient: NotificationClient {
+        get { self[NotificationClient.self] }
+        set { self[NotificationClient.self] = newValue }
+    }
 }

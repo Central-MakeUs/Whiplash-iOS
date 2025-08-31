@@ -16,12 +16,20 @@ open class NetworkRequestInterceptor: RequestInterceptor {
                       for session: Session,
                       completion: @escaping (Result<URLRequest, any Error>) -> Void) {
         var urlRequest = urlRequest
-        
-        guard let accessToken = KeychainProvider.shared.read(.accessToken) else {
+        Logger.shared.log(level: .debug, category: .network, "url request : \(urlRequest)")
+        guard var accessToken = KeychainProvider.shared.read(.accessToken) else {
             completion(.success(urlRequest))
             return
         }
         
+        if let url = urlRequest.url {
+            if url.absoluteString.contains("/api/auth/reissue") {
+                if let refreshToken = KeychainProvider.shared.read(.refreshToken) {
+                    accessToken = refreshToken
+                }
+            }
+        }
+
         urlRequest.headers.add(.authorization(bearerToken: accessToken))
         completion(.success(urlRequest))
     }
@@ -30,12 +38,21 @@ open class NetworkRequestInterceptor: RequestInterceptor {
                       for session: Session,
                       dueTo error: any Error,
                       completion: @escaping (RetryResult) -> Void) {
+        Logger.shared.log(level: .debug, category: .network, "retry 호출됨")
         guard let response = request.task?.response as? HTTPURLResponse,
               response.statusCode == 401 else {
             completion(.doNotRetryWithError(error))
             return
         }
+        
+        // 무한 재시도 방지
+        guard request.retryCount == 0 else {
+            completion(.doNotRetryWithError(error))
+            return
+        }
+        
         self.reissueTokens(completion: completion)
+        
     }
     
     func reissueTokens(completion: @escaping (RetryResult) -> Void) {}

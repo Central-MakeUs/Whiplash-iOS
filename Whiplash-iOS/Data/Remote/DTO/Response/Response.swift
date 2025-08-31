@@ -13,3 +13,5 @@ struct Response<T: Decodable>: Respondable {
     let message: String
     let result: T?
 }
+
+public struct EmptyDTO: Codable {}

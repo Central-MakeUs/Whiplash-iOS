@@ -25,17 +25,18 @@ final class AuthInterceptor: NetworkRequestInterceptor {
             switch result {
             case .success(let response):
                 let data = response.result!
-                KeychainProvider.shared.save(data.accessToken, key: .accessToken)
-                KeychainProvider.shared.save(data.refreshToken, key: .refreshToken)
+
+                TokenStore.shared.save(accessToken: data.accessToken,
+                                  refreshToken: data.refreshToken)
+                Logger.shared.log(level: .debug, category: .network, "토큰 재발급 성공 : \(data)")
+                
+                completion(.retry)
 
             case .failure(let error):
-                self.deleteAllTokens()
+                Logger.shared.log(level: .debug, category: .network, "토큰 재발급 실패 : \(error)")
+                TokenStore.shared.clear()
+                completion(.doNotRetryWithError(error))
             }
         }
-    }
-    
-    private func deleteAllTokens() {
-        KeychainProvider.shared.delete(.accessToken)
-        KeychainProvider.shared.delete(.refreshToken)
     }
 }

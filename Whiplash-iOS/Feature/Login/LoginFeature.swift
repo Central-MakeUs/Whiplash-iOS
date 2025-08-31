@@ -24,14 +24,16 @@ public struct LoginFeature {
         case delegate(Delegate)
     }
     
-    public enum Delegate {
+    public enum Delegate: Equatable {
         case didFinishLogin(shouldCreateProfile: Bool)
+        case needLogin // 추가
     }
     
     @Dependency(\.authUsecase) var authUseCase
     @Dependency(\.appleRepository) var appleRepository
     @Dependency(\.kakaoRepository) var kakaoRepository
     @Dependency(\.googleRepository) var googleRepository
+    @Dependency(\.autoLoginClient) var autoLogin
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -52,8 +54,9 @@ public struct LoginFeature {
                     ))
                 }
             case let .didFinishLogin(.success(info)):
-                KeychainProvider.shared.save(info.accessToken, key: .accessToken)
-                KeychainProvider.shared.save(info.refreshToken, key: .refreshToken)
+                TokenStore.shared.save(accessToken: info.accessToken,
+                                  refreshToken: info.refreshToken)
+                autoLogin.setEnabled(true)
                 return .send(.delegate(.didFinishLogin(shouldCreateProfile: true)))
             case .didFinishLogin(.failure):
                 return .none
@@ -63,3 +66,5 @@ public struct LoginFeature {
         }
     }
 }
+
+

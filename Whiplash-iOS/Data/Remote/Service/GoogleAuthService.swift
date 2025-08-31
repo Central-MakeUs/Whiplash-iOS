@@ -9,6 +9,7 @@ import Foundation
 import GoogleSignIn
 import UIKit
 
+@MainActor
 final class GoogleAuthService {
     
     static let shared = GoogleAuthService()

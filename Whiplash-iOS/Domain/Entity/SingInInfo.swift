@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SignInInfo {
+public struct SignInInfo: Equatable {
     public let accessToken: String
     public let refreshToken: String
     

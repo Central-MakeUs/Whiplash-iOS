@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum SocialLoginType: String, Codable {
+public enum SocialLoginType: String, Codable, Equatable {
     case apple
     case kakao
     case google

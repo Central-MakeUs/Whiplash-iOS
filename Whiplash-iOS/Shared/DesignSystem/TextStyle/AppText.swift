@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BaseText: View {
+struct AppText: View {
     var text: String
     var style: TextStyle
     var color: Color = .primary

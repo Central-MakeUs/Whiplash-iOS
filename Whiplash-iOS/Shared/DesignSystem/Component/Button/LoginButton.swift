@@ -16,7 +16,7 @@ struct LoginButton: View {
             HStack(spacing: 4) {
                 type.icon
 
-                BaseText(text: type.title,
+                AppText(text: type.title,
                          style: .body2_m_14,
                          color: type.foregroundColor)
             }

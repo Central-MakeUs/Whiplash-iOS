@@ -13,13 +13,16 @@ public struct KakaoAuthRepositoryImpl: AuthRepository {
     
     public var signIn: @Sendable () async throws -> SignInInfo
     public var logout: @Sendable () async throws -> Void
+    public var signout: @Sendable () async throws -> Void
     
     public init(
         signIn: @escaping @Sendable () async throws -> SignInInfo,
-        logout: @escaping @Sendable () async throws -> Void
+        logout: @escaping @Sendable () async throws -> Void,
+        signout: @escaping @Sendable () async throws -> Void
     ) {
         self.signIn = signIn
         self.logout = logout
+        self.signout = signout
     }
 }
 
@@ -33,8 +36,7 @@ extension KakaoAuthRepositoryImpl: DependencyKey {
                 let token = try await KakaoAuthService().signIn()
                 let request = SignInRequestDTO(socialType: "KAKAO",
                                                token: token,
-                                               deviceId: "1",
-                                               originalNonce: "")
+                                               deviceId: "3")
                 
                 let response: Response<SignInResponseDTO> = try await apiClient.request(
                     Response<SignInResponseDTO>.self,
@@ -50,6 +52,9 @@ extension KakaoAuthRepositoryImpl: DependencyKey {
 
             },
             logout: {
+                
+            },
+            signout: {
                 
             }
         )

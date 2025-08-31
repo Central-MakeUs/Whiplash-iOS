@@ -13,13 +13,16 @@ import UIKit
 public struct GoogleAuthRepositoryImpl: AuthRepository {
     public var signIn: @Sendable () async throws -> SignInInfo
     public var logout: @Sendable () async throws -> Void
+    public var signout: @Sendable () async throws -> Void
     
     public init(
         signIn: @escaping @Sendable () async throws -> SignInInfo,
-        logout: @escaping @Sendable () async throws -> Void
+        logout: @escaping @Sendable () async throws -> Void,
+        signout: @escaping @Sendable () async throws -> Void
     ) {
         self.signIn = signIn
         self.logout = logout
+        self.signout = signout
     }
 }
 
@@ -32,8 +35,7 @@ extension GoogleAuthRepositoryImpl: DependencyKey {
 
                 let request = SignInRequestDTO(socialType: "GOOGLE",
                                                token: idToken,
-                                               deviceId: "1",
-                                               originalNonce: "")
+                                               deviceId: "1")
                 
                 let response: Response<SignInResponseDTO> = try await apiClient.request(
                     Response<SignInResponseDTO>.self,
@@ -46,6 +48,10 @@ extension GoogleAuthRepositoryImpl: DependencyKey {
                 }
             },
             logout: {
+                
+            },
+            signout: {
+                
             }
         )
     }()

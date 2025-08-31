@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BaseButton: View {
+struct AppButton: View {
     let title: String
     let size: ButtonSize
     let type: ButtonType
@@ -22,7 +22,7 @@ struct BaseButton: View {
         Button(action: {
             if state != .disabled { action() }
         }) {
-            BaseText(text: title,
+            AppText(text: title,
                      style: .subtitle5_b_16,
                      color: style.foregroundColor)
                 .frame(maxWidth: .infinity)

@@ -11,15 +11,12 @@ public struct SignInRequestDTO: Requestable {
     let socialType: String
     let token: String
     let deviceId: String
-    let originalNonce: String?
     
     init(socialType: String,
          token: String,
-         deviceId: String,
-         originalNonce: String) {
+         deviceId: String) {
         self.socialType = socialType
         self.token = token
         self.deviceId = deviceId
-        self.originalNonce = originalNonce
     }
 }
